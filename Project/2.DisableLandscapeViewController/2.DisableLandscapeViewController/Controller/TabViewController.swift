@@ -1,5 +1,5 @@
 //
-//  NaviViewController.swift
+//  TabViewController.swift
 //  2.DisableLandscapeViewController
 //
 //  Created by Duy Nguyen on 9/4/19.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class NaviViewController: UIViewController {
+class TabViewController: UIViewController {
 
     override var shouldAutorotate: Bool {
         get {
-            return true
+            return false
         }
     }
 }

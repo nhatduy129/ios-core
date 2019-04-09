@@ -14,6 +14,7 @@
 		04926392225C673500F7F59D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04926390225C673500F7F59D /* LaunchScreen.storyboard */; };
 		0492639A225C683A00F7F59D /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04926399225C683A00F7F59D /* NaviViewController.swift */; };
 		0492639E225C694C00F7F59D /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492639D225C694C00F7F59D /* UINavigationController.swift */; };
+		049263A1225C6BEF00F7F59D /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049263A0225C6BEF00F7F59D /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04926393225C673500F7F59D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04926399225C683A00F7F59D /* NaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
 		0492639D225C694C00F7F59D /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		049263A0225C6BEF00F7F59D /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				04926389225C673400F7F59D /* ViewController.swift */,
 				04926399225C683A00F7F59D /* NaviViewController.swift */,
+				049263A0225C6BEF00F7F59D /* TabViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				0492638A225C673400F7F59D /* ViewController.swift in Sources */,
 				0492639A225C683A00F7F59D /* NaviViewController.swift in Sources */,
 				04926388225C673400F7F59D /* AppDelegate.swift in Sources */,
+				049263A1225C6BEF00F7F59D /* TabViewController.swift in Sources */,
 				0492639E225C694C00F7F59D /* UINavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
