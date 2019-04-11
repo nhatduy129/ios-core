@@ -36,7 +36,7 @@ class FirstTabVC: UIViewController {
     }
     
     deinit {
-        print("FirstTabVC: deinit")
+        print("FirstTabVC: deinit ok")
     }
 }
 
