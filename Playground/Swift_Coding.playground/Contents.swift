@@ -1,3 +1,4 @@
+import Foundation
 
 //1. Pass preference of parameter
 func abc(_ d: inout Int) {
@@ -59,3 +60,45 @@ for (i, name) in zip(names.indices, names) {
         shorterIndices.append(i)
     }
 }
+
+//8. sieve
+let MAX = 100005
+var F = Array(repeating: 0, count: MAX)
+
+func sieve() {
+    for i in 2..<Int(Double(MAX).squareRoot()) {
+        if F[i] != 0 { continue }
+        for j in stride(from: i*i, to: MAX, by: i) {
+            F[j] = i
+        }
+    }
+}
+//Bây giờ F[i] nào bằng 0 thì i đó là số nguyên tố, F[i] nào khác 0 thì i đó có ước số nhỏ nhất là i
+
+//9. Sử dụng stride để thay thế cho vòng lặp truyền thống
+for i in stride(from: 0, to: 10, by: 2) {       //ko chứa end value
+    print(i)        //output: 0, 2, 4, 6, 8
+}
+for i in stride(from: 0, through: 10, by: 2) {  //Chứa luôn cả end value
+    print(i)        //output: 0, 2, 4, 6, 8, 10
+}
+
+//10. Mũ, căn    power, square root
+print(pow(5, 2))        //output: 25
+print(pow(25, 2))       //output: 5
+//Lưu ý:
+//  - Để dùng đc pow cần import Foundation
+//  - 2 parameter trong pow đều phải là Double
+//  - Giá trị trả về của pow luôn là Double
+
+//11. DFS for tree
+func dfs(_ u: Int, _ p: Int) {
+    // do something from root to left
+    for v in graph[u] {
+        if v == p { continue }
+        dfs(v, u)
+    }
+    // do something from left to root
+}
+//Ex: https://www.hackerrank.com/challenges/even-tree/problem
+
