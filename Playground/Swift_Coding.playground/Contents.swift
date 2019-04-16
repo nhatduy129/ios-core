@@ -102,3 +102,10 @@ func dfs(_ u: Int, _ p: Int) {
 }
 //Ex: https://www.hackerrank.com/challenges/even-tree/problem
 
+//12. Recursive
+//Dạng 1: c^N, lồng nhau
+//VD: Bài toán phép tính
+//insert operator: + - * / to pair of numbers in order to get the maximum. Always LEFT -> RIGHT
+//Input: [1, 12, 3] -> 1 + 12 * 3 = 39
+//Input [1, 12, -3] -> 1 - 12 * (-3) = 33
+//Đối với dạng này truyền processing value vào parameter

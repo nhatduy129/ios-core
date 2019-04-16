@@ -1,13 +1,40 @@
-var arr2D = [
-    [1, 4, 2],
-    [21, 14, 22],
-    [12, 24, 32],
-]
 
-arr2D.flatMap({$0}).forEach({i in
-    print(i)
-})
+enum Operator {
+    case plus, minus, multi, div
+}
 
-//arr2D.forEach({i in
-//
-//})
+var ans: Float = Float(Int.min)
+
+func cal(_ list: [Float], _ ith: Int, _ value: Float, _ op: Operator) {
+    var value = value
+    switch op {
+    case .plus:
+        value += list[ith]
+    case .minus:
+        value -= list[ith]
+    case .multi:
+        value *= list[ith]
+    case .div:
+        value /= list[ith]
+    }
+    
+    if ith == list.count - 1 {
+        ans = max(ans, value)
+        return
+    }
+    
+    cal(list, ith + 1, value, .plus)
+    cal(list, ith + 1, value, .minus)
+    cal(list, ith + 1, value, .multi)
+    cal(list, ith + 1, value, .div)
+}
+
+func solve(list: [Float]) -> Float {
+    cal(list, 1, list[0], .plus)
+    cal(list, 1, list[0], .minus)
+    cal(list, 1, list[0], .multi)
+    cal(list, 1, list[0], .div)
+    return ans
+}
+
+print(solve(list: [1, 12, -3]))
