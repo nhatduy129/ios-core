@@ -3,16 +3,13 @@ class A {
     var t: Int?
 }
 
-//var name: String
-//if name == nil {
-//    name = "duy"
-//}
-//
-//print(name)
-
-
-var a: A!
-if a == nil {
-    print("true")
+func change(obj: A) {
+    obj.t = 50
 }
-print(a!)
+
+
+var a = A()
+a.t = 10
+change(obj: a)
+
+print(a.t)
