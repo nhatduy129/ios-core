@@ -1,7 +1,8 @@
-var demo: String? {
-    didSet {
-        print("demo is setup")
+extension String {
+    
+    var firstChar : Character {
+        get {
+            return "b"
+        }
     }
 }
-
-demo = nil

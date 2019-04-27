@@ -41,11 +41,5 @@ func stoneDivision(n: Int, s: [Int]) -> Int {
 //var ans = stoneDivision(n: 64, s: [2, 4, 8, 16, 64])
 //print(ans)
 //
-var ans = stoneDivision(n: 1, s: [1,2])
-print(ans)
-//
-//ans = stoneDivision(n: 6, s: [3])
-//print(ans)
 
- ans = stoneDivision(n: 64, s: [2, 4, 8 ,16, 32, 64])
-print(ans)
+NSAr
