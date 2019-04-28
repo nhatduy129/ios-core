@@ -17,6 +17,15 @@ struct Fraction {
         let denominator = rhs.denominator * lhs.denominator
         return Fraction(numerator, denominator)
     }
+    
+    subscript (i: Int) -> Int {
+        if i == 0 {
+            return numerator
+        } else if i == 1 {
+            return denominator
+        }
+        return 0
+    }
 }
 
 let a = Fraction(2, 3)
@@ -24,8 +33,9 @@ let b = Fraction(3, 4)
 
 let c = a + b
 print(c)
-
+print(c[0])
 //------------------------------------------------------
+print("------------------------------------------------------")
 
 infix operator ^^
 infix operator ^^=
