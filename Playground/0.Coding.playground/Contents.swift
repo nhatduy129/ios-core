@@ -1,18 +1,16 @@
-extension String {
+struct A {
     
-    var tam: Int {
-        get {
-            return tam
-        }
-        set {
-            print("con cac")
-            //tam = 10
-        }
+    static func sayHello() {
+        print("Hello")
     }
 }
 
-var a = String()
-print("cai lon")
-a.tam = 20
-print("fuck \(a.tam)")
-//a.tam = 10
+extension A {
+    func sayHello() {
+        print("Hello in ext")
+    }
+}
+
+let a = A()
+a.sayHello()
+A.sayHello()
