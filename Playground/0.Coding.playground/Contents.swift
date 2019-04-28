@@ -3,9 +3,7 @@ struct A {
     static func sayHello() {
         print("Hello")
     }
-}
-
-extension A {
+    
     func sayHello() {
         print("Hello in ext")
     }
