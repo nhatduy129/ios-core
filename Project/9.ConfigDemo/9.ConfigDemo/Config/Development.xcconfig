@@ -1,0 +1,14 @@
+//
+//  Development.xcconfig
+//  9.ConfigDemo
+//
+//  Created by Duy Nguyen on 28/4/19.
+//  Copyright © 2019 Duy Nguyen. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-9.ConfigDemo/Pods-9.ConfigDemo.debug.xcconfig"
+
+demo                = day la development
