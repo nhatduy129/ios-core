@@ -1,14 +1,9 @@
-struct A {
+
+extension Array {
     
-    static func sayHello() {
-        print("Hello")
-    }
-    
-    func sayHello() {
-        print("Hello in ext")
+    func chooseRandom(_ quantity: Int) -> Array {
+        return Array(shuffled().prefix(quantity))
     }
 }
 
-let a = A()
-a.sayHello()
-A.sayHello()
+print([1,2,3,4,5].chooseRandom(3))
