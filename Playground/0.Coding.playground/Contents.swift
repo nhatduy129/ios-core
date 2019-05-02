@@ -1,9 +1,12 @@
+import UIKit
 
-extension Array {
-    
-    func chooseRandom(_ quantity: Int) -> Array {
-        return Array(shuffled().prefix(quantity))
+let button = UIButton()
+let tableView = UITableView()
+let label = UILabel()
+
+for view in [button, tableView, label] {
+    if view.self is UIView {
+        print(true)
     }
 }
 
-print([1,2,3,4,5].chooseRandom(3))
