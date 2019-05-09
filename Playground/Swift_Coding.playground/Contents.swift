@@ -109,3 +109,9 @@ func dfs(_ u: Int, _ p: Int) {
 //Input: [1, 12, 3] -> 1 + 12 * 3 = 39
 //Input [1, 12, -3] -> 1 - 12 * (-3) = 33
 //Đối với dạng này truyền processing value vào parameter
+
+//13. Binary
+//Int -> string Binary
+print(String(101, radix: 2)) //output: 101
+//string Binary -> Int
+print(Int("101", radix: 2)!) //output: 5

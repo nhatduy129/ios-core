@@ -1,9 +1,10 @@
-//
-//  main.swift
-//  Coding
-//
-//  Created by Duy Nguyen on 21/4/19.
-//  Copyright © 2019 Duy Nguyen. All rights reserved.
-//
+func flippingBits(n: Int) -> Int {
+    var s = String(n, radix: 2)
+    s = String(Array<Character>(repeating: "0", count: 32 - s.count)) + s
+    let s2 = String(s.map {
+        $0 == "0" ? "1" : "0"
+    })
+    return Int(UInt(s2, radix: 2)!)
+}
 
-struct Fraction
+print(flippingBits(n: 4))
