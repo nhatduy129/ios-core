@@ -12,11 +12,11 @@ class SecondVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(demo), name: .demoNotificaiton, object: nil)
+        NotificationCustom.shared.addObserver(self, selector: #selector(demo), name: "DemoNotificationCustom")
     }
     
     @objc func demo() {
-        print("\(self.className): Notification Center is pushed")
+        print("\(self.className): Notification Custom is pushed")
     }
     
     @IBAction func goToThirdVCButtonTapped(_ sender: Any) {
