@@ -10,7 +10,7 @@ import Foundation
 
 class NotificationCustom: NSObject {
     
-    class Observer {
+    class Notify {
         weak var observer: NSObject?
         var selector: Selector
         
@@ -21,7 +21,7 @@ class NotificationCustom: NSObject {
     }
     
     static var shared = NotificationCustom()
-    var handlers = [String: Array<Observer>]()
+    var handlers = [String: Array<Notify>]()
     
     private override init() {
         super.init()
@@ -29,14 +29,15 @@ class NotificationCustom: NSObject {
     
     func addObserver(_ observer: Any, selector aSelector: Selector, name: String) {
         if handlers[name] == nil {
-            handlers[name] = Array<Observer>()
+            handlers[name] = Array<Notify>()
         }
-        handlers[name]?.append(Observer(observer: observer, selector: aSelector))
+        let notify = Notify(observer: observer, selector: aSelector)
+        handlers[name]?.append(notify)
     }
     
-    func post(name: String) {
-        for observer in handlers[name]! {
-            observer.observer?.perform(observer.selector)
+    func post(name: String, object: Any? = nil) {
+        for notify in handlers[name]! {
+            notify.observer?.perform(notify.selector, with: object)
         }
     }
 }
