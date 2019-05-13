@@ -115,3 +115,14 @@ func dfs(_ u: Int, _ p: Int) {
 print(String(101, radix: 2)) //output: 101
 //string Binary -> Int
 print(Int("101", radix: 2)!) //output: 5
+
+//14. Counted Set
+//Must import Foundation
+//Set, Dictionary dont need to import Foundation
+let set = NSCountedSet()
+set.add("Bob")
+set.add("Charlotte")
+set.add("John")
+set.add("Bob")
+
+print(set.count(for: "Bob"))
