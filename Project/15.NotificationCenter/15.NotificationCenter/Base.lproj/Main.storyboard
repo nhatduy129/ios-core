@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1c0-3A-G4N">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First tab-->
+        <scene sceneID="vOz-Q7-87P">
+            <objects>
+                <navigationController id="DXZ-i3-8nQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="First tab" id="Zbh-lj-Hcv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j54-Km-6EK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pqc-Up-XvW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89v-LZ-6Yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="104"/>
+        </scene>
+        <!--Second Tab-->
+        <scene sceneID="nVm-3Y-4At">
+            <objects>
+                <viewController id="E3l-Mx-7k6" customClass="SecondTabVC" customModule="_5_NotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VMA-TF-Y7d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azb-BQ-RUU">
+                                <rect key="frame" x="125" y="433" width="164" height="30"/>
+                                <state key="normal" title="Post Notification Center"/>
+                                <connections>
+                                    <action selector="pushNotificationButtonTapped:" destination="E3l-Mx-7k6" eventType="touchUpInside" id="niT-FP-vuB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Azb-BQ-RUU" firstAttribute="centerY" secondItem="VMA-TF-Y7d" secondAttribute="centerY" id="EkV-0n-bWH"/>
+                            <constraint firstItem="Azb-BQ-RUU" firstAttribute="centerX" secondItem="VMA-TF-Y7d" secondAttribute="centerX" id="f5p-PP-oWH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qXf-2t-pDb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second Tab" id="6mZ-7h-Ut3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJX-FA-Is9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771" y="861"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ab5-SK-2mc">
+            <objects>
+                <tabBarController id="1c0-3A-G4N" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ydZ-KX-gxM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DXZ-i3-8nQ" kind="relationship" relationship="viewControllers" id="OOl-Ud-cgQ"/>
+                        <segue destination="E3l-Mx-7k6" kind="relationship" relationship="viewControllers" id="aHc-Tc-6Hq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXP-zB-SO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1617" y="370"/>
+        </scene>
+        <!--FirstVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstVC" customModule="_5_NotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O90-ZN-Fif">
+                                <rect key="frame" x="149" y="433" width="116" height="30"/>
+                                <state key="normal" title="Go to second VC"/>
+                                <connections>
+                                    <segue destination="2EG-o6-Wh6" kind="show" id="CjZ-q6-hRn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O90-ZN-Fif" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cm8-V4-xiM"/>
+                            <constraint firstItem="O90-ZN-Fif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YzZ-vq-ubY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MbY-7u-QBY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="104"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="xFf-hh-lJO">
+            <objects>
+                <viewController id="2EG-o6-Wh6" customClass="SecondVC" customModule="_5_NotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S3G-lu-gBA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVx-tm-cke">
+                                <rect key="frame" x="158.5" y="433" width="97" height="30"/>
+                                <state key="normal" title="Go to third VC"/>
+                                <connections>
+                                    <action selector="goToThirdVCButtonTapped:" destination="2EG-o6-Wh6" eventType="touchUpInside" id="GgW-QY-kWi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QVx-tm-cke" firstAttribute="centerX" secondItem="S3G-lu-gBA" secondAttribute="centerX" id="T0L-Ng-N1p"/>
+                            <constraint firstItem="QVx-tm-cke" firstAttribute="centerY" secondItem="S3G-lu-gBA" secondAttribute="centerY" id="ljY-lk-LEZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fam-7c-lA0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTN-xA-XO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855" y="104"/>
+        </scene>
+    </scenes>
+</document>
