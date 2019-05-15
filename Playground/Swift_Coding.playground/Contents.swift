@@ -124,5 +124,8 @@ set.add("Bob")
 set.add("Charlotte")
 set.add("John")
 set.add("Bob")
-
 print(set.count(for: "Bob"))
+
+//15. ASCII of Character
+var c: Character = "c"   //Cannot: var c = "c" (compiler will consider as String)
+print(c.asciiValue!)
