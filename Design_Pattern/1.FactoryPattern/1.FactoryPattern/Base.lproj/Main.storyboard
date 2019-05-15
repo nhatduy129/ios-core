@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="__FactoryPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQz-pE-8SO">
+                                <rect key="frame" x="187" y="192" width="40" height="30"/>
+                                <state key="normal" title="Circle"/>
+                                <connections>
+                                    <action selector="circleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Y4-sg-2dh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grV-YQ-RdZ">
+                                <rect key="frame" x="88" y="192" width="49" height="30"/>
+                                <state key="normal" title="Square"/>
+                                <connections>
+                                    <action selector="squareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0f6-Bu-ms1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a1-Sn-vFt">
+                                <rect key="frame" x="277" y="192" width="69" height="30"/>
+                                <state key="normal" title="Rectangle"/>
+                                <connections>
+                                    <action selector="rectangleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpy-Fg-BFu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YQz-pE-8SO" firstAttribute="leading" secondItem="grV-YQ-RdZ" secondAttribute="trailing" constant="50" id="5SY-GP-ABS"/>
+                            <constraint firstItem="0a1-Sn-vFt" firstAttribute="centerY" secondItem="YQz-pE-8SO" secondAttribute="centerY" id="9LT-Ve-Dzj"/>
+                            <constraint firstItem="YQz-pE-8SO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="GBB-fy-tFw"/>
+                            <constraint firstItem="YQz-pE-8SO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LCe-ft-Rl5"/>
+                            <constraint firstItem="0a1-Sn-vFt" firstAttribute="leading" secondItem="YQz-pE-8SO" secondAttribute="trailing" constant="50" id="fu7-jl-exg"/>
+                            <constraint firstItem="grV-YQ-RdZ" firstAttribute="centerY" secondItem="YQz-pE-8SO" secondAttribute="centerY" id="pUh-NE-n9K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
