@@ -16,18 +16,16 @@ class MainVC: UIViewController {
     }
     
     @IBAction func squareButtonTapped(_ sender: Any) {
-        createShape(.square, on: view)
+        ShapeFactory.create(as: .square, on: view).display()
     }
     
     @IBAction func circleButtonTapped(_ sender: Any) {
-        createShape(.circle, on: view)
+        ShapeFactory.create(as: .circle, on: view).display()
     }
     
     @IBAction func rectangleButtonTapped(_ sender: Any) {
-        let shape = getShape(.rectangle, on: view)
-        shape.display()
         //Or use
-        //createShape(.rectangle, on: view)
+        ShapeFactory.create(as: .rectangle, on: view).display()
     }
 }
 

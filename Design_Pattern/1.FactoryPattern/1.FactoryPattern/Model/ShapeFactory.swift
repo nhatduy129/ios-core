@@ -15,14 +15,8 @@ enum Shapes {
 }
 
 class ShapeFactory {
-    
-    let parentView: UIView
-    
-    init(parentView: UIView) {
-        self.parentView = parentView
-    }
-    
-    func create(as shape: Shapes) -> HelperViewFactoryProtocol {
+
+    static func create(as shape: Shapes, on parentView: UIView) -> HelperViewFactoryProtocol {
         switch shape {
         case .square:
             let square = Square(parentView: parentView)
@@ -34,21 +28,19 @@ class ShapeFactory {
             let rectangle = Rectangle(parentView: parentView)
             return rectangle
         }
-        
-    } // end func display
-    
-} // end class ShapeFactory
+    }
+}
 
 // Public factory method to display shapes.
-func createShape(_ shape: Shapes, on view: UIView) {
-    let shapeFactory = ShapeFactory(parentView: view)
-    shapeFactory.create(as: shape).display()
-}
+//func createShape(_ shape: Shapes, on view: UIView) {
+//    let shapeFactory = ShapeFactory(parentView: view)
+//    shapeFactory.create(as: shape).display()
+//}
 
 // Alternative public factory method to display shapes.
 // Technically, the factory method should return one of
 // a number of related classes.
-func getShape(_ shape: Shapes, on view: UIView) -> HelperViewFactoryProtocol {
-    let shapeFactory = ShapeFactory(parentView: view)
-    return shapeFactory.create(as: shape)
-}
+//func getShape(_ shape: Shapes, on view: UIView) -> HelperViewFactoryProtocol {
+//    let shapeFactory = ShapeFactory(parentView: view)
+//    return shapeFactory.create(as: shape)
+//}
