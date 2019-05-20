@@ -17,6 +17,7 @@
 		0444B90E228D4E540033FD8F /* AdviceAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444B90D228D4E540033FD8F /* AdviceAdapterCell.swift */; };
 		0444B910228D5B7E0033FD8F /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444B90F228D5B7E0033FD8F /* AudioPlayerView.swift */; };
 		0444B912228D67F30033FD8F /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444B911228D67F30033FD8F /* VideoPlayerView.swift */; };
+		0444B914228D6B2C0033FD8F /* AdviceFatoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444B913228D6B2C0033FD8F /* AdviceFatoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0444B90D228D4E540033FD8F /* AdviceAdapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceAdapterCell.swift; sourceTree = "<group>"; };
 		0444B90F228D5B7E0033FD8F /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
 		0444B911228D67F30033FD8F /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		0444B913228D6B2C0033FD8F /* AdviceFatoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceFatoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				0444B90F228D5B7E0033FD8F /* AudioPlayerView.swift */,
 				0444B911228D67F30033FD8F /* VideoPlayerView.swift */,
 				0444B90D228D4E540033FD8F /* AdviceAdapterCell.swift */,
+				0444B913228D6B2C0033FD8F /* AdviceFatoryCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				0444B908228D416E0033FD8F /* AdviceCell.swift in Sources */,
 				0444B8F6228D33600033FD8F /* MainVC.swift in Sources */,
+				0444B914228D6B2C0033FD8F /* AdviceFatoryCell.swift in Sources */,
 				0444B910228D5B7E0033FD8F /* AudioPlayerView.swift in Sources */,
 				0444B8F4228D33600033FD8F /* AppDelegate.swift in Sources */,
 				0444B90E228D4E540033FD8F /* AdviceAdapterCell.swift in Sources */,
