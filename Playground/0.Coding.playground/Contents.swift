@@ -1,19 +1,18 @@
-class Person {
-    var name: String
-    init(name: String) {
-        self.name = name
-    }
-}
+import UIKit
 
-class Student: Person {
-    var id: Int
+struct Car {
+    var color: UIColor?
+    let model: String
     
-    init(name: String, id: Int) {
-        self.id = id
-        super.init(name: name)
+    init(model: String) {
+        self.model = model
+    }
+    
+    func changeColor(color: UIColor) {
+        self.color = color
     }
 }
 
-let s = Student(name: "duy", id: 1312087)
-print(s.id)
-print(s.name)
+var car = Car(model: "123")
+car.changeColor(color: .red)
+print("abc")
