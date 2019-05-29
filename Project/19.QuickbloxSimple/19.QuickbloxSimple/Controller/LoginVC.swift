@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class LoginVC: UIViewController {
 
@@ -20,15 +21,27 @@ class LoginVC: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         if QuickbloxHelper.isLoggedIn == false {
+            KRProgressHUD.show()
             QuickbloxHelper.login(login: emailTextField.text!, password: passwordTextField.text!, successBlock: {[weak self] _, _ in
-                guard let `self` = self else { return }
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
-                self.navigationController?.pushViewController(vc, animated: true)
+                KRProgressHUD.dismiss()
+                self?.goToChatVC()
             }, errorBlock: {error in
                 print(error.description)
             })
+        } else {
+            goToChatVC()
         }
+    }
+    
+    func goToChatVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChatVC") as! ChatVC
+        if FakeData.arrUser[0].username == emailTextField.text! {
+            vc.qbUser = FakeData.arrUser[0]
+        } else {
+            vc.qbUser = FakeData.arrUser[1]
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -1,16 +1,32 @@
 PODS:
+  - JSQMessagesViewController (7.3.5):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - KRActivityIndicatorView (3.0.2)
+  - KRProgressHUD (3.4.1):
+    - KRActivityIndicatorView (= 3.0.2)
   - QuickBlox (2.17.1)
 
 DEPENDENCIES:
+  - JSQMessagesViewController
+  - KRProgressHUD
   - QuickBlox
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - JSQMessagesViewController
+    - JSQSystemSoundPlayer
+    - KRActivityIndicatorView
+    - KRProgressHUD
     - QuickBlox
 
 SPEC CHECKSUMS:
+  JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  KRActivityIndicatorView: a2022d5d3e366207d2690f6bcc550f83aa91241b
+  KRProgressHUD: 115363b48feb530ab1f36c4146ed22e779e0f5aa
   QuickBlox: b8c327b61db8382880bd41185703acf228105a1c
 
-PODFILE CHECKSUM: 67438fcb5dfd6436cf1b92db432a11a63f6a1ee5
+PODFILE CHECKSUM: dfd12e2792aef811f29b24fdfc693ff87d03c78a
 
 COCOAPODS: 1.5.3

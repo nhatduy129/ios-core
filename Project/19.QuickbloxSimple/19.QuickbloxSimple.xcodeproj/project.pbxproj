@@ -14,6 +14,8 @@
 		042D857E229D25CC007BF94C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042D857C229D25CC007BF94C /* LaunchScreen.storyboard */; };
 		042D8586229D2AC0007BF94C /* QuickbloxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D8585229D2AC0007BF94C /* QuickbloxHelper.swift */; };
 		042D858C229D3B8E007BF94C /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D858B229D3B8E007BF94C /* ChatVC.swift */; };
+		04816F50229E637D00799E62 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04816F4F229E637D00799E62 /* User.swift */; };
+		04816F52229E63DE00799E62 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04816F51229E63DE00799E62 /* Data.swift */; };
 		1030435BB1213F34689BCA9A /* Pods_19_QuickbloxSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7006AEA3551FAFBD30F872BD /* Pods_19_QuickbloxSimple.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		042D857F229D25CC007BF94C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042D8585229D2AC0007BF94C /* QuickbloxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickbloxHelper.swift; sourceTree = "<group>"; };
 		042D858B229D3B8E007BF94C /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		04816F4F229E637D00799E62 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04816F51229E63DE00799E62 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7006AEA3551FAFBD30F872BD /* Pods_19_QuickbloxSimple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_19_QuickbloxSimple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A5B8793108F39826D0EA92 /* Pods-19.QuickbloxSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19.QuickbloxSimple.release.xcconfig"; path = "Pods/Target Support Files/Pods-19.QuickbloxSimple/Pods-19.QuickbloxSimple.release.xcconfig"; sourceTree = "<group>"; };
 		E184A3756955847CFA65650A /* Pods-19.QuickbloxSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19.QuickbloxSimple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-19.QuickbloxSimple/Pods-19.QuickbloxSimple.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 		042D8572229D25CB007BF94C /* 19.QuickbloxSimple */ = {
 			isa = PBXGroup;
 			children = (
+				04816F4E229E636C00799E62 /* Model */,
 				042D858A229D39C6007BF94C /* Controller */,
 				042D8587229D39B0007BF94C /* Helper */,
 				042D8573229D25CB007BF94C /* AppDelegate.swift */,
@@ -99,6 +104,15 @@
 				042D858B229D3B8E007BF94C /* ChatVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		04816F4E229E636C00799E62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04816F4F229E637D00799E62 /* User.swift */,
+				04816F51229E63DE00799E62 /* Data.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E2283756A00DC523579A584B /* Pods */ = {
@@ -188,12 +202,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-19.QuickbloxSimple/Pods-19.QuickbloxSimple-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${PODS_ROOT}/QuickBlox/Quickblox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quickblox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,8 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				042D858C229D3B8E007BF94C /* ChatVC.swift in Sources */,
+				04816F52229E63DE00799E62 /* Data.swift in Sources */,
 				042D8576229D25CB007BF94C /* LoginVC.swift in Sources */,
 				042D8574229D25CB007BF94C /* AppDelegate.swift in Sources */,
+				04816F50229E637D00799E62 /* User.swift in Sources */,
 				042D8586229D2AC0007BF94C /* QuickbloxHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
