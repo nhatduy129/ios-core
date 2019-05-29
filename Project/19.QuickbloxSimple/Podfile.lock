@@ -1,0 +1,16 @@
+PODS:
+  - QuickBlox (2.17.1)
+
+DEPENDENCIES:
+  - QuickBlox
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - QuickBlox
+
+SPEC CHECKSUMS:
+  QuickBlox: b8c327b61db8382880bd41185703acf228105a1c
+
+PODFILE CHECKSUM: 67438fcb5dfd6436cf1b92db432a11a63f6a1ee5
+
+COCOAPODS: 1.5.3
