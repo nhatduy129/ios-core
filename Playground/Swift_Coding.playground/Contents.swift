@@ -129,3 +129,20 @@ print(set.count(for: "Bob"))
 //15. ASCII of Character
 var c: Character = "c"   //Cannot: var c = "c" (compiler will consider as String)
 print(c.asciiValue!)
+
+//16. Binary search
+func search(_ nums: [Int], _ target: Int) -> Int {
+    var left = 0, right = nums.count - 1
+    var mid: Int
+    while left <= right {
+        mid = (left + right) / 2
+        if nums[mid] > target {
+            right = mid - 1
+        } else if nums[mid] < target {
+            left = mid + 1
+        } else {
+            return mid
+        }
+    }
+    return -1
+}
