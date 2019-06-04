@@ -14,7 +14,11 @@ var dt: [Int: [Int]] = [:]
 if dt[3] != nil {
     //do something
 }
-
+//iterate
+var dict = ["duy": 13, "vu": 209, "nhat": 1209]
+for a in dict {                             // Hoặc: for (key, value) in dict { }
+    print("\(a.key): \(a.value)")
+}
 
 //3. Set
 var st = Set<Int>()
@@ -146,3 +150,15 @@ func search(_ nums: [Int], _ target: Int) -> Int {
     }
     return -1
 }
+
+//17. Basic func of Array
+let arrInt = [0,1,2,3,4,5,6]
+let arrStr = ["vu", "nguyen", "duy"]
+//reduce
+arrInt[1...5].reduce(0, +)      //return 15
+//filter
+arrInt.filter { $0 > 4 }        //return [5, 6]
+//map
+arrStr.map{ $0.count }          //return [2, 6, 3]
+//sort
+arrInt.sort(by: <)              //Change ordered element in arrInt. Remember always need "by"
