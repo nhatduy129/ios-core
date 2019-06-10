@@ -1,42 +1,17 @@
+class Singleton {
+    static var shared = Singleton()
+    private init() {}
+}
 
-extension Float {
-    static func +(lhs: Int, rhs: Float) -> Float {
-        return Float(lhs) + rhs
-    }
+class SubClass: Singleton {
     
-    static func +(lhs: Float, rhs: Int) -> Float {
-        return lhs + Float(rhs)
-    }
-    
-    static func +=(lhs: inout Float, rhs: Int) {
-        lhs += Float(rhs)
+}
+
+extension Singleton {
+    func cal(a: Int, b: Int) -> Int {
+        return a + b
     }
 }
 
-extension Double {
-    static func +(lhs: Int, rhs: Double) -> Double {
-        return Double(lhs) + rhs
-    }
-    
-    static func +(lhs: Double, rhs: Int) -> Double {
-        return lhs + Double(rhs)
-    }
-    
-    static func +=(lhs: inout Double, rhs: Int) {
-        lhs += Double(rhs)
-    }
-}
-
-extension Double {
-    static func +(lhs: Float, rhs: Double) -> Double {
-        return Double(lhs) + rhs
-    }
-    
-    static func +(lhs: Double, rhs: Float) -> Double {
-        return lhs + Double(rhs)
-    }
-    
-    static func +=(lhs: inout Double, rhs: Float) {
-        lhs += Double(rhs)
-    }
-}
+var ans = Singleton.shared.cal(a: 1, b: 2)
+print(ans)
