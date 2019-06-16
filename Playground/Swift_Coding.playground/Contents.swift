@@ -162,3 +162,6 @@ arrInt.filter { $0 > 4 }        //return [5, 6]
 arrStr.map{ $0.count }          //return [2, 6, 3]
 //sort
 arrInt.sort(by: <)              //Change ordered element in arrInt. Remember always need "by"
+
+//18. Get array of characters from 'a' -> 'z'
+let az = (97...122).map({Character(UnicodeScalar($0))})

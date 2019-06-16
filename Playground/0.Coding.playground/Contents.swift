@@ -1,17 +1,4 @@
-class Singleton {
-    static var shared = Singleton()
-    private init() {}
-}
+var genres = ["towel", "42"]
+var jointGenres : String = genres.reduce("", { $0 == "" ? $1 : $0 + "," + $1 })
 
-class SubClass: Singleton {
-    
-}
-
-extension Singleton {
-    func cal(a: Int, b: Int) -> Int {
-        return a + b
-    }
-}
-
-var ans = Singleton.shared.cal(a: 1, b: 2)
-print(ans)
+print(jointGenres)

@@ -1,70 +1,41 @@
 import Foundation
 
-extension Decimal {
-    var int: Int {
-        return NSDecimalNumber(decimal: self).intValue
-    }
-}
+let az = (97...122).map({Character(UnicodeScalar($0))})
 
-extension Int {
-    func power(_ n: Int) -> Int {
-        if n == 0 {
-            return 1
+func getMinimumDifference(a: [String], b: [String]) -> [Int] {
+    var result = [Int]()
+    for i in 0..<a.count {
+        if a[i].count != b[i].count {
+            result.append(-1)
+            continue
         }
-        var ans: Int = 1
-        for i in Array<Int>(repeating: self, count: n) {
-            if Double(Double(ans) * Double(i)) < Double(Int.max) {
-                ans *= i
+        var countA = [Character: Int]()
+        var countB = [Character: Int]()
+        for c in a[i] {
+            if countA[c] != nil {
+                countA[c]! += 1
             } else {
-                return Int.max
+                countA[c] = 1
             }
         }
-        return ans
-    }
-}
-
-
-func cal(_ k: Int, _ m: Int) -> Int {
-    if k >= 10 && m >= 100 {
-        return Int.max
-    }
-    var ans: Int = 0
-    for i in Array(0...k).map({ m.power($0) }) {
-        if Double(Double(ans) + Double(i)) < Double(Int.max) {
-            ans += i
-        } else {
-            return Int.max
+        for c in b[i] {
+            if countB[c] != nil {
+                countB[c]! += 1
+            } else {
+                countB[c] = 1
+            }
         }
-    }
-    return ans
-}
-
-func bs(_ k: Int, _ n: Int) -> Int {
-    var l = 1, r = n, mid: Int = 0
-    
-    while(r - l > 1) {
-        mid = (l + r)/2;
-        if(cal(k, mid) >= n) {
-            r = mid
-        } else {
-            l = mid
+        var cnt: Int = 0
+        for c in az {
+            cnt += min(countA[c] ?? 0, countB[c] ?? 0)
         }
+        result.append(a[i].count - cnt)
     }
-    return r
-}
-
-func smallestGoodBase(_ n: String) -> String {
-    let n = Int(n)!
-    for i in stride(from: Int(log2(Double(n))), through: 1, by: -1) {
-        let tmp = bs(i, n)
-        if cal(i, tmp) == n {
-            return String(tmp)
-        }
-    }
-    return ""
+    return result
 }
 
 
-print(smallestGoodBase("665930169964312773"))
+print(getMinimumDifference(a: ["c"], b: ["b"]))
 
-//print(cal(50, 2))
+//print(xs)
+//-1 0 1 2 3
