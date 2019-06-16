@@ -44,7 +44,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of this VC Title of this VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-Xr-H87">
-                                <rect key="frame" x="20" y="467.5" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="493.5" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usl-RB-p4L">
-                                <rect key="frame" x="165.5" y="584" width="83" height="30"/>
+                                <rect key="frame" x="165.5" y="610" width="83" height="30"/>
                                 <color key="backgroundColor" red="0.87354882020000002" green="0.43965442490000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change text">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,11 +66,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="On8-ed-MiT">
-                                <rect key="frame" x="180" y="194" width="214" height="253.5"/>
+                                <rect key="frame" x="180" y="194" width="214" height="279.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-zv-d4t">
-                                        <rect key="frame" x="5" y="5" width="204" height="243.5"/>
+                                        <rect key="frame" x="5" y="31" width="204" height="243.5"/>
                                         <string key="text">Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1v-lH-n0Q">
+                                        <rect key="frame" x="5" y="5" width="204" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -79,9 +85,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5iZ-zv-d4t" firstAttribute="leading" secondItem="On8-ed-MiT" secondAttribute="leading" constant="5" id="1BL-jQ-MM3"/>
-                                    <constraint firstItem="5iZ-zv-d4t" firstAttribute="top" secondItem="On8-ed-MiT" secondAttribute="top" constant="5" id="5zd-w3-cMt"/>
                                     <constraint firstAttribute="trailing" secondItem="5iZ-zv-d4t" secondAttribute="trailing" constant="5" id="Ddv-TQ-hGb"/>
                                     <constraint firstAttribute="bottom" secondItem="5iZ-zv-d4t" secondAttribute="bottom" constant="5" id="Ja9-Sd-1c2"/>
+                                    <constraint firstAttribute="trailing" secondItem="I1v-lH-n0Q" secondAttribute="trailing" constant="5" id="Vly-ay-jH1"/>
+                                    <constraint firstItem="5iZ-zv-d4t" firstAttribute="top" secondItem="I1v-lH-n0Q" secondAttribute="bottom" constant="5" id="dAN-Xh-T6g"/>
+                                    <constraint firstItem="I1v-lH-n0Q" firstAttribute="leading" secondItem="On8-ed-MiT" secondAttribute="leading" constant="5" id="j05-fH-Gd9"/>
+                                    <constraint firstItem="I1v-lH-n0Q" firstAttribute="top" secondItem="On8-ed-MiT" secondAttribute="top" constant="5" id="kVA-C9-1It"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -111,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1216" y="-347"/>
+            <point key="canvasLocation" x="-1217.3913043478262" y="-347.54464285714283"/>
         </scene>
         <!--Second-->
         <scene sceneID="nfb-QK-VHr">
@@ -178,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRs-vu-rsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1217" y="338"/>
+            <point key="canvasLocation" x="-1217" y="331"/>
         </scene>
     </scenes>
     <resources>
