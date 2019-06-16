@@ -43,15 +43,8 @@
                                     <constraint firstAttribute="width" constant="150" id="YLK-Bi-HXY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-zv-d4t">
-                                <rect key="frame" x="200" y="194" width="184" height="142.5"/>
-                                <string key="text">Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of this VC Title of this VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-Xr-H87">
-                                <rect key="frame" x="20" y="366.5" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="467.5" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usl-RB-p4L">
-                                <rect key="frame" x="165.5" y="483" width="83" height="30"/>
+                                <rect key="frame" x="165.5" y="584" width="83" height="30"/>
                                 <color key="backgroundColor" red="0.87354882020000002" green="0.43965442490000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change text">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,20 +65,39 @@
                                     <action selector="changeTextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JW4-pi-R2M"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="On8-ed-MiT">
+                                <rect key="frame" x="180" y="194" width="214" height="253.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-zv-d4t">
+                                        <rect key="frame" x="5" y="5" width="204" height="243.5"/>
+                                        <string key="text">Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy </string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5iZ-zv-d4t" firstAttribute="leading" secondItem="On8-ed-MiT" secondAttribute="leading" constant="5" id="1BL-jQ-MM3"/>
+                                    <constraint firstItem="5iZ-zv-d4t" firstAttribute="top" secondItem="On8-ed-MiT" secondAttribute="top" constant="5" id="5zd-w3-cMt"/>
+                                    <constraint firstAttribute="trailing" secondItem="5iZ-zv-d4t" secondAttribute="trailing" constant="5" id="Ddv-TQ-hGb"/>
+                                    <constraint firstAttribute="bottom" secondItem="5iZ-zv-d4t" secondAttribute="bottom" constant="5" id="Ja9-Sd-1c2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5iZ-zv-d4t" firstAttribute="leading" secondItem="WkX-xn-9Z1" secondAttribute="trailing" constant="30" id="24c-dX-y5V"/>
-                            <constraint firstItem="5iZ-zv-d4t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="2re-mm-Qg7"/>
+                            <constraint firstItem="On8-ed-MiT" firstAttribute="leading" secondItem="WkX-xn-9Z1" secondAttribute="trailing" constant="10" id="4QW-RZ-fv2"/>
                             <constraint firstItem="usl-RB-p4L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5IU-bn-4pW"/>
                             <constraint firstItem="8ra-Xr-H87" firstAttribute="top" secondItem="WkX-xn-9Z1" secondAttribute="bottom" priority="1" constant="30" id="66t-Ph-h7C"/>
                             <constraint firstItem="8ra-Xr-H87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LL0-ZN-9AJ"/>
                             <constraint firstItem="t8G-Hw-9v7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OP4-j8-Rh6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5iZ-zv-d4t" secondAttribute="trailing" constant="30" id="PGd-lG-lb2"/>
                             <constraint firstItem="usl-RB-p4L" firstAttribute="top" secondItem="8ra-Xr-H87" secondAttribute="bottom" constant="90" id="SPK-iL-jtW"/>
-                            <constraint firstItem="8ra-Xr-H87" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5iZ-zv-d4t" secondAttribute="bottom" constant="30" id="a2y-2P-8nm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t8G-Hw-9v7" secondAttribute="bottom" constant="10" id="brp-Mq-gHA"/>
+                            <constraint firstItem="On8-ed-MiT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="emw-Eb-Oxs"/>
+                            <constraint firstItem="8ra-Xr-H87" firstAttribute="top" relation="greaterThanOrEqual" secondItem="On8-ed-MiT" secondAttribute="bottom" constant="20" id="f32-3u-vE3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t8G-Hw-9v7" secondAttribute="trailing" constant="20" id="nKP-Mb-zwo"/>
+                            <constraint firstAttribute="trailing" secondItem="On8-ed-MiT" secondAttribute="trailing" constant="20" id="sTS-xA-0uR"/>
                             <constraint firstItem="WkX-xn-9Z1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tfg-1T-WWp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ra-Xr-H87" secondAttribute="trailing" constant="20" id="u5s-Ie-1ly"/>
                             <constraint firstItem="WkX-xn-9Z1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wNR-UC-pkv"/>
