@@ -43,34 +43,59 @@
                                     <constraint firstAttribute="width" constant="150" id="YLK-Bi-HXY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label nguyen vu nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-zv-d4t">
-                                <rect key="frame" x="200" y="244" width="184" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iZ-zv-d4t">
+                                <rect key="frame" x="200" y="194" width="184" height="142.5"/>
+                                <string key="text">Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy Label nguyen vu nhat duy nguyen vu nhat duy  nhat duy nguyen vu nhat duy </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of this VC Title of this VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-Xr-H87">
-                                <rect key="frame" x="20" y="324" width="374" height="26.5"/>
+                                <rect key="frame" x="20" y="366.5" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test auto layout depends on 2 elements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8G-Hw-9v7">
+                                <rect key="frame" x="20" y="782" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usl-RB-p4L">
+                                <rect key="frame" x="165.5" y="483" width="83" height="30"/>
+                                <color key="backgroundColor" red="0.87354882020000002" green="0.43965442490000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change text">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeTextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JW4-pi-R2M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5iZ-zv-d4t" firstAttribute="leading" secondItem="WkX-xn-9Z1" secondAttribute="trailing" constant="30" id="24c-dX-y5V"/>
-                            <constraint firstItem="5iZ-zv-d4t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="2re-mm-Qg7"/>
-                            <constraint firstItem="8ra-Xr-H87" firstAttribute="top" relation="lessThanOrEqual" secondItem="WkX-xn-9Z1" secondAttribute="bottom" constant="30" id="66t-Ph-h7C"/>
+                            <constraint firstItem="5iZ-zv-d4t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="2re-mm-Qg7"/>
+                            <constraint firstItem="usl-RB-p4L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5IU-bn-4pW"/>
+                            <constraint firstItem="8ra-Xr-H87" firstAttribute="top" secondItem="WkX-xn-9Z1" secondAttribute="bottom" priority="1" constant="30" id="66t-Ph-h7C"/>
                             <constraint firstItem="8ra-Xr-H87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LL0-ZN-9AJ"/>
+                            <constraint firstItem="t8G-Hw-9v7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OP4-j8-Rh6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5iZ-zv-d4t" secondAttribute="trailing" constant="30" id="PGd-lG-lb2"/>
+                            <constraint firstItem="usl-RB-p4L" firstAttribute="top" secondItem="8ra-Xr-H87" secondAttribute="bottom" constant="90" id="SPK-iL-jtW"/>
+                            <constraint firstItem="8ra-Xr-H87" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5iZ-zv-d4t" secondAttribute="bottom" constant="30" id="a2y-2P-8nm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t8G-Hw-9v7" secondAttribute="bottom" constant="10" id="brp-Mq-gHA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t8G-Hw-9v7" secondAttribute="trailing" constant="20" id="nKP-Mb-zwo"/>
                             <constraint firstItem="WkX-xn-9Z1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tfg-1T-WWp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ra-Xr-H87" secondAttribute="trailing" constant="20" id="u5s-Ie-1ly"/>
                             <constraint firstItem="WkX-xn-9Z1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wNR-UC-pkv"/>
-                            <constraint firstItem="8ra-Xr-H87" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5iZ-zv-d4t" secondAttribute="bottom" constant="30" id="ySE-BU-lsI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" id="k5E-8h-xaN"/>
+                    <connections>
+                        <outlet property="textLabel" destination="5iZ-zv-d4t" id="JL0-Vb-Jpq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
