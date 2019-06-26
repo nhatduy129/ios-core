@@ -15,6 +15,7 @@
 		0457A78922C362E900F754DD /* RetainCycleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457A78822C362E900F754DD /* RetainCycleVC.swift */; };
 		0457A78F22C374D400F754DD /* SecondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457A78E22C374D400F754DD /* SecondCell.swift */; };
 		04AF15ED22C3B47200EC340D /* ThidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF15EC22C3B47200EC340D /* ThidVC.swift */; };
+		04AF15F022C3CA0E00EC340D /* FourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF15EF22C3CA0E00EC340D /* FourVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0457A78822C362E900F754DD /* RetainCycleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCycleVC.swift; sourceTree = "<group>"; };
 		0457A78E22C374D400F754DD /* SecondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCell.swift; sourceTree = "<group>"; };
 		04AF15EC22C3B47200EC340D /* ThidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThidVC.swift; sourceTree = "<group>"; };
+		04AF15EF22C3CA0E00EC340D /* FourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		0457A78A22C3748C00F754DD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				04AF15EE22C3C98500EC340D /* Four */,
 				04AF15EB22C3B45100EC340D /* Third */,
 				0457A78C22C374A500F754DD /* Second */,
 				0457A78B22C3749A00F754DD /* First */,
@@ -111,6 +114,14 @@
 				04AF15EC22C3B47200EC340D /* ThidVC.swift */,
 			);
 			path = Third;
+			sourceTree = "<group>";
+		};
+		04AF15EE22C3C98500EC340D /* Four */ = {
+			isa = PBXGroup;
+			children = (
+				04AF15EF22C3CA0E00EC340D /* FourVC.swift */,
+			);
+			path = Four;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 				0457A77722C33AA600F754DD /* FirstVC.swift in Sources */,
 				0457A78722C356CB00F754DD /* SecondVC.swift in Sources */,
 				0457A78922C362E900F754DD /* RetainCycleVC.swift in Sources */,
+				04AF15F022C3CA0E00EC340D /* FourVC.swift in Sources */,
 				04AF15ED22C3B47200EC340D /* ThidVC.swift in Sources */,
 				0457A78F22C374D400F754DD /* SecondCell.swift in Sources */,
 				0457A77522C33AA600F754DD /* AppDelegate.swift in Sources */,

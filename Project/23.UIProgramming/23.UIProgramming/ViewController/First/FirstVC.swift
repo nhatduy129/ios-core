@@ -37,8 +37,11 @@ class FirstVC: UIViewController {
         let topView = UIView()
         view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let demoConstraint = topView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
+        demoConstraint.priority = UILayoutPriority(rawValue: 999)
         NSLayoutConstraint.activate([
-            topView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            demoConstraint,
             topView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
             topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             topView.heightAnchor.constraint(equalToConstant: 200),
