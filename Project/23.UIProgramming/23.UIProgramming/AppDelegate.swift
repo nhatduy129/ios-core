@@ -17,11 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let vc1 = FirstVC()
         let vc2 = SecondVC()
+        let vc3 = ThirdVC()
         let navController1 = UINavigationController(rootViewController: vc1)
         navController1.title = "Frist"
         vc2.title = "Second"
+        vc3.title = "Third"
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [navController1, vc2]
+        tabBarController.viewControllers = [navController1, vc2, vc3]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
