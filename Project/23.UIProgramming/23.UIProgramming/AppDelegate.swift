@@ -15,11 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let vc = ViewController()
-        let nvc = UINavigationController(rootViewController: vc)
+        let vc1 = FirstVC()
+        let vc2 = SecondVC()
+        let navController1 = UINavigationController(rootViewController: vc1)
+        navController1.title = "Frist"
+        vc2.title = "Second"
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [navController1, vc2]
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = nvc
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
         return true

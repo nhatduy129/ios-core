@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstVC: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +29,22 @@ class ViewController: UIViewController {
         topView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         topView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         topView.backgroundColor = .green
+        
+        let button = UIButton()
+        button.setTitle("Go to Retain Cycle VC", for: .normal)
+        view.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+    }
+    
+    @objc func buttonTapped(_ sender: UIButton) {
+        let vc = RetainCycleVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
