@@ -1,20 +1,29 @@
 import Foundation
 
-let az = (97...122).map({Character(UnicodeScalar($0))})
+//func subsetsHelper(arr: [Int], i: Int, result: inout [[Int]]) {
+//    guard i < arr.count else {
+//        return
+//    }
+//    for var sub in result {
+//        sub.append(arr[i])
+//
+//    }
+//}
 
-let q1 = DispatchQueue(label: "hello 1")
-let q2 = DispatchQueue(label: "hello 2", attributes: .concurrent)
-
-print("1")
-q1.async {
-    print("2")
-    q2.async {
-        print("3")
-        q1.sync {
-            print("4")
+func subsets(arr: [Int]) -> [[Int]] {
+    var result = [[Int]]()
+    var temp = [[Int]]()
+    temp.append([])
+    for i in 0..<arr.count {
+        result = []
+        for var sub in temp {
+            result.append(sub)
+            sub.append(arr[i])
+            result.append(sub)
         }
-        print("5")
+        temp = result
     }
-    print("6")
+    return result
 }
-print("7")
+
+print(subsets(arr: [1,2,3]))
