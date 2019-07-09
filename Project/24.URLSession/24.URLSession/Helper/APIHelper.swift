@@ -33,8 +33,8 @@ class APIHelper {
         task.resume()
     }
     
-    static func searchMovie(keyword: String, completed: @escaping (([Book]) -> Void), error: ((String) -> Void)?) {
-        var components = URLComponents(string: "https://developers.themoviedb.org/3/search/search-movies")!
+    static func searchMovie(keyword: String, completed: @escaping (([Movie]) -> Void), error: ((String) -> Void)?) {
+        var components = URLComponents(string: "https://api.themoviedb.org/3/search/movie")!
         components.queryItems = [
             URLQueryItem(name: "api_key", value: "008bd3a6c99b393aaa2a290d16f21937"),
             URLQueryItem(name: "query", value: keyword),
@@ -51,8 +51,8 @@ class APIHelper {
                 let urlResponse = urlResponse as? HTTPURLResponse,
                 urlResponse.statusCode == 200 {
                 do {
-                    let dataParsed = try decoder.decode([Book].self, from: data)
-                    completed(dataParsed)
+                    let dataParsed = try decoder.decode(PagingResponse<Movie>.self, from: data)
+                    completed(dataParsed.results ?? [])
                 } catch (let err) {
                     error?(err.localizedDescription)
                 }

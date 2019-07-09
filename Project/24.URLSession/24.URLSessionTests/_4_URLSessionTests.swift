@@ -19,10 +19,21 @@ class _4_URLSessionTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testGetListBooks() {
         let expectation = self.expectation(description: "expect 1")
         expectation.expectedFulfillmentCount = 1
         APIHelper.getListBooks(completed: { data in
+            print(data)
+            XCTAssert(data.count > 0)
+            expectation.fulfill()
+        }, error: nil)
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    func testSearchMovie() {
+        let expectation = self.expectation(description: "expect 1")
+        expectation.expectedFulfillmentCount = 1
+        APIHelper.searchMovie(keyword: "king", completed: { data in
             print(data)
             XCTAssert(data.count > 0)
             expectation.fulfill()

@@ -15,6 +15,8 @@
 		049DE37622D4442700911922 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE37522D4442700911922 /* APIHelper.swift */; };
 		049DE37A22D45D1C00911922 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE37922D45D1C00911922 /* Book.swift */; };
 		049DE3A022D4624000911922 /* _4_URLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE39F22D4624000911922 /* _4_URLSessionTests.swift */; };
+		049DE3B722D4736B00911922 /* PagingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE3B622D4736B00911922 /* PagingResponse.swift */; };
+		049DE3B922D4738800911922 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE3B822D4738800911922 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		049DE39D22D4624000911922 /* 24.URLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 24.URLSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		049DE39F22D4624000911922 /* _4_URLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4_URLSessionTests.swift; sourceTree = "<group>"; };
 		049DE3A122D4624000911922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049DE3B622D4736B00911922 /* PagingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingResponse.swift; sourceTree = "<group>"; };
+		049DE3B822D4738800911922 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				049DE37922D45D1C00911922 /* Book.swift */,
+				049DE3B622D4736B00911922 /* PagingResponse.swift */,
+				049DE3B822D4738800911922 /* Movie.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				049DE37A22D45D1C00911922 /* Book.swift in Sources */,
+				049DE3B722D4736B00911922 /* PagingResponse.swift in Sources */,
+				049DE3B922D4738800911922 /* Movie.swift in Sources */,
 				049DE37622D4442700911922 /* APIHelper.swift in Sources */,
 				049DE36622D43B1200911922 /* ViewController.swift in Sources */,
 				049DE36422D43B1200911922 /* AppDelegate.swift in Sources */,
