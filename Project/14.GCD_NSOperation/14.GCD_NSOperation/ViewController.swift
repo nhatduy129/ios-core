@@ -54,5 +54,19 @@ class ViewController: UIViewController {
         opQueue.addOperations(arrOp, waitUntilFinished: true)
         opQueue.maxConcurrentOperationCount = 1
     }
+    
+    @IBAction func demoButtonTapped(_ sender: UIButton) {
+        let q = DispatchQueue(label: "")
+        q.async {
+            DispatchQueue.main.sync {
+                print("abc")
+            }
+        }
+        for i in 0...10000 {
+            if i.isMultiple(of: 3000) {
+                print("DDD")
+            }
+        }
+    }
 }
 
