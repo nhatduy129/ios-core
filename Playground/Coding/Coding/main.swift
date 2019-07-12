@@ -1,17 +1,29 @@
 import Foundation
 
-class A {
-    private let threadSafeCountQueue = DispatchQueue(label: "...", attributes: .concurrent)
-    private var _count = 0
-    public var count: Int {
-        get {
-            return threadSafeCountQueue.sync {
-                return _count
-            }
-        } set {
-            threadSafeCountQueue.async(flags: .barrier) { [unowned self] in
-                self._count = newValue
-            }
+let op1 = BlockOperation()
+op1.addExecutionBlock {
+    for i in 0...80000 {
+        if i.isMultiple(of: 30000) {
+            print("A")
         }
     }
 }
+op1.addExecutionBlock {
+    for i in 0...80000 {
+        if i.isMultiple(of: 30000) {
+            print("B")
+        }
+    }
+}
+op1.start()
+
+let op2 = BlockOperation {
+    for i in 0...80000 {
+        if i.isMultiple(of: 30000) {
+            print("C")
+        }
+    }
+}
+op2.start()
+
+sleep(3)
