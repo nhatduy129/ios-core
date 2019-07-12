@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -56,15 +57,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func demoButtonTapped(_ sender: UIButton) {
-        let q = DispatchQueue(label: "")
-        q.async {
-            DispatchQueue.main.sync {
-                print("abc")
+        let privateMOC = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateMOC.perform {
+            for i in 0...8000 {
+                if i.isMultiple(of: 3000) {
+                    print("1")
+                }
             }
         }
-        for i in 0...10000 {
-            if i.isMultiple(of: 3000) {
-                print("DDD")
+        privateMOC.perform {
+            for i in 0...8000 {
+                if i.isMultiple(of: 3000) {
+                    print("2")
+                }
+            }
+        }
+        privateMOC.perform {
+            for i in 0...8000 {
+                if i.isMultiple(of: 3000) {
+                    print("3")
+                }
             }
         }
     }
