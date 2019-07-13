@@ -1,5 +1,7 @@
 import Foundation
 
+//Operation
+
 let op1 = Operation()
 op1.completionBlock = {
     for i in 0...8000 {
@@ -20,14 +22,18 @@ op2.completionBlock = {
 }
 op2.start()
 
+//BlockOperation: Operation
+
+let sentence = "Ray's courses are the best!"
+let wordOperation = BlockOperation()
+for word in sentence.split(separator: " ") {
+    wordOperation.addExecutionBlock {
+        print(word)
+    }
+}
+
+wordOperation.start()
+
+//OperationQueue
+
 sleep(2)
-
-
-//let sentence = "Ray's courses are the best!"
-//let wordOperation = BlockOperation()
-//for word in sentence.split(separator: " ") {
-//    wordOperation.addExecutionBlock {
-//        print(word)
-//        sleep(2)
-//    }
-//}
