@@ -73,12 +73,19 @@ import Foundation
 //Operation Dependency
 
 class OperationA: Operation {
+    
+    var abc: String?
+    
     override func main() {
         for i in 0...8000 {
             if i.isMultiple(of: 3000) {
                 print("A Operation")
             }
         }
+    }
+    
+    deinit {
+        print("Operation A is deallocated")
     }
 }
 
@@ -90,23 +97,31 @@ class OperationB: Operation {
             }
         }
     }
+    
+    deinit {
+        print("Operation B is deallocated")
+    }
 }
 
-let aOp = OperationA()
-let bOp = OperationB()
-
-aOp.completionBlock = {
-    print("A Operation finished")
+func run() {
+    let aOp = OperationA()
+    let bOp = OperationB()
+    aOp.completionBlock = {
+        aOp.abc = "Duy"
+        print("A Operation finished")
+    }
+    bOp.completionBlock = {
+        print("B Operation finished")
+    }
+    
+    aOp.addDependency(bOp)
+    
+    let queue = OperationQueue()
+    queue.maxConcurrentOperationCount = 1
+    queue.addOperation(aOp)
+    queue.addOperation(bOp)
 }
-bOp.completionBlock = {
-    print("B Operation finished")
-}
 
-aOp.addDependency(bOp)
-
-let queue = OperationQueue()
-queue.maxConcurrentOperationCount = 1
-queue.addOperation(aOp)
-queue.addOperation(bOp)
+run()
 
 sleep(2)
