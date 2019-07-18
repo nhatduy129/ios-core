@@ -26,27 +26,25 @@ class OperationA: Operation {
     }
     
 }
-class A {
+struct A {
     func main() {
-        let array = [6,5,4,3,2,1]
-        let operation = OperationA(array: array)
-        let operationQueue = OperationQueue()
-        operationQueue.addOperation(operation)
-        operation.completionBlock = {
-            print("done")
-            for i in operation.array {
-                print(i)
-            }
-            
+        DispatchQueue.global().async {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                self.printA()
+            })
         }
     }
     
-    deinit {
-        print("A is deinit")
+    func printA() {
+        print("A")
     }
 }
 
-let a = A()
-a.main()
+func run() {
+    let a = A()
+    a.main()
+}
 
-sleep(2)
+run()
+
+sleep(10)
