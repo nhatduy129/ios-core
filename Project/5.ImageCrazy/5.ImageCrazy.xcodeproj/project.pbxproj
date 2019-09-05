@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0419630F23215B18001073EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F00F822687B2700307178 /* ViewController.swift */; };
+		0419631023215B18001073EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F00F622687B2700307178 /* AppDelegate.swift */; };
+		0419631323215B18001073EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FF22687B2A00307178 /* LaunchScreen.storyboard */; };
+		0419631423215B18001073EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FD22687B2A00307178 /* Assets.xcassets */; };
+		0419631523215B18001073EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FA22687B2700307178 /* Main.storyboard */; };
 		044F00F722687B2700307178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F00F622687B2700307178 /* AppDelegate.swift */; };
 		044F00F922687B2700307178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F00F822687B2700307178 /* ViewController.swift */; };
 		044F00FC22687B2700307178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FA22687B2700307178 /* Main.storyboard */; };
@@ -15,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0419631923215B18001073EF /* 5.ImageCrazy Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "5.ImageCrazy Beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0419631A23215B18001073EF /* Info_beta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info_beta.plist; path = "/Users/duynguyen/project/ios-core/Project/5.ImageCrazy/Info_beta.plist"; sourceTree = "<absolute>"; };
 		044F00F322687B2700307178 /* 5.ImageCrazy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.ImageCrazy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044F00F622687B2700307178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044F00F822687B2700307178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +32,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0419631123215B18001073EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		044F00F022687B2700307178 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				044F00F322687B2700307178 /* 5.ImageCrazy.app */,
+				0419631923215B18001073EF /* 5.ImageCrazy Beta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +75,7 @@
 				044F00FD22687B2A00307178 /* Assets.xcassets */,
 				044F00FF22687B2A00307178 /* LaunchScreen.storyboard */,
 				044F010222687B2A00307178 /* Info.plist */,
+				0419631A23215B18001073EF /* Info_beta.plist */,
 			);
 			path = 5.ImageCrazy;
 			sourceTree = "<group>";
@@ -67,6 +83,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0419630D23215B18001073EF /* 5.ImageCrazy Beta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0419631623215B18001073EF /* Build configuration list for PBXNativeTarget "5.ImageCrazy Beta" */;
+			buildPhases = (
+				0419630E23215B18001073EF /* Sources */,
+				0419631123215B18001073EF /* Frameworks */,
+				0419631223215B18001073EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "5.ImageCrazy Beta";
+			productName = 5.ImageCrazy;
+			productReference = 0419631923215B18001073EF /* 5.ImageCrazy Beta.app */;
+			productType = "com.apple.product-type.application";
+		};
 		044F00F222687B2700307178 /* 5.ImageCrazy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044F010522687B2A00307178 /* Build configuration list for PBXNativeTarget "5.ImageCrazy" */;
@@ -113,11 +146,22 @@
 			projectRoot = "";
 			targets = (
 				044F00F222687B2700307178 /* 5.ImageCrazy */,
+				0419630D23215B18001073EF /* 5.ImageCrazy Beta */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0419631223215B18001073EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0419631323215B18001073EF /* LaunchScreen.storyboard in Resources */,
+				0419631423215B18001073EF /* Assets.xcassets in Resources */,
+				0419631523215B18001073EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		044F00F122687B2700307178 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +175,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0419630E23215B18001073EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0419630F23215B18001073EF /* ViewController.swift in Sources */,
+				0419631023215B18001073EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		044F00EF22687B2700307178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +215,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0419631723215B18001073EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZCMHM49LE;
+				INFOPLIST_FILE = "$(SRCROOT)/Info_beta.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ImageCrazy.beta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0419631823215B18001073EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZCMHM49LE;
+				INFOPLIST_FILE = "$(SRCROOT)/Info_beta.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ImageCrazy.beta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		044F010322687B2A00307178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,7 +378,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "n.--ImageCrazy";
+				PRODUCT_BUNDLE_IDENTIFIER = ImageCrazy.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "n.--ImageCrazy";
+				PRODUCT_BUNDLE_IDENTIFIER = ImageCrazy.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,6 +406,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0419631623215B18001073EF /* Build configuration list for PBXNativeTarget "5.ImageCrazy Beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0419631723215B18001073EF /* Debug */,
+				0419631823215B18001073EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		044F00EE22687B2700307178 /* Build configuration list for PBXProject "5.ImageCrazy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
