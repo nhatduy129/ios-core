@@ -22,14 +22,30 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return HalfSizePresentationController(presentedViewController: presented, presenting: presentingViewController)
+        return HalfSizePresentationController(presented: presented, presenting: presentingViewController, presentedPercent: 0.6)
     }
 }
 
 class HalfSizePresentationController : UIPresentationController {
+    
+    var presentedPercent: Float
+    
+    override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
+        presentedPercent = 1
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
+    }
+    
+    convenience init(presented: UIViewController, presenting: UIViewController?, presentedPercent: Float) {
+        self.init(presentedViewController: presented, presenting: presenting)
+        self.presentedPercent = presentedPercent
+    }
+    
     override var frameOfPresentedViewInContainerView: CGRect {
         get {
-            return CGRect(x: 0, y: containerView!.bounds.height/2, width: containerView!.bounds.width, height: containerView!.bounds.height/2)
+            guard let containerView = containerView else { return .zero }
+            let top = containerView.bounds.height * CGFloat(1 - presentedPercent)
+            let height = containerView.bounds.height * CGFloat(presentedPercent)
+            return CGRect(x: 0, y: top, width: containerView.bounds.width, height: height)
         }
     }
 }
