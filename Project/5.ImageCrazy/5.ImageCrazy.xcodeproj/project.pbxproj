@@ -12,6 +12,7 @@
 		0419631323215B18001073EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FF22687B2A00307178 /* LaunchScreen.storyboard */; };
 		0419631423215B18001073EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FD22687B2A00307178 /* Assets.xcassets */; };
 		0419631523215B18001073EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FA22687B2700307178 /* Main.storyboard */; };
+		0419631C23215BFB001073EF /* Info_beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0419631B23215BFB001073EF /* Info_beta.plist */; };
 		044F00F722687B2700307178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F00F622687B2700307178 /* AppDelegate.swift */; };
 		044F00F922687B2700307178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F00F822687B2700307178 /* ViewController.swift */; };
 		044F00FC22687B2700307178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044F00FA22687B2700307178 /* Main.storyboard */; };
@@ -21,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0419631923215B18001073EF /* 5.ImageCrazy Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "5.ImageCrazy Beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0419631A23215B18001073EF /* Info_beta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info_beta.plist; path = "/Users/duynguyen/project/ios-core/Project/5.ImageCrazy/Info_beta.plist"; sourceTree = "<absolute>"; };
+		0419631B23215BFB001073EF /* Info_beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_beta.plist; sourceTree = "<group>"; };
 		044F00F322687B2700307178 /* 5.ImageCrazy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.ImageCrazy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044F00F622687B2700307178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044F00F822687B2700307178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +76,7 @@
 				044F00FD22687B2A00307178 /* Assets.xcassets */,
 				044F00FF22687B2A00307178 /* LaunchScreen.storyboard */,
 				044F010222687B2A00307178 /* Info.plist */,
-				0419631A23215B18001073EF /* Info_beta.plist */,
+				0419631B23215BFB001073EF /* Info_beta.plist */,
 			);
 			path = 5.ImageCrazy;
 			sourceTree = "<group>";
@@ -166,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0419631C23215BFB001073EF /* Info_beta.plist in Resources */,
 				044F010122687B2A00307178 /* LaunchScreen.storyboard in Resources */,
 				044F00FE22687B2A00307178 /* Assets.xcassets in Resources */,
 				044F00FC22687B2700307178 /* Main.storyboard in Resources */,
@@ -221,7 +223,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZCMHM49LE;
-				INFOPLIST_FILE = "$(SRCROOT)/Info_beta.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/5.ImageCrazy/Info_beta.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -239,7 +241,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZCMHM49LE;
-				INFOPLIST_FILE = "$(SRCROOT)/Info_beta.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/5.ImageCrazy/Info_beta.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
