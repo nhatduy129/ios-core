@@ -15,6 +15,7 @@ class SecondTabVC: UIViewController {
     }
     
     @IBAction func pushNotificationButtonTapped(_ sender: Any) {
-        NotificationCustom.shared.post(name: "DemoNotificationCustom", object: "duy")
+        //NotificationCustom.shared.post(name: "DemoNotificationCustom", object: "duy")
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DemoNotificationCustom"), object: nil, userInfo: nil)
     }
 }
