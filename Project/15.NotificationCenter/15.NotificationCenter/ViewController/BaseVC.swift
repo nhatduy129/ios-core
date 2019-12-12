@@ -10,6 +10,15 @@ import UIKit
 
 class BaseVC: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(demo), name: Notification.Name("DemoNotificationCustom"), object: nil)
+    }
+    
+    @objc private func demo() {
+        print("\(self.className): Notification Custom is pushed")
+    }
+    
     deinit {
         print("deinit \(self.className)")
     }
