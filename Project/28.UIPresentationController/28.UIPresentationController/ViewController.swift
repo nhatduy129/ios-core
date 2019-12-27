@@ -48,4 +48,11 @@ class HalfSizePresentationController : UIPresentationController {
             return CGRect(x: 0, y: top, width: containerView.bounds.width, height: height)
         }
     }
+    
+//    override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
+//        super.preferredContentSizeDidChange(forChildContentContainer: container)
+//        UIView.animate(withDuration: 1, animations: {[weak self] in
+//            self?.presentedView?.layoutIfNeeded()
+//        })
+//    }
 }

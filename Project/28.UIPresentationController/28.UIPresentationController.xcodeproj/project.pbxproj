@@ -14,6 +14,7 @@
 		040E31182314340500819FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E31162314340500819FAA /* LaunchScreen.storyboard */; };
 		040E31232314340500819FAA /* _8_UIPresentationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E31222314340500819FAA /* _8_UIPresentationControllerTests.swift */; };
 		040E312E2314340500819FAA /* _8_UIPresentationControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E312D2314340500819FAA /* _8_UIPresentationControllerUITests.swift */; };
+		04356C5823B5BEED0069AFE0 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04356C5723B5BEED0069AFE0 /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		040E31292314340500819FAA /* 28.UIPresentationControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 28.UIPresentationControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040E312D2314340500819FAA /* _8_UIPresentationControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8_UIPresentationControllerUITests.swift; sourceTree = "<group>"; };
 		040E312F2314340500819FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04356C5723B5BEED0069AFE0 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				040E31142314340500819FAA /* Assets.xcassets */,
 				040E31162314340500819FAA /* LaunchScreen.storyboard */,
 				040E31192314340500819FAA /* Info.plist */,
+				04356C5723B5BEED0069AFE0 /* SecondVC.swift */,
 			);
 			path = 28.UIPresentationController;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040E31102314340400819FAA /* ViewController.swift in Sources */,
+				04356C5823B5BEED0069AFE0 /* SecondVC.swift in Sources */,
 				040E310E2314340400819FAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
