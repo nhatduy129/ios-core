@@ -1,3 +1,3 @@
-let d: Double = 12
+let a = [2, 49, 3]
 
-print(Int(d))
+print(a.in)
