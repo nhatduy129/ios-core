@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  37.FirebasePushNotification
+//  38.SimpleAR
 //
-//  Created by Duy Nguyen on 21/2/20.
+//  Created by Duy Nguyen on 29/2/20.
 //  Copyright © 2020 Duy Nguyen. All rights reserved.
 //
 
@@ -48,3 +48,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 }
+
