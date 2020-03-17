@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PRs-nW-JBE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,42 +7,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Multiple files-->
+        <scene sceneID="THl-pd-IIQ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_1_FileDownloader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="wBx-Qa-1hc" customClass="SecondVC" customModule="_1_FileDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Nd-dK-b6Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAb-6Y-2Fj">
-                                <rect key="frame" x="138.5" y="353" width="137" height="30"/>
-                                <state key="normal" title="Download single file"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHR-x0-aMq">
+                                <rect key="frame" x="127.5" y="433" width="159" height="30"/>
+                                <state key="normal" title="Download multiple files"/>
                                 <connections>
-                                    <action selector="downloadSingleFileButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARs-RV-0dT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogr-HK-U45">
-                                <rect key="frame" x="104.5" y="433" width="205" height="30"/>
-                                <state key="normal" title="Download 2 files continuously"/>
-                                <connections>
-                                    <action selector="downloadTwoFilesButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIb-cG-ePl"/>
+                                    <action selector="downloadMultipleFilesButtonTapped:" destination="wBx-Qa-1hc" eventType="touchUpInside" id="FIa-Og-zrE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ogr-HK-U45" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dyb-Hz-swX"/>
-                            <constraint firstItem="ogr-HK-U45" firstAttribute="top" secondItem="qAb-6Y-2Fj" secondAttribute="bottom" constant="50" id="PlL-ON-yqD"/>
-                            <constraint firstItem="ogr-HK-U45" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gbA-BB-P22"/>
-                            <constraint firstItem="qAb-6Y-2Fj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xa4-cK-3FQ"/>
+                            <constraint firstItem="WHR-x0-aMq" firstAttribute="centerY" secondItem="7Nd-dK-b6Z" secondAttribute="centerY" id="Cmm-mB-ZYo"/>
+                            <constraint firstItem="WHR-x0-aMq" firstAttribute="centerX" secondItem="7Nd-dK-b6Z" secondAttribute="centerX" id="wd5-d1-qBb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="7u6-je-jy7"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Multiple files" id="oZn-8D-ffs"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDk-go-C5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="-367" y="281"/>
+        </scene>
+        <!--Single file-->
+        <scene sceneID="Pqe-UL-6oC">
+            <objects>
+                <viewController id="TD5-ub-sNu" customClass="FirstVC" customModule="_1_FileDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l0C-es-43O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBh-PU-WbU">
+                                <rect key="frame" x="138.5" y="433" width="137" height="30"/>
+                                <state key="normal" title="Download single file"/>
+                                <connections>
+                                    <action selector="downloadSingleFileButtonTapped:" destination="TD5-ub-sNu" eventType="touchUpInside" id="I3Y-fw-doM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FBh-PU-WbU" firstAttribute="centerX" secondItem="l0C-es-43O" secondAttribute="centerX" id="Jw1-Dg-kt3"/>
+                            <constraint firstItem="FBh-PU-WbU" firstAttribute="centerY" secondItem="l0C-es-43O" secondAttribute="centerY" id="XLy-sO-WuE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="otY-VO-IM3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Single file" id="HNO-Gc-ogc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFU-dH-raH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="-368"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KRH-H8-OaL">
+            <objects>
+                <tabBarController id="PRs-nW-JBE" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SzX-v7-hPr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TD5-ub-sNu" kind="relationship" relationship="viewControllers" id="MVD-Jw-srt"/>
+                        <segue destination="wBx-Qa-1hc" kind="relationship" relationship="viewControllers" id="4YR-5d-SUA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3i1-5Y-O1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="-43"/>
         </scene>
     </scenes>
 </document>
