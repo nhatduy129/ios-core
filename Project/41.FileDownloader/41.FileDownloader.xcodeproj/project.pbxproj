@@ -14,6 +14,7 @@
 		04E9D0932420690B00CFEA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E9D0922420690B00CFEA98 /* Assets.xcassets */; };
 		04E9D0962420690B00CFEA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E9D0942420690B00CFEA98 /* LaunchScreen.storyboard */; };
 		04E9D09E242077B700CFEA98 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D09D242077B700CFEA98 /* SecondVC.swift */; };
+		04E9D0A0242085CF00CFEA98 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9D09F242085CF00CFEA98 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04E9D0952420690B00CFEA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E9D0972420690B00CFEA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E9D09D242077B700CFEA98 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		04E9D09F242085CF00CFEA98 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				04E9D0922420690B00CFEA98 /* Assets.xcassets */,
 				04E9D0942420690B00CFEA98 /* LaunchScreen.storyboard */,
 				04E9D0972420690B00CFEA98 /* Info.plist */,
+				04E9D09F242085CF00CFEA98 /* Utils.swift */,
 			);
 			path = 41.FileDownloader;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E9D0A0242085CF00CFEA98 /* Utils.swift in Sources */,
 				04E9D08E2420690900CFEA98 /* FirstVC.swift in Sources */,
 				04E9D08A2420690900CFEA98 /* AppDelegate.swift in Sources */,
 				04E9D09E242077B700CFEA98 /* SecondVC.swift in Sources */,

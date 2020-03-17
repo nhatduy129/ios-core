@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 // Note: if your file is HTTP, you have to add "App Transport Security Settings", "Allow Arbitrary Loads" in Info.plist
 class FirstVC: UIViewController {
 
-    //let data = URL(string: "http://www.sagamedia.vn/wp-content/uploads/van-khan-audio/vk-78.mp3")!
-    let data =  URL(string: "http://ipv4.download.thinkbroadband.com/50MB.zip")!
+    let data = URL(string: "http://www.sagamedia.vn/wp-content/uploads/van-khan-audio/vk-78.mp3")!
+    //let data =  URL(string: "http://ipv4.download.thinkbroadband.com/50MB.zip")!
     var alert: UIAlertController?
     
     @IBAction func downloadSingleFileButtonTapped(_ sender: Any) {
@@ -26,24 +27,36 @@ class FirstVC: UIViewController {
         }))
         self.present(alert!, animated: true, completion: nil)
     }
+    
 }
 
 extension FirstVC: URLSessionDownloadDelegate {
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        DispatchQueue.main.async {[weak self] in
-            self?.alert?.title = "Download completed"
-            let alertAction = self?.alert?.actions.first
-            alertAction?.setValue("OK", forKey: "title")
-        }
-        print(location)
-    }
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask,
+                    didWriteData bytesWritten: Int64, totalBytesWritten: Int64,
+                    totalBytesExpectedToWrite: Int64) {
+        // Handle download progress
         let progress: Double = Double(totalBytesWritten) * 100 / Double(totalBytesExpectedToWrite)
         DispatchQueue.main.async {[weak self] in
             self?.alert?.title = "Downloaded \(Int(progress))%"
         }
         
         print("Downloaded \(Int(progress))%")
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask,
+                    didFinishDownloadingTo location: URL) {
+        // After download completed, change action from "Cancel" to "OK"
+        DispatchQueue.main.async {[weak self] in
+            self?.alert?.title = "Download completed"
+            let alertAction = self?.alert?.actions.first
+            alertAction?.setValue("OK", forKey: "title")
+        }
+        
+        print(location)
+        // Store file to local (document)
+        if let data = try? Data(contentsOf: location) {
+            let fileName = downloadTask.originalRequest?.url?.lastPathComponent ?? "unknown.mp3"
+            Utils.storeFileLocally(fileName: fileName, data: data)
+        }
     }
 }
