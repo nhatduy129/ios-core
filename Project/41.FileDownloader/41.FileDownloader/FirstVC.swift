@@ -12,8 +12,8 @@ import AVFoundation
 // Note: if your file is HTTP, you have to add "App Transport Security Settings", "Allow Arbitrary Loads" in Info.plist
 class FirstVC: UIViewController {
 
-    let data = URL(string: "http://www.sagamedia.vn/wp-content/uploads/van-khan-audio/vk-78.mp3")!
-    //let data =  URL(string: "http://ipv4.download.thinkbroadband.com/50MB.zip")!
+    //let data = URL(string: "http://www.sagamedia.vn/wp-content/uploads/van-khan-audio/vk-78.mp3")!
+    let data =  URL(string: "http://ipv4.download.thinkbroadband.com/80MB.zip")!
     var alert: UIAlertController?
     
     @IBAction func downloadSingleFileButtonTapped(_ sender: Any) {
