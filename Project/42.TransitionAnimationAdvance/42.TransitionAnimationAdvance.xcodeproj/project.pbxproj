@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		045A5493242C9950005CE740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A5492242C9950005CE740 /* AppDelegate.swift */; };
 		045A5495242C9950005CE740 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A5494242C9950005CE740 /* SceneDelegate.swift */; };
-		045A5497242C9950005CE740 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A5496242C9950005CE740 /* ViewController.swift */; };
+		045A5497242C9950005CE740 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A5496242C9950005CE740 /* FirstVC.swift */; };
 		045A549A242C9950005CE740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045A5498242C9950005CE740 /* Main.storyboard */; };
 		045A549C242C9952005CE740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045A549B242C9952005CE740 /* Assets.xcassets */; };
 		045A549F242C9952005CE740 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045A549D242C9952005CE740 /* LaunchScreen.storyboard */; };
+		045A54A7242C99BF005CE740 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A54A6242C99BF005CE740 /* SecondVC.swift */; };
+		045A54AE242C9B9A005CE740 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A54AD242C9B9A005CE740 /* AnimationController.swift */; };
+		045A54B0242D0675005CE740 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045A54AF242D0675005CE740 /* PresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		045A548F242C9950005CE740 /* 42.TransitionAnimationAdvance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 42.TransitionAnimationAdvance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045A5492242C9950005CE740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		045A5494242C9950005CE740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		045A5496242C9950005CE740 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		045A5496242C9950005CE740 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		045A5499242C9950005CE740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		045A549B242C9952005CE740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045A549E242C9952005CE740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045A54A0242C9952005CE740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045A54A6242C99BF005CE740 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		045A54AD242C9B9A005CE740 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		045A54AF242D0675005CE740 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		045A5491242C9950005CE740 /* 42.TransitionAnimationAdvance */ = {
 			isa = PBXGroup;
 			children = (
+				045A54AB242C9B79005CE740 /* Resource */,
+				045A54AA242C9B6F005CE740 /* Delegate */,
+				045A54A9242C9B67005CE740 /* Controllers */,
+				045A5498242C9950005CE740 /* Main.storyboard */,
+			);
+			path = 42.TransitionAnimationAdvance;
+			sourceTree = "<group>";
+		};
+		045A54A9242C9B67005CE740 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				045A5496242C9950005CE740 /* FirstVC.swift */,
+				045A54A6242C99BF005CE740 /* SecondVC.swift */,
+				045A54AD242C9B9A005CE740 /* AnimationController.swift */,
+				045A54AF242D0675005CE740 /* PresentationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		045A54AA242C9B6F005CE740 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
 				045A5492242C9950005CE740 /* AppDelegate.swift */,
 				045A5494242C9950005CE740 /* SceneDelegate.swift */,
-				045A5496242C9950005CE740 /* ViewController.swift */,
-				045A5498242C9950005CE740 /* Main.storyboard */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		045A54AB242C9B79005CE740 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				045A549B242C9952005CE740 /* Assets.xcassets */,
 				045A549D242C9952005CE740 /* LaunchScreen.storyboard */,
 				045A54A0242C9952005CE740 /* Info.plist */,
 			);
-			path = 42.TransitionAnimationAdvance;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045A5497242C9950005CE740 /* ViewController.swift in Sources */,
+				045A5497242C9950005CE740 /* FirstVC.swift in Sources */,
 				045A5493242C9950005CE740 /* AppDelegate.swift in Sources */,
+				045A54A7242C99BF005CE740 /* SecondVC.swift in Sources */,
 				045A5495242C9950005CE740 /* SceneDelegate.swift in Sources */,
+				045A54AE242C9B9A005CE740 /* AnimationController.swift in Sources */,
+				045A54B0242D0675005CE740 /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TZTHJXX2D;
-				INFOPLIST_FILE = 42.TransitionAnimationAdvance/Info.plist;
+				INFOPLIST_FILE = 42.TransitionAnimationAdvance/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TZTHJXX2D;
-				INFOPLIST_FILE = 42.TransitionAnimationAdvance/Info.plist;
+				INFOPLIST_FILE = 42.TransitionAnimationAdvance/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
