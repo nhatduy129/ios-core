@@ -8,25 +8,12 @@
 
 import UIKit
 
-class SecondVC: UIViewController, UIViewControllerTransitioningDelegate {
+class SecondVC: BasePresentedVC {
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.modalPresentationStyle = .custom
-        self.transitioningDelegate = self
-    }
+    override var widthPresentedPercent: Float { return 0.9 }
+    override var heightPresentedPercent: Float { return 0.8 }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true)
-    }
-    
-    // MARK: - UIViewControllerTransitioningDelegate
-//    func animationController(forPresented presented: UIViewController,
-//                             presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return AnimationController(animationDuration: 0.3, animationType: .present)
-//    }
-    
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return PresentationController(presented: presented, presenting: presenting, widthPercent: 0.5, heightPercent: 0.5)
     }
 }

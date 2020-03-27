@@ -34,6 +34,7 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
                 transitionContext.completeTransition(false)
                 return
         }
+        toVC.view.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
         switch self.animationType {
         case .present:
             self.presentAnimation(with: transitionContext, viewToAnimate: toVC.view)
@@ -42,7 +43,7 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
             print("dismiss")
         }
     }
-    
+
     func presentAnimation(with transitionContext: UIViewControllerContextTransitioning, viewToAnimate: UIView) {
         viewToAnimate.clipsToBounds = true
         viewToAnimate.transform = CGAffineTransform(scaleX: 0, y: 0)

@@ -8,7 +8,24 @@
 
 import UIKit
 
-class PresentationController : UIPresentationController {
+class BasePresentedVC: UIViewController, UIViewControllerTransitioningDelegate {
+    var widthPresentedPercent: Float { return 0.8 }
+    var heightPresentedPercent: Float { return 0.5 }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.modalPresentationStyle = .custom
+        self.transitioningDelegate = self
+    }
+    
+    // MARK: - UIViewControllerTransitioningDelegate
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return PresentationController(presented: presented, presenting: presenting,
+                                      widthPercent: self.widthPresentedPercent, heightPercent: self.heightPresentedPercent)
+    }
+}
+
+fileprivate class PresentationController : UIPresentationController {
     private var widthPercent: Float = 1
     private var heightPercent: Float = 1
     
@@ -34,14 +51,14 @@ class PresentationController : UIPresentationController {
     override func dismissalTransitionWillBegin() {
         guard let viewToAnimate = self.containerView else { return }
         self.presentedViewController.transitionCoordinator?.animate(alongsideTransition: {_ in
-            viewToAnimate.transform = CGAffineTransform(scaleX: 0, y: 0)
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)  // If put 0, it does not work
         }, completion: nil)
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let containerView = containerView else { return .zero }
-        return CGRect(x: containerView.bounds.width * CGFloat(self.widthPercent) / 2,
-                      y: containerView.bounds.height * CGFloat(self.heightPercent) / 2,
+        return CGRect(x: containerView.bounds.width * CGFloat(1 - self.widthPercent) / 2,
+                      y: containerView.bounds.height * CGFloat(1 - self.heightPercent) / 2,
                       width: containerView.bounds.width * CGFloat(self.widthPercent),
                       height: containerView.bounds.height * CGFloat(self.heightPercent))
     }
