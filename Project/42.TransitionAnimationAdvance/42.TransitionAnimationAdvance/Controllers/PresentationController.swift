@@ -18,6 +18,13 @@ class BasePresentedVC: UIViewController, UIViewControllerTransitioningDelegate {
         self.transitioningDelegate = self
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        // Add round coner
+        self.view.layer.masksToBounds = true
+        self.view.layer.cornerRadius = 10
+    }
+    
     // MARK: - UIViewControllerTransitioningDelegate
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return PresentationController(presented: presented, presenting: presenting,
@@ -46,6 +53,12 @@ fileprivate class PresentationController : UIPresentationController {
         self.presentedViewController.transitionCoordinator?.animate(alongsideTransition: {_ in
             viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
         }, completion: nil)
+    }
+    
+    override func presentationTransitionDidEnd(_ completed: Bool) {
+        UIView.animate(withDuration: 0.15, animations: {[unowned self] in
+            self.presentingViewController.view.superview?.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.5)
+        })
     }
     
     override func dismissalTransitionWillBegin() {
