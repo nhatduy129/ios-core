@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>550771688231-cpacvhmseq8a3i82qnaseh24vkcg7rhh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.550771688231-cpacvhmseq8a3i82qnaseh24vkcg7rhh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD1LaZEWr1XWMEnEXKo56kAf2nbUfTLLbM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>550771688231</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.duy.customview.-4-CloudFirestore</string>
+	<key>PROJECT_ID</key>
+	<string>ioscore-cloudfirebase</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ioscore-cloudfirebase.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:550771688231:ios:4f5b8a15da9cc9b0151f02</string>
+	<key>DATABASE_URL</key>
+	<string>https://ioscore-cloudfirebase.firebaseio.com</string>
+</dict>
+</plist>

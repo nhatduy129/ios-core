@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ViewController: UIViewController {
-
+    let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        db.collection("coretest").document("a").getDocument(completion: { data, error in
+            print(data?.data())
+        })
     }
-
-
 }
-
