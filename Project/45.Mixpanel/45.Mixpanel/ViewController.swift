@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import Mixpanel
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        // STEP 2a
+        Mixpanel.mainInstance().identify(distinctId: "21787sdf")
+        Mixpanel.mainInstance().people.set(properties: [ "$name":"Duy demo lan 2"])
+        Mixpanel.mainInstance().track(event: "Logged in")
+        Mixpanel.mainInstance().flush()
+    }
+    
+    @IBAction func eventAButtonTapped(_ sender: Any) {
+        // STEP 2b
+        Mixpanel.mainInstance().track(event: "EVENT A",
+                                      properties: ["genre" : "hip-hop", "duration in seconds": 42])
     }
 }
-
