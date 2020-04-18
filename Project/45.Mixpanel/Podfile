@@ -1,0 +1,4 @@
+target '45.Mixpanel' do
+  use_frameworks!
+  pod 'Mixpanel-swift'
+end
