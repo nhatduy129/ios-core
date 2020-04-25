@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  37.FirebasePushNotification
+//  47.CollectionViewDemo
 //
-//  Created by Duy Nguyen on 21/2/20.
+//  Created by Duy Nguyen on 25/4/20.
 //  Copyright © 2020 Duy Nguyen. All rights reserved.
 //
 
@@ -47,4 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+
+
 }
+
