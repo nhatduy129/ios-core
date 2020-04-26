@@ -1,0 +1,24 @@
+PODS:
+  - KRActivityIndicatorView (3.0.5)
+  - KRProgressHUD (3.4.5):
+    - KRActivityIndicatorView (= 3.0.5)
+  - Stripe (19.1.0)
+
+DEPENDENCIES:
+  - KRProgressHUD
+  - Stripe
+
+SPEC REPOS:
+  trunk:
+    - KRActivityIndicatorView
+    - KRProgressHUD
+    - Stripe
+
+SPEC CHECKSUMS:
+  KRActivityIndicatorView: 912bc0413d98340f384b12a4e1e6aa8f42fb377d
+  KRProgressHUD: df4cdc3a1baf708d4276a089ee34d133fa9a6f3e
+  Stripe: 82a3aab0b1a66866eef581139a00adadcb2e6dc4
+
+PODFILE CHECKSUM: 44eae216c6a0ddd5c9f9ca94a7e071d66fcdc257
+
+COCOAPODS: 1.9.1

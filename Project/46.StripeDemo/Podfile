@@ -1,0 +1,6 @@
+
+target '46.StripeDemo' do
+  use_frameworks!
+  pod 'Stripe'
+  pod 'KRProgressHUD'
+end
