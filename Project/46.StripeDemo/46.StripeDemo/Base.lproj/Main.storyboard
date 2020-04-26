@@ -14,7 +14,29 @@
                     <view key="view" contentMode="scaleToFill" id="1tD-M4-2wN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKp-OX-T61">
+                                <rect key="frame" x="125" y="144" width="164" height="30"/>
+                                <state key="normal" title="Select payment method"/>
+                                <connections>
+                                    <action selector="selectPaymentMethod:" destination="Hv5-pY-2kZ" eventType="touchUpInside" id="gVb-j7-xsT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBD-3M-Zy0">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="Pay"/>
+                                <connections>
+                                    <action selector="payButtonTapped:" destination="Hv5-pY-2kZ" eventType="touchUpInside" id="cMT-q7-eiP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hBD-3M-Zy0" firstAttribute="centerX" secondItem="1tD-M4-2wN" secondAttribute="centerX" id="25R-PQ-6dv"/>
+                            <constraint firstItem="yKp-OX-T61" firstAttribute="centerX" secondItem="1tD-M4-2wN" secondAttribute="centerX" id="6ir-1a-PGa"/>
+                            <constraint firstItem="yKp-OX-T61" firstAttribute="top" secondItem="zaI-EP-Zxi" secondAttribute="top" constant="100" id="Dnb-G4-ihq"/>
+                            <constraint firstItem="hBD-3M-Zy0" firstAttribute="centerY" secondItem="1tD-M4-2wN" secondAttribute="centerY" id="sHm-Ze-REP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zaI-EP-Zxi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Advance" id="uk5-hz-oIc"/>
