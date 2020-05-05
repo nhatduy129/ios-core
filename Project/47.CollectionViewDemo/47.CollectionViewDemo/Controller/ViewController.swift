@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Title", for: .normal)
+        return button
+    }()
+    
     private var data = [
         Product(title: "GCP Professional Cloud Network Engineer", price: 8.0, backgroundColor: .blue),
         Product(title: "GCP alsdkjfl Cloudl akjsla kks k laler", price: 19.5, backgroundColor: UIColor(hex: 0x4FD400)),
