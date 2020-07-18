@@ -59,9 +59,10 @@ fileprivate class StripeKeyProvider: NSObject, STPCustomerEphemeralKeyProvider {
 
 class AdvanceViewController: UIViewController, STPPaymentContextDelegate {
     private let paymentContext: STPPaymentContext
+    private let customerContext: STPCustomerContext
     
     required init?(coder: NSCoder) {
-        let customerContext = STPCustomerContext(keyProvider: StripeKeyProvider.shared)
+        customerContext = STPCustomerContext(keyProvider: StripeKeyProvider.shared)
         paymentContext = STPPaymentContext(customerContext: customerContext)
         super.init(coder: coder)
         paymentContext.delegate = self
@@ -90,7 +91,6 @@ class AdvanceViewController: UIViewController, STPPaymentContextDelegate {
             case .success(let clientSecret):
                 let paymentIntentParams = STPPaymentIntentParams(clientSecret: clientSecret)
                 paymentIntentParams.paymentMethodId = paymentResult.paymentMethod?.stripeId
-
                 // Confirm the PaymentIntent
                 STPPaymentHandler.shared().confirmPayment(withParams: paymentIntentParams, authenticationContext: paymentContext) { status, paymentIntent, error in
                     switch status {
