@@ -14,7 +14,10 @@ class SecondVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.automaticallyAdjustsScrollViewInsets = false
+        if let constraint = view.constraints.first(where: { $0.identifier == "imageViewTopConstraint" }) {
+            constraint.constant = 20
+            view.layoutIfNeeded()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
