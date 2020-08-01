@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0488262924D5535400D51401 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0488262824D5535400D51401 /* GoogleService-Info.plist */; };
 		18C4956521B492DA00ACD57D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C4956421B492DA00ACD57D /* LaunchScreen.storyboard */; };
 		4D3334751C02DDD800EEB039 /* NewsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3334741C02DDD800EEB039 /* NewsItemCell.swift */; };
 		4D5A5BC01C29187400B8386B /* AssetAttributions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D5A5BBF1C29187400B8386B /* AssetAttributions.txt */; };
@@ -24,12 +25,16 @@
 		4DFFBA8F1BFAD20C00A24C84 /* PodcastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA8E1BFAD20C00A24C84 /* PodcastItem.swift */; };
 		4DFFBA911BFAD24100A24C84 /* PodcastFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */; };
 		4DFFBA931BFAD28600A24C84 /* NewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA921BFAD28600A24C84 /* NewsStore.swift */; };
+		6DB583CFA56BF793DBF68659 /* Pods_WenderCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9C1F90018C2784AC092192 /* Pods_WenderCast.framework */; };
 		958AD3C62158BA76000C57A4 /* WenderSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0488262824D5535400D51401 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		048D545524D518B00080D766 /* WenderCast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WenderCast.entitlements; sourceTree = "<group>"; };
 		18C4956421B492DA00ACD57D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F9C1F90018C2784AC092192 /* Pods_WenderCast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WenderCast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		493C07D1F6400B65659194E9 /* Pods-WenderCast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WenderCast.release.xcconfig"; path = "Target Support Files/Pods-WenderCast/Pods-WenderCast.release.xcconfig"; sourceTree = "<group>"; };
 		4D3334741C02DDD800EEB039 /* NewsItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemCell.swift; sourceTree = "<group>"; };
 		4D5A5BBF1C29187400B8386B /* AssetAttributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AssetAttributions.txt; sourceTree = "<group>"; };
 		4D67221E1C37691500E08100 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		4DFFBA8E1BFAD20C00A24C84 /* PodcastItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastItem.swift; sourceTree = "<group>"; };
 		4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastFeedLoader.swift; sourceTree = "<group>"; };
 		4DFFBA921BFAD28600A24C84 /* NewsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewsStore.swift; sourceTree = "<group>"; tabWidth = 2; };
+		8F2A389E797EE39CC187EC67 /* Pods-WenderCast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WenderCast.debug.xcconfig"; path = "Target Support Files/Pods-WenderCast/Pods-WenderCast.debug.xcconfig"; sourceTree = "<group>"; };
 		958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenderSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,12 +62,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB583CFA56BF793DBF68659 /* Pods_WenderCast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A199B99C1EEEA093B055222 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A389E797EE39CC187EC67 /* Pods-WenderCast.debug.xcconfig */,
+				493C07D1F6400B65659194E9 /* Pods-WenderCast.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4D5A5BBE1C2917FA00B8386B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +95,8 @@
 			children = (
 				4DFFBA711BFACF0700A24C84 /* WenderCast */,
 				4DFFBA701BFACF0700A24C84 /* Products */,
+				0A199B99C1EEEA093B055222 /* Pods */,
+				EFE8AFC360DD7E3CCA4F51BC /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -94,6 +113,7 @@
 		4DFFBA711BFACF0700A24C84 /* WenderCast */ = {
 			isa = PBXGroup;
 			children = (
+				0488262824D5535400D51401 /* GoogleService-Info.plist */,
 				048D545524D518B00080D766 /* WenderCast.entitlements */,
 				4DFFBA721BFACF0700A24C84 /* AppDelegate.swift */,
 				4DFFBA761BFACF0700A24C84 /* Main.storyboard */,
@@ -147,6 +167,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EFE8AFC360DD7E3CCA4F51BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F9C1F90018C2784AC092192 /* Pods_WenderCast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DFFBA811BFACF0700A24C84 /* Build configuration list for PBXNativeTarget "WenderCast" */;
 			buildPhases = (
+				820100B96CA98949EC733696 /* [CP] Check Pods Manifest.lock */,
 				4DFFBA6B1BFACF0700A24C84 /* Sources */,
 				4DFFBA6C1BFACF0700A24C84 /* Frameworks */,
 				4DFFBA6D1BFACF0700A24C84 /* Resources */,
+				D71EC2C369781D11C1028AEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,12 +247,62 @@
 			files = (
 				4DFFBA7A1BFACF0700A24C84 /* Assets.xcassets in Resources */,
 				18C4956521B492DA00ACD57D /* LaunchScreen.storyboard in Resources */,
+				0488262924D5535400D51401 /* GoogleService-Info.plist in Resources */,
 				4DFFBA781BFACF0700A24C84 /* Main.storyboard in Resources */,
 				4D5A5BC01C29187400B8386B /* AssetAttributions.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		820100B96CA98949EC733696 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WenderCast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D71EC2C369781D11C1028AEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WenderCast/Pods-WenderCast-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WenderCast/Pods-WenderCast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DFFBA6B1BFACF0700A24C84 /* Sources */ = {
@@ -366,6 +446,7 @@
 		};
 		4DFFBA821BFACF0700A24C84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F2A389E797EE39CC187EC67 /* Pods-WenderCast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WenderCast/WenderCast.entitlements;
@@ -384,6 +465,7 @@
 		};
 		4DFFBA831BFACF0700A24C84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493C07D1F6400B65659194E9 /* Pods-WenderCast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WenderCast/WenderCast.entitlements;

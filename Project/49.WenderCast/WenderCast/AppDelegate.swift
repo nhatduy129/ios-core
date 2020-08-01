@@ -28,6 +28,7 @@
 
 import UIKit
 import SafariServices
+import FirebaseCore
 
 enum Identifiers {
   static let viewAction = "VIEW_IDENTIFIER"
@@ -45,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITabBar.appearance().barTintColor = UIColor.themeGreenColor
     UITabBar.appearance().tintColor = UIColor.white
     registerForPushNotifications()
+    FirebaseApp.configure()
     return true
   }
   
