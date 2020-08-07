@@ -1,4 +1,5 @@
 target '44.CloudFirestore' do
   use_frameworks!
   pod 'Firebase/Firestore'
+  pod 'Firebase/RemoteConfig'
 end
