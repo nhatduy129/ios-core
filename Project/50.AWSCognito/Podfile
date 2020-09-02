@@ -1,0 +1,4 @@
+target '50.AWSCognito' do
+  use_frameworks!
+  pod 'FBSDKLoginKit'
+end
