@@ -14,7 +14,8 @@
 		042B366D24FE40D700C55073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B366C24FE40D700C55073 /* Assets.xcassets */; };
 		042B367024FE40D700C55073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042B366E24FE40D700C55073 /* LaunchScreen.storyboard */; };
 		043F6F0224FFE29B0012C22E /* CustomIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */; };
-		043F6F04250001F30012C22E /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 043F6F03250001F30012C22E /* awsconfiguration.json */; };
+		515355C02500DF9700DA3606 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 515355BE2500DF9600DA3606 /* awsconfiguration.json */; };
+		515355C12500DF9700DA3606 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 515355BF2500DF9700DA3606 /* amplifyconfiguration.json */; };
 		E1D741AB8E7831CD752C4ED8 /* Pods_50_AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +29,8 @@
 		042B366F24FE40D700C55073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042B367124FE40D700C55073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIdentityProvider.swift; sourceTree = "<group>"; };
-		043F6F03250001F30012C22E /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		515355BE2500DF9600DA3606 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		515355BF2500DF9700DA3606 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		7B01CBD6A55CEFC9CDD58478 /* Pods-50.AWSCognito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.debug.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.debug.xcconfig"; sourceTree = "<group>"; };
 		BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_50_AWSCognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3712724F4DDA82669CF590 /* Pods-50.AWSCognito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.release.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		042B366224FE40D400C55073 /* 50.AWSCognito */ = {
 			isa = PBXGroup;
 			children = (
+				515355BF2500DF9700DA3606 /* amplifyconfiguration.json */,
+				515355BE2500DF9600DA3606 /* awsconfiguration.json */,
 				042B366324FE40D400C55073 /* AppDelegate.swift */,
 				042B366524FE40D400C55073 /* SceneDelegate.swift */,
 				043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */,
@@ -75,7 +79,6 @@
 				042B366C24FE40D700C55073 /* Assets.xcassets */,
 				042B366E24FE40D700C55073 /* LaunchScreen.storyboard */,
 				042B367124FE40D700C55073 /* Info.plist */,
-				043F6F03250001F30012C22E /* awsconfiguration.json */,
 			);
 			path = 50.AWSCognito;
 			sourceTree = "<group>";
@@ -109,6 +112,7 @@
 				042B365D24FE40D400C55073 /* Frameworks */,
 				042B365E24FE40D400C55073 /* Resources */,
 				2459798C61650ED2B785BCC5 /* [CP] Embed Pods Frameworks */,
+				515355B72500A42500DA3606 /* AWS */,
 			);
 			buildRules = (
 			);
@@ -157,8 +161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043F6F04250001F30012C22E /* awsconfiguration.json in Resources */,
+				515355C02500DF9700DA3606 /* awsconfiguration.json in Resources */,
 				042B367024FE40D700C55073 /* LaunchScreen.storyboard in Resources */,
+				515355C12500DF9700DA3606 /* amplifyconfiguration.json in Resources */,
 				042B366D24FE40D700C55073 /* Assets.xcassets in Resources */,
 				042B366B24FE40D400C55073 /* Main.storyboard in Resources */,
 			);
@@ -183,6 +188,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		515355B72500A42500DA3606 /* AWS */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = AWS;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+
+";
 		};
 		C0D1CC04E0C8160B583C3401 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -362,13 +387,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TZTHJXX2D;
+				DEVELOPMENT_TEAM = 5NBW3Q535G;
 				INFOPLIST_FILE = 50.AWSCognito/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.ios.-0-AWSCognito";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.ios.-50-AWSCognito";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,13 +407,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TZTHJXX2D;
+				DEVELOPMENT_TEAM = 5NBW3Q535G;
 				INFOPLIST_FILE = 50.AWSCognito/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.ios.-0-AWSCognito";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.ios.-50-AWSCognito";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,4 +1,44 @@
 PODS:
+  - Amplify (1.1.2):
+    - Amplify/Default (= 1.1.2)
+  - Amplify/Default (1.1.2)
+  - AmplifyPlugins (1.1.2):
+    - AmplifyPlugins/AWSAPIPlugin (= 1.1.2)
+    - AmplifyPlugins/AWSCognitoAuthPlugin (= 1.1.2)
+    - AmplifyPlugins/AWSDataStorePlugin (= 1.1.2)
+    - AmplifyPlugins/AWSPinpointAnalyticsPlugin (= 1.1.2)
+    - AmplifyPlugins/AWSS3StoragePlugin (= 1.1.2)
+    - AWSAuthCore (~> 2.15.0)
+    - AWSCore (~> 2.15.0)
+    - AWSPluginsCore (= 1.1.2)
+  - AmplifyPlugins/AWSAPIPlugin (1.1.2):
+    - AppSyncRealTimeClient (~> 1.4.0)
+    - AWSAuthCore (~> 2.15.0)
+    - AWSCore (~> 2.15.0)
+    - AWSPluginsCore (= 1.1.2)
+    - ReachabilitySwift (~> 5.0.0)
+  - AmplifyPlugins/AWSCognitoAuthPlugin (1.1.2):
+    - AWSAuthCore (~> 2.15.0)
+    - AWSCore (~> 2.15.0)
+    - AWSMobileClient (~> 2.15.0)
+    - AWSPluginsCore (= 1.1.2)
+  - AmplifyPlugins/AWSDataStorePlugin (1.1.2):
+    - AWSAuthCore (~> 2.15.0)
+    - AWSCore (~> 2.15.0)
+    - AWSPluginsCore (= 1.1.2)
+    - SQLite.swift (~> 0.12.0)
+  - AmplifyPlugins/AWSPinpointAnalyticsPlugin (1.1.2):
+    - AWSAuthCore (~> 2.15.0)
+    - AWSCore (~> 2.15.0)
+    - AWSPinpoint (~> 2.15.0)
+    - AWSPluginsCore (= 1.1.2)
+  - AmplifyPlugins/AWSS3StoragePlugin (1.1.2):
+    - AWSAuthCore (~> 2.15.0)
+    - AWSCore (~> 2.15.0)
+    - AWSPluginsCore (= 1.1.2)
+    - AWSS3 (~> 2.15.0)
+  - AppSyncRealTimeClient (1.4.1):
+    - Starscream (~> 3.1.0)
   - AWSAuthCore (2.15.3):
     - AWSCore (= 2.15.3)
   - AWSAuthUI (2.15.3):
@@ -16,6 +56,14 @@ PODS:
   - AWSMobileClient (2.15.3):
     - AWSAuthCore (= 2.15.3)
     - AWSCognitoIdentityProvider (= 2.15.3)
+  - AWSPinpoint (2.15.3):
+    - AWSCore (= 2.15.3)
+  - AWSPluginsCore (1.1.2):
+    - Amplify (= 1.1.2)
+    - AWSCore (~> 2.15.0)
+    - AWSMobileClient (~> 2.15.0)
+  - AWSS3 (2.15.3):
+    - AWSCore (= 2.15.3)
   - FBSDKCoreKit (5.8.0):
     - FBSDKCoreKit/Basics (= 5.8.0)
     - FBSDKCoreKit/Core (= 5.8.0)
@@ -26,15 +74,24 @@ PODS:
     - FBSDKLoginKit/Login (= 5.8.0)
   - FBSDKLoginKit/Login (5.8.0):
     - FBSDKCoreKit (~> 5.0)
+  - ReachabilitySwift (5.0.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - Amplify
+  - AmplifyPlugins
   - AWSAuthUI
   - AWSFacebookSignIn
-  - AWSMobileClient
   - FBSDKLoginKit
 
 SPEC REPOS:
   trunk:
+    - Amplify
+    - AmplifyPlugins
+    - AppSyncRealTimeClient
     - AWSAuthCore
     - AWSAuthUI
     - AWSCognitoIdentityProvider
@@ -42,10 +99,19 @@ SPEC REPOS:
     - AWSCore
     - AWSFacebookSignIn
     - AWSMobileClient
+    - AWSPinpoint
+    - AWSPluginsCore
+    - AWSS3
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - ReachabilitySwift
+    - SQLite.swift
+    - Starscream
 
 SPEC CHECKSUMS:
+  Amplify: cdb7a7c8b8d4fbd7815e4b25812207516d83416b
+  AmplifyPlugins: 6ee36c02d09f7e848c6b9c6a936328da357761ac
+  AppSyncRealTimeClient: 879b9fa3ce3f335450ca06e0def279fa90af9e76
   AWSAuthCore: 598e8eb56e12799877414d10b04598de12a15992
   AWSAuthUI: bafa4e28a80b0b337e242db708ebed622a61b677
   AWSCognitoIdentityProvider: 4a721292eda37a8c3ef451e8fec28abe14aff18e
@@ -53,9 +119,15 @@ SPEC CHECKSUMS:
   AWSCore: 5a8f9d7461dbe5ea6a5473c41cf113b687e19136
   AWSFacebookSignIn: e37379eb6908d908fb612e3a242db0824ffadab9
   AWSMobileClient: 5c29678413764ee3bcd528421331deb0a35b72fb
+  AWSPinpoint: 6c17e240a104de90643e0afee5741a7528011800
+  AWSPluginsCore: fce4a87408b6eba8f060af873c95a0347fbb4f98
+  AWSS3: 04a7e689791b382d2d1e29cda6852048e0555635
   FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
   FBSDKLoginKit: 1b0cf04df0370b37404213157b060d6666ede814
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: cb8b4ec3230978dbe2ea23213e45260d97c5c885
+PODFILE CHECKSUM: b71d71897bdfe140ac362a4cee7dc0b1aab6d8c8
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4
