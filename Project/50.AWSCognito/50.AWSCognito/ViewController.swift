@@ -54,21 +54,22 @@ class ViewController: UIViewController, LoginButtonDelegate {
   }
   
   func fetchCurrentAuthSession() {
-    AWSMobileClient.default().initialize { (state, err) in
-      switch state {
-      case .signedIn:
-        print("Is user signed in - true")
-      case .signedOut, .signedOutFederatedTokensInvalid, .signedOutUserPoolsTokenInvalid:
-        print("Signed Out")
-      default: break
+    Amplify.Auth.fetchAuthSession { result in
+      switch result {
+      case .success(let session):
+        print("Is user signed in - \(session.isSignedIn)")
+      case .failure(let error):
+        print("Fetch session failed with error \(error)")
       }
     }
-//    _ = Amplify.Auth.fetchAuthSession { result in
-//      switch result {
-//      case .success(let session):
-//        print("Is user signed in - \(session.isSignedIn)")
-//      case .failure(let error):
-//        print("Fetch session failed with error \(error)")
+    
+//    AWSMobileClient.default().initialize { (state, err) in
+//      switch state {
+//      case .signedIn:
+//        print("Is user signed in - true")
+//      case .signedOut, .signedOutFederatedTokensInvalid, .signedOutUserPoolsTokenInvalid:
+//        print("Signed Out")
+//      default: break
 //      }
 //    }
   }
@@ -108,35 +109,12 @@ class ViewController: UIViewController, LoginButtonDelegate {
 //                print("Status: \(userState.rawValue)")
 //            }
 //        }
-
-//
-//    let cognitoRegion = AWSRegionType.USEast2 // Region of your Cognito Identity Pool
-//    let cognitoIdentityPoolId = "us-east-2:511dd363-3756-425d-95a2-eb607ec3f542" // e.g. "us-east-1:111e111-8efa-dead-b8d7-11c7f4e00de1"
-//    let tokens = ["graph.facebook.com": AccessToken.current!.tokenString]
-//    let customIdentityProvider = CustomIdentityProvider(tokens: tokens)
-//    let credentialsProvider = AWSCognitoCredentialsProvider(regionType: cognitoRegion,
-//                                                            identityPoolId: cognitoIdentityPoolId,
-//                                                            identityProviderManager: customIdentityProvider)
-//    let configuration = AWSServiceConfiguration(region: cognitoRegion,
-//                                                credentialsProvider: credentialsProvider)
-//    AWSServiceManager.default().defaultServiceConfiguration = configuration
-//    AWSCognitoIdentityProvider.register(with: configuration!, forKey: "identityProvider")
-//
-    
-//    credentialsProvider.getIdentityId().continueWith { (task) -> Any? in
-//      guard task.error != nil else {
-//        print("Error: \(task.error?.localizedDescription)")
-//        return nil
-//      }
-//      print("ClientId: \((task.result ?? "") as String)")
-//      return task
-//    }
   }
   
   private func getTokens() {
     AWSMobileClient.default().getIdentityId().continueWith { (task) in
       guard task.error == nil else {
-        print("Error: \(task.error?.localizedDescription)")
+        print("Error: \(task.error?.localizedDescription ?? "")")
         return nil
       }
       print("ClientId: \((task.result ?? "") as String)")
@@ -161,11 +139,6 @@ class ViewController: UIViewController, LoginButtonDelegate {
     
     /// SignOut with AWSMobileClient
 //    AWSMobileClient.default().signOut()
-    
-//    AWSSignInManager.sharedInstance().logout(completionHandler: {(result: Any?, error: Error?) in
-//      //self.showSignIn()
-//      print("Sign-out Successful")
-//    })
   }
   
   // MARK: - Facebook LoginButtonDelegate
@@ -176,6 +149,4 @@ class ViewController: UIViewController, LoginButtonDelegate {
   func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
     print("loginButtonDidLogOut")
   }
-  
-  
 }
