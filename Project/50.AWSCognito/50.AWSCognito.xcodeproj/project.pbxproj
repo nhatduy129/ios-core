@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		042B366B24FE40D400C55073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042B366924FE40D400C55073 /* Main.storyboard */; };
 		042B366D24FE40D700C55073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B366C24FE40D700C55073 /* Assets.xcassets */; };
 		042B367024FE40D700C55073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042B366E24FE40D700C55073 /* LaunchScreen.storyboard */; };
+		043F6F0224FFE29B0012C22E /* CustomIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */; };
+		043F6F04250001F30012C22E /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 043F6F03250001F30012C22E /* awsconfiguration.json */; };
 		E1D741AB8E7831CD752C4ED8 /* Pods_50_AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		042B366C24FE40D700C55073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042B366F24FE40D700C55073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042B367124FE40D700C55073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIdentityProvider.swift; sourceTree = "<group>"; };
+		043F6F03250001F30012C22E /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		7B01CBD6A55CEFC9CDD58478 /* Pods-50.AWSCognito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.debug.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.debug.xcconfig"; sourceTree = "<group>"; };
 		BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_50_AWSCognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3712724F4DDA82669CF590 /* Pods-50.AWSCognito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.release.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,11 +69,13 @@
 			children = (
 				042B366324FE40D400C55073 /* AppDelegate.swift */,
 				042B366524FE40D400C55073 /* SceneDelegate.swift */,
+				043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */,
 				042B366724FE40D400C55073 /* ViewController.swift */,
 				042B366924FE40D400C55073 /* Main.storyboard */,
 				042B366C24FE40D700C55073 /* Assets.xcassets */,
 				042B366E24FE40D700C55073 /* LaunchScreen.storyboard */,
 				042B367124FE40D700C55073 /* Info.plist */,
+				043F6F03250001F30012C22E /* awsconfiguration.json */,
 			);
 			path = 50.AWSCognito;
 			sourceTree = "<group>";
@@ -88,7 +94,6 @@
 				7B01CBD6A55CEFC9CDD58478 /* Pods-50.AWSCognito.debug.xcconfig */,
 				FF3712724F4DDA82669CF590 /* Pods-50.AWSCognito.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043F6F04250001F30012C22E /* awsconfiguration.json in Resources */,
 				042B367024FE40D700C55073 /* LaunchScreen.storyboard in Resources */,
 				042B366D24FE40D700C55073 /* Assets.xcassets in Resources */,
 				042B366B24FE40D400C55073 /* Main.storyboard in Resources */,
@@ -210,6 +216,7 @@
 				042B366824FE40D400C55073 /* ViewController.swift in Sources */,
 				042B366424FE40D400C55073 /* AppDelegate.swift in Sources */,
 				042B366624FE40D400C55073 /* SceneDelegate.swift in Sources */,
+				043F6F0224FFE29B0012C22E /* CustomIdentityProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

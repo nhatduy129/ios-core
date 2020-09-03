@@ -1,27 +1,61 @@
 PODS:
-  - FBSDKCoreKit (7.1.1):
-    - FBSDKCoreKit/Basics (= 7.1.1)
-    - FBSDKCoreKit/Core (= 7.1.1)
-  - FBSDKCoreKit/Basics (7.1.1)
-  - FBSDKCoreKit/Core (7.1.1):
+  - AWSAuthCore (2.15.3):
+    - AWSCore (= 2.15.3)
+  - AWSAuthUI (2.15.3):
+    - AWSAuthCore (= 2.15.3)
+    - AWSCore (= 2.15.3)
+  - AWSCognitoIdentityProvider (2.15.3):
+    - AWSCognitoIdentityProviderASF (= 1.0.2)
+    - AWSCore (= 2.15.3)
+  - AWSCognitoIdentityProviderASF (1.0.2)
+  - AWSCore (2.15.3)
+  - AWSFacebookSignIn (2.15.3):
+    - AWSAuthCore (= 2.15.3)
+    - FBSDKCoreKit (= 5.8)
+    - FBSDKLoginKit (= 5.8)
+  - AWSMobileClient (2.15.3):
+    - AWSAuthCore (= 2.15.3)
+    - AWSCognitoIdentityProvider (= 2.15.3)
+  - FBSDKCoreKit (5.8.0):
+    - FBSDKCoreKit/Basics (= 5.8.0)
+    - FBSDKCoreKit/Core (= 5.8.0)
+  - FBSDKCoreKit/Basics (5.8.0)
+  - FBSDKCoreKit/Core (5.8.0):
     - FBSDKCoreKit/Basics
-  - FBSDKLoginKit (7.1.1):
-    - FBSDKLoginKit/Login (= 7.1.1)
-  - FBSDKLoginKit/Login (7.1.1):
-    - FBSDKCoreKit (~> 7.1.1)
+  - FBSDKLoginKit (5.8.0):
+    - FBSDKLoginKit/Login (= 5.8.0)
+  - FBSDKLoginKit/Login (5.8.0):
+    - FBSDKCoreKit (~> 5.0)
 
 DEPENDENCIES:
+  - AWSAuthUI
+  - AWSFacebookSignIn
+  - AWSMobileClient
   - FBSDKLoginKit
 
 SPEC REPOS:
   trunk:
+    - AWSAuthCore
+    - AWSAuthUI
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSFacebookSignIn
+    - AWSMobileClient
     - FBSDKCoreKit
     - FBSDKLoginKit
 
 SPEC CHECKSUMS:
-  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
-  FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
+  AWSAuthCore: 598e8eb56e12799877414d10b04598de12a15992
+  AWSAuthUI: bafa4e28a80b0b337e242db708ebed622a61b677
+  AWSCognitoIdentityProvider: 4a721292eda37a8c3ef451e8fec28abe14aff18e
+  AWSCognitoIdentityProviderASF: 0fb6ea671c05a63276e320726f680cd880522442
+  AWSCore: 5a8f9d7461dbe5ea6a5473c41cf113b687e19136
+  AWSFacebookSignIn: e37379eb6908d908fb612e3a242db0824ffadab9
+  AWSMobileClient: 5c29678413764ee3bcd528421331deb0a35b72fb
+  FBSDKCoreKit: e7dcac0aabcfb09d0166998edd95fe3b05a0ce5d
+  FBSDKLoginKit: 1b0cf04df0370b37404213157b060d6666ede814
 
-PODFILE CHECKSUM: a1a8f809b91bae076602f4dfe1a0bd23d1254468
+PODFILE CHECKSUM: cb8b4ec3230978dbe2ea23213e45260d97c5c885
 
 COCOAPODS: 1.9.1
