@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		042B366424FE40D400C55073 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B366324FE40D400C55073 /* AppDelegate.swift */; };
 		042B366624FE40D400C55073 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B366524FE40D400C55073 /* SceneDelegate.swift */; };
-		042B366824FE40D400C55073 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B366724FE40D400C55073 /* ViewController.swift */; };
+		042B366824FE40D400C55073 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B366724FE40D400C55073 /* FacebookViewController.swift */; };
 		042B366B24FE40D400C55073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042B366924FE40D400C55073 /* Main.storyboard */; };
 		042B366D24FE40D700C55073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042B366C24FE40D700C55073 /* Assets.xcassets */; };
 		042B367024FE40D700C55073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042B366E24FE40D700C55073 /* LaunchScreen.storyboard */; };
 		043F6F0224FFE29B0012C22E /* CustomIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */; };
-		515355C02500DF9700DA3606 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 515355BE2500DF9600DA3606 /* awsconfiguration.json */; };
-		515355C12500DF9700DA3606 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 515355BF2500DF9700DA3606 /* amplifyconfiguration.json */; };
+		04BCD03225011E4B00A7F5C4 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BCD03025011E4B00A7F5C4 /* amplifyconfiguration.json */; };
+		04BCD03325011E4B00A7F5C4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BCD03125011E4B00A7F5C4 /* awsconfiguration.json */; };
+		04BCD03525012B0F00A7F5C4 /* GoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCD03425012B0F00A7F5C4 /* GoogleViewController.swift */; };
 		E1D741AB8E7831CD752C4ED8 /* Pods_50_AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,14 +24,15 @@
 		042B366024FE40D400C55073 /* 50.AWSCognito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 50.AWSCognito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042B366324FE40D400C55073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		042B366524FE40D400C55073 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		042B366724FE40D400C55073 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		042B366724FE40D400C55073 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		042B366A24FE40D400C55073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		042B366C24FE40D700C55073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		042B366F24FE40D700C55073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		042B367124FE40D700C55073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIdentityProvider.swift; sourceTree = "<group>"; };
-		515355BE2500DF9600DA3606 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		515355BF2500DF9700DA3606 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		04BCD03025011E4B00A7F5C4 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		04BCD03125011E4B00A7F5C4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		04BCD03425012B0F00A7F5C4 /* GoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleViewController.swift; sourceTree = "<group>"; };
 		7B01CBD6A55CEFC9CDD58478 /* Pods-50.AWSCognito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.debug.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.debug.xcconfig"; sourceTree = "<group>"; };
 		BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_50_AWSCognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3712724F4DDA82669CF590 /* Pods-50.AWSCognito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.release.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,12 +71,13 @@
 		042B366224FE40D400C55073 /* 50.AWSCognito */ = {
 			isa = PBXGroup;
 			children = (
-				515355BF2500DF9700DA3606 /* amplifyconfiguration.json */,
-				515355BE2500DF9600DA3606 /* awsconfiguration.json */,
+				04BCD03025011E4B00A7F5C4 /* amplifyconfiguration.json */,
+				04BCD03125011E4B00A7F5C4 /* awsconfiguration.json */,
 				042B366324FE40D400C55073 /* AppDelegate.swift */,
 				042B366524FE40D400C55073 /* SceneDelegate.swift */,
 				043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */,
-				042B366724FE40D400C55073 /* ViewController.swift */,
+				042B366724FE40D400C55073 /* FacebookViewController.swift */,
+				04BCD03425012B0F00A7F5C4 /* GoogleViewController.swift */,
 				042B366924FE40D400C55073 /* Main.storyboard */,
 				042B366C24FE40D700C55073 /* Assets.xcassets */,
 				042B366E24FE40D700C55073 /* LaunchScreen.storyboard */,
@@ -161,11 +164,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				515355C02500DF9700DA3606 /* awsconfiguration.json in Resources */,
+				04BCD03325011E4B00A7F5C4 /* awsconfiguration.json in Resources */,
 				042B367024FE40D700C55073 /* LaunchScreen.storyboard in Resources */,
-				515355C12500DF9700DA3606 /* amplifyconfiguration.json in Resources */,
 				042B366D24FE40D700C55073 /* Assets.xcassets in Resources */,
 				042B366B24FE40D400C55073 /* Main.storyboard in Resources */,
+				04BCD03225011E4B00A7F5C4 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,10 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042B366824FE40D400C55073 /* ViewController.swift in Sources */,
+				042B366824FE40D400C55073 /* FacebookViewController.swift in Sources */,
 				042B366424FE40D400C55073 /* AppDelegate.swift in Sources */,
 				042B366624FE40D400C55073 /* SceneDelegate.swift in Sources */,
 				043F6F0224FFE29B0012C22E /* CustomIdentityProvider.swift in Sources */,
+				04BCD03525012B0F00A7F5C4 /* GoogleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

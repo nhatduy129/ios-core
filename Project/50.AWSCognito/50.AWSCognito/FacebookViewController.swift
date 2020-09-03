@@ -14,7 +14,7 @@ import AWSFacebookSignIn
 import Amplify
 import AWSMobileClient
 
-class ViewController: UIViewController, LoginButtonDelegate {
+class FacebookViewController: UIViewController, LoginButtonDelegate {
   // This button use FBSDKLoginKit
   private lazy var facebookLoginButton: FBLoginButton = {
     let button = FBLoginButton()
