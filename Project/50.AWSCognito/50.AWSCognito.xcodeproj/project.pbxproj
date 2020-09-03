@@ -17,6 +17,7 @@
 		04BCD03225011E4B00A7F5C4 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BCD03025011E4B00A7F5C4 /* amplifyconfiguration.json */; };
 		04BCD03325011E4B00A7F5C4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 04BCD03125011E4B00A7F5C4 /* awsconfiguration.json */; };
 		04BCD03525012B0F00A7F5C4 /* GoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCD03425012B0F00A7F5C4 /* GoogleViewController.swift */; };
+		04BCD03725012B8900A7F5C4 /* AppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCD03625012B8900A7F5C4 /* AppleViewController.swift */; };
 		E1D741AB8E7831CD752C4ED8 /* Pods_50_AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		04BCD03025011E4B00A7F5C4 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		04BCD03125011E4B00A7F5C4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		04BCD03425012B0F00A7F5C4 /* GoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleViewController.swift; sourceTree = "<group>"; };
+		04BCD03625012B8900A7F5C4 /* AppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleViewController.swift; sourceTree = "<group>"; };
 		7B01CBD6A55CEFC9CDD58478 /* Pods-50.AWSCognito.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.debug.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.debug.xcconfig"; sourceTree = "<group>"; };
 		BA74C9058370983675080420 /* Pods_50_AWSCognito.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_50_AWSCognito.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3712724F4DDA82669CF590 /* Pods-50.AWSCognito.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-50.AWSCognito.release.xcconfig"; path = "Target Support Files/Pods-50.AWSCognito/Pods-50.AWSCognito.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				043F6F0124FFE29B0012C22E /* CustomIdentityProvider.swift */,
 				042B366724FE40D400C55073 /* FacebookViewController.swift */,
 				04BCD03425012B0F00A7F5C4 /* GoogleViewController.swift */,
+				04BCD03625012B8900A7F5C4 /* AppleViewController.swift */,
 				042B366924FE40D400C55073 /* Main.storyboard */,
 				042B366C24FE40D700C55073 /* Assets.xcassets */,
 				042B366E24FE40D700C55073 /* LaunchScreen.storyboard */,
@@ -246,6 +249,7 @@
 				042B366624FE40D400C55073 /* SceneDelegate.swift in Sources */,
 				043F6F0224FFE29B0012C22E /* CustomIdentityProvider.swift in Sources */,
 				04BCD03525012B0F00A7F5C4 /* GoogleViewController.swift in Sources */,
+				04BCD03725012B8900A7F5C4 /* AppleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
