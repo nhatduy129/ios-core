@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nn-ib-Gxj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Nn-ib-Gxj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -31,7 +31,35 @@
                     <view key="view" contentMode="scaleToFill" id="hH7-Fs-7Jb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzX-Hj-Wrv">
+                                <rect key="frame" x="90" y="410.5" width="234" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login with Google Account">
+                                    <color key="titleColor" red="0.94333755970001221" green="0.32553115902336693" blue="0.12816261497349329" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="login" destination="Qp5-dl-X4W" eventType="touchUpInside" id="fe0-xd-gab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-07-vqh">
+                                <rect key="frame" x="176" y="471" width="62" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout" destination="Qp5-dl-X4W" eventType="touchUpInside" id="A7r-1L-1fW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WzX-Hj-Wrv" firstAttribute="centerY" secondItem="N9n-HH-hnP" secondAttribute="centerY" id="LvN-SB-NMT"/>
+                            <constraint firstItem="WzX-Hj-Wrv" firstAttribute="centerX" secondItem="N9n-HH-hnP" secondAttribute="centerX" id="TfG-de-MRt"/>
+                            <constraint firstItem="aVd-07-vqh" firstAttribute="centerX" secondItem="WzX-Hj-Wrv" secondAttribute="centerX" id="TxK-xR-ady"/>
+                            <constraint firstItem="aVd-07-vqh" firstAttribute="top" secondItem="WzX-Hj-Wrv" secondAttribute="bottom" constant="24.5" id="tU0-x6-50V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N9n-HH-hnP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Google" id="yP0-jY-fSs"/>
@@ -62,6 +90,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7Nn-ib-Gxj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5mp-Ve-ZhR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

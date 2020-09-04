@@ -63,15 +63,15 @@ class FacebookViewController: UIViewController, LoginButtonDelegate {
       }
     }
     
-//    AWSMobileClient.default().initialize { (state, err) in
-//      switch state {
-//      case .signedIn:
-//        print("Is user signed in - true")
-//      case .signedOut, .signedOutFederatedTokensInvalid, .signedOutUserPoolsTokenInvalid:
-//        print("Signed Out")
-//      default: break
-//      }
-//    }
+    //    AWSMobileClient.default().initialize { (state, err) in
+    //      switch state {
+    //      case .signedIn:
+    //        print("Is user signed in - true")
+    //      case .signedOut, .signedOutFederatedTokensInvalid, .signedOutUserPoolsTokenInvalid:
+    //        print("Signed Out")
+    //      default: break
+    //      }
+    //    }
   }
   
   private func layoutConstraint() {
@@ -100,15 +100,15 @@ class FacebookViewController: UIViewController, LoginButtonDelegate {
     }
     
     /// Login with AWSMobileClient
-//        let hostedUIOptions = HostedUIOptions(scopes: ["profile","email"], identityProvider: "Facebook")
-//        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, hostedUIOptions: hostedUIOptions) { (userState, error) in
-//            if let error = error as? AWSMobileClientError {
-//                print(error.localizedDescription)
-//            }
-//            if let userState = userState {
-//                print("Status: \(userState.rawValue)")
-//            }
-//        }
+    //        let hostedUIOptions = HostedUIOptions(scopes: ["profile","email"], identityProvider: "Facebook")
+    //        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, hostedUIOptions: hostedUIOptions) { (userState, error) in
+    //            if let error = error as? AWSMobileClientError {
+    //                print(error.localizedDescription)
+    //            }
+    //            if let userState = userState {
+    //                print("Status: \(userState.rawValue)")
+    //            }
+    //        }
   }
   
   private func getTokens() {
@@ -118,7 +118,17 @@ class FacebookViewController: UIViewController, LoginButtonDelegate {
         return nil
       }
       print("ClientId: \((task.result ?? "") as String)")
+      
       return nil
+    }
+    
+    Amplify.Auth.fetchUserAttributes { (result) in
+      switch result {
+      case .success(let info):
+        print(info)
+      case .failure(let error):
+        print(error)
+      }
     }
     
     AWSMobileClient.default().getTokens { (tokens, err) in
@@ -127,18 +137,18 @@ class FacebookViewController: UIViewController, LoginButtonDelegate {
   }
   
   @objc private func logoutButtonTapped() {
-        /// Sign out with Amplify
-        Amplify.Auth.signOut { (result) in
-          switch result {
-          case .success:
-            print("Signed Out")
-          case .failure(_):
-            print("Sign Out failed")
-          }
-        }
+    /// Sign out with Amplify
+    Amplify.Auth.signOut { (result) in
+      switch result {
+      case .success:
+        print("Signed Out")
+      case .failure(_):
+        print("Sign Out failed")
+      }
+    }
     
     /// SignOut with AWSMobileClient
-//    AWSMobileClient.default().signOut()
+    //    AWSMobileClient.default().signOut()
   }
   
   // MARK: - Facebook LoginButtonDelegate
