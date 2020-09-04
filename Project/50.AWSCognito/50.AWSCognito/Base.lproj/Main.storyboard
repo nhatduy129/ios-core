@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Facebook-->
+        <!--Facebook View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FacebookViewController" customModule="_0_AWSCognito" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,12 +17,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Facebook" id="7kt-eU-7jC"/>
                     <navigationItem key="navigationItem" id="wql-oZ-ZLw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="862"/>
+            <point key="canvasLocation" x="915.94202898550736" y="861.83035714285711"/>
         </scene>
         <!--Google-->
         <scene sceneID="3qF-3z-7V0">
@@ -66,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFO-ZS-kG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="862"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="861.83035714285711"/>
         </scene>
         <!--Apple-->
         <scene sceneID="Rxk-gj-gcW">
@@ -82,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iD5-cF-lMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="862"/>
+            <point key="canvasLocation" x="2818.840579710145" y="861.83035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kun-Vf-4ZK">
@@ -95,7 +94,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="jR7-fr-8rM"/>
+                        <segue destination="Esc-nl-rAy" kind="relationship" relationship="viewControllers" id="jR7-fr-8rM"/>
                         <segue destination="Qp5-dl-X4W" kind="relationship" relationship="viewControllers" id="xfA-Dy-wDF"/>
                         <segue destination="se0-JC-C4z" kind="relationship" relationship="viewControllers" id="2Ei-ze-Bw2"/>
                     </connections>
@@ -103,6 +102,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHt-YF-qeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
+        </scene>
+        <!--Facebook-->
+        <scene sceneID="jQr-Rf-DJ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Esc-nl-rAy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Facebook" id="7kt-eU-7jC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="55e-rl-a8c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hdD-vg-1NN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veE-zy-Jts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="861.83035714285711"/>
         </scene>
     </scenes>
 </document>
