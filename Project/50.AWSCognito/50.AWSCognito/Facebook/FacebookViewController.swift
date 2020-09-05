@@ -61,7 +61,7 @@ class FacebookViewController: UIViewController {
     view.addSubview(logoutButton)
     view.addSubview(printUserAttributesButton)
     layoutConstraint()
-    fetchCurrentAuthSession()
+    //fetchCurrentAuthSession()
     print("AWSSignInManager.sharedInstance().isLoggedIn: \(AWSSignInManager.sharedInstance().isLoggedIn)")
   }
   
@@ -101,28 +101,27 @@ class FacebookViewController: UIViewController {
   
   @objc private func facebookAWSLoginButtonTapped() {
     /// Login with Amplify.Auth
-    Amplify.Auth.signInWithWebUI(for: .facebook,
-                                 presentationAnchor: UIApplication.shared.windows.first!) { [weak self] result in
-                                  switch result {
-                                  case .success:
-                                    print("Sign in succeeded")
-                                    self?.getTokens()
-                                    self?.loginState = true
-                                  case .failure(let error):
-                                    print("Sign in failed \(error)")
-                                  }
-    }
+//    Amplify.Auth.signInWithWebUI(for: .facebook,
+//                                 presentationAnchor: UIApplication.shared.windows.first!) { [weak self] result in
+//                                  switch result {
+//                                  case .success:
+//                                    print("Sign in succeeded")
+//                                    self?.getTokens()
+//                                    self?.loginState = true
+//                                  case .failure(let error):
+//                                    print("Sign in failed \(error)")
+//                                  }
+//    }
     
-    /// Login with AWSMobileClient
-    //        let hostedUIOptions = HostedUIOptions(scopes: ["profile","email"], identityProvider: "Facebook")
-    //        AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, hostedUIOptions: hostedUIOptions) { (userState, error) in
-    //            if let error = error as? AWSMobileClientError {
-    //                print(error.localizedDescription)
-    //            }
-    //            if let userState = userState {
-    //                print("Status: \(userState.rawValue)")
-    //            }
-    //        }
+            let hostedUIOptions = HostedUIOptions(scopes: ["profile","email"], identityProvider: "Facebook")
+            AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, hostedUIOptions: hostedUIOptions) { (userState, error) in
+                if let error = error as? AWSMobileClientError {
+                    print(error.localizedDescription)
+                }
+                if let userState = userState {
+                    print("Status: \(userState.rawValue)")
+                }
+            }
   }
   
   private func getTokens() {

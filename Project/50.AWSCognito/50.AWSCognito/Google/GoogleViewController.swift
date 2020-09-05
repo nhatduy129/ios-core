@@ -15,7 +15,7 @@ class GoogleViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    fetchCurrentAuthSession()
+    //fetchCurrentAuthSession()
   }
   
   func fetchCurrentAuthSession() {
