@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success:
                 print("Sign in success")
+                print("Amplify.Auth.getCurrentUser()?.username: \(String(describing: Amplify.Auth.getCurrentUser()?.username))")
             case .failure(let error):
                 print(error)
             }

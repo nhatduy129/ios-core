@@ -35,6 +35,7 @@ class GoogleViewController: UIViewController {
                                   switch result {
                                   case .success:
                                     print("Sign in succeeded")
+                                    print("Amplify.Auth.getCurrentUser()?.username: \(String(describing: Amplify.Auth.getCurrentUser()?.username))")
                                     self?.getTokens()
                                   case .failure(let error):
                                     print("Sign in failed \(error)")

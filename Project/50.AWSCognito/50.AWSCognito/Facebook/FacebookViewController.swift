@@ -61,7 +61,7 @@ class FacebookViewController: UIViewController {
     view.addSubview(logoutButton)
     view.addSubview(printUserAttributesButton)
     layoutConstraint()
-    //fetchCurrentAuthSession()
+    fetchCurrentAuthSession()
     print("AWSSignInManager.sharedInstance().isLoggedIn: \(AWSSignInManager.sharedInstance().isLoggedIn)")
   }
   
@@ -76,16 +76,6 @@ class FacebookViewController: UIViewController {
         print("Fetch session failed with error \(error)")
       }
     }
-    
-//        AWSMobileClient.default().initialize { (state, err) in
-//          switch state {
-//          case .signedIn:
-//            print("Is user signed in - true")
-//          case .signedOut, .signedOutFederatedTokensInvalid, .signedOutUserPoolsTokenInvalid:
-//            print("Signed Out")
-//          default: break
-//          }
-//        }
   }
   
   private func layoutConstraint() {
@@ -101,27 +91,19 @@ class FacebookViewController: UIViewController {
   
   @objc private func facebookAWSLoginButtonTapped() {
     /// Login with Amplify.Auth
-//    Amplify.Auth.signInWithWebUI(for: .facebook,
-//                                 presentationAnchor: UIApplication.shared.windows.first!) { [weak self] result in
-//                                  switch result {
-//                                  case .success:
-//                                    print("Sign in succeeded")
-//                                    self?.getTokens()
-//                                    self?.loginState = true
-//                                  case .failure(let error):
-//                                    print("Sign in failed \(error)")
-//                                  }
-//    }
-    
-            let hostedUIOptions = HostedUIOptions(scopes: ["profile","email"], identityProvider: "Facebook")
-            AWSMobileClient.default().showSignIn(navigationController: self.navigationController!, hostedUIOptions: hostedUIOptions) { (userState, error) in
-                if let error = error as? AWSMobileClientError {
-                    print(error.localizedDescription)
-                }
-                if let userState = userState {
-                    print("Status: \(userState.rawValue)")
-                }
-            }
+    Amplify.Auth.signInWithWebUI(for: .facebook,
+                                 presentationAnchor: UIApplication.shared.windows.first!) { [weak self] result in
+                                  switch result {
+                                  case .success:
+                                    print("Sign in succeeded")
+                                    self?.getTokens()
+                                    print("Amplify.Auth.getCurrentUser()?.username: \(String(describing: Amplify.Auth.getCurrentUser()?.username))")
+                                    Amplify.Auth.getCurrentUser().
+                                    self?.loginState = true
+                                  case .failure(let error):
+                                    print("Sign in failed \(error)")
+                                  }
+    }
   }
   
   private func getTokens() {
@@ -166,6 +148,7 @@ class FacebookViewController: UIViewController {
   }
   
   @objc private func printUserAttributesButtonTapped() {
+    print("Amplify.Auth.getCurrentUser()?.username: \(String(describing: Amplify.Auth.getCurrentUser()?.username))")
     Amplify.Auth.fetchUserAttributes(listener: { result in
       switch result {
       case .success(let attributes):
