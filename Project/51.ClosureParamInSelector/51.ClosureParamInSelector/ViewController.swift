@@ -12,10 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(demo), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(demo2), userInfo: nil, repeats: true)
     }
 
-    @objc func demo(completion: (() -> Void)? = nil) {
+    @objc func demo1(completion: (() -> Void)? = nil) {
+        print("demo")
+    }
+    
+    @objc func demo2(app: String? = nil) {
         print("demo")
     }
 }

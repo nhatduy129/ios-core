@@ -1,4 +1,4 @@
-var genres = ["towel", "42"]
-var jointGenres : String = genres.reduce("", { $0 == "" ? $1 : $0 + "," + $1 })
+import Foundation
 
-print(jointGenres)
+let d = Int(ceil(10.000001 / 2.0))
+print(d)
