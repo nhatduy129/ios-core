@@ -1,9 +1,16 @@
-import Foundation
+import UIKit
 
-let date = Date()
+class Person {
+    func printName() {
+        print("Person")
+    }
+}
 
-"hh:mm"
-11:55 -> 11:55
-09:55 -> 9:55
-11:05 -> 11:5
-13:05 -> 13:5
+class Student: Person {
+    override func printName() {
+        print("Student")
+    }
+}
+
+let a: Person = Student()
+a.printName()
