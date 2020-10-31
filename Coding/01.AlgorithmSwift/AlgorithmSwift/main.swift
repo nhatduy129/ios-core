@@ -8,49 +8,24 @@
 
 import Foundation
 
-enum Action: String {
-    case insert
-    case addToValue
-    case addToKey
-    case get
+func countDigits(n: Int64) -> Int {
+    return String(n).count
 }
 
-func hashMap(queryType: [String], query: [[Int]]) -> Int64 {
-    var bufferKey = 0
-    var sum: Int64 = 0, bufferValue: Int64 = 0
-    var dict: [Int: Int64] = [:]
-    for i in (0..<queryType.count) {
-        switch queryType[i] {
-        case Action.insert.rawValue:
-            dict[query[i][0] - bufferKey] = Int64(query[i][1]) - bufferValue
-        case Action.addToValue.rawValue:
-            bufferValue += Int64(query[i][0])
-        case Action.addToKey.rawValue:
-            bufferKey += query[i][0]
-        case Action.get.rawValue:
-            if let value = dict[query[i][0] - bufferKey] {
-                sum += value + bufferValue
-            }
-        default:
-            break
-        }
+func concatenationsSum(a: [Int]) -> Int64 {
+    let a = a.map { Int64($0) }
+    let sum: Int64 = a.reduce(0, +)
+    var res: Int64 = 0
+    for i in 0..<a.count {
+        res += sum * Int64(pow(10, Double(countDigits(n: a[i]))))
+        res += a[i] * Int64(a.count)
     }
-    return sum
+    return res
 }
 
-let output = hashMap(queryType:
-    ["insert",
-    "addToValue",
-    "get",
-    "insert",
-    "addToKey",
-    "addToValue",
-    "get"], query:
-    [[1,2],
-    [2],
-    [1],
-    [2,3],
-    [1],
-    [-1],
-    [3]])
-print(output)
+func main() {
+    let res = concatenationsSum(a: [10])
+    print(res)
+}
+
+main()
