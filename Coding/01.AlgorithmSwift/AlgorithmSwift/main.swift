@@ -8,17 +8,28 @@
 
 import Foundation
 
-func countDigits(n: Int64) -> Int {
-    return String(n).count
+struct Student {
+    var ten: String = ""
+    var tuoi: Int = 0
 }
 
-func isValid(_ s: String) -> Bool {
-    var stack = 
+extension Student {
+    init(ten: String) {
+        self.ten = ten
+        self.tuoi = 0
+    }
+    
+    func cc() {
+        print("cc")
+    }
 }
 
 func main() {
-    let res = isValid("()")
-    print(res)
+    let arr = [
+        Student(ten: "lk", tuoi: 1),
+        Student(ten: "lksd")
+    ]
+    arr[0].cc()
 }
 
 main()
