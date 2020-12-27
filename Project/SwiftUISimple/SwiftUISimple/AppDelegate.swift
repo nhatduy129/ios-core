@@ -1,14 +1,13 @@
 //
 //  AppDelegate.swift
-//  frameandbound
+//  SwiftUISimple
 //
-//  Created by Duy Nguyen on 4/10/20.
-//  Copyright © 2020 Duy Nguyen. All rights reserved.
+//  Created by Duy Nguyen on 27/12/20.
 //
 
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
