@@ -1,0 +1,19 @@
+target '56.StoreKeySample' do
+  use_frameworks!
+
+  target '56.StoreKeySampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target '56.StoreKeySampleUITests' do
+    # Pods for testing
+  end
+
+end
+
+plugin 'cocoapods-keys', {
+  :project => "56.StoreKeySample",
+  :keys => [
+    "DemoKey",
+  ]}
