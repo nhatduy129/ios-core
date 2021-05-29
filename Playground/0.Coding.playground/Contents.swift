@@ -1,4 +1,6 @@
-import Foundation
+let first = ["Sulaco", "Nostromo"]
 
-let d = Int(ceil(10.000001 / 2.0))
-print(d)
+let second = ["X-Wing", "TIE Fighter"]
+
+let third = first + second
+print(third)
