@@ -1,0 +1,11 @@
+framework module LPALib {
+  umbrella header "LPALib.h"
+
+  export *
+  module * { export * }
+}
+
+module LPALib.Swift {
+    header "LPALib-Swift.h"
+    requires objc
+}
