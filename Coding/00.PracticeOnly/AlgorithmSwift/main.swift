@@ -8,34 +8,27 @@
 
 import Foundation
 
-// dieu kien position[i+1] - position[i] >= abs(height[i+1] - height[i])
-// mud = so luong mud o giua
-// gap = don vi wall heigh chenh lech
-
-// if gap <= mud + 1
-// do some thing
-// else return 0
-
-//
-func maxHeight(wallPositions: [Int], wallHeights: [Int]) -> Int {
-    var result = 0
-    for i in 0..<(wallPositions.count - 1) {
-        let gap = abs(wallHeights[i] - wallHeights[i+1])
-        var numberOfSlots = wallPositions[i+1] - wallPositions[i] - 1
-        var ans = 0
-        if numberOfSlots == 0 {
-            ans = 0
-        } else if gap > numberOfSlots + 1 || gap == numberOfSlots - 1 {
-            ans = min(wallHeights[i], wallHeights[i+1]) + numberOfSlots
-        } else {
-            numberOfSlots += numberOfSlots.isMultiple(of: 2) ? 0 : 1
-            let bonus = (numberOfSlots + gap) / 2
-            ans = min(wallHeights[i], wallHeights[i+1]) + bonus
-        }
-        result = max(result, ans)
+func alarmClock(setTime: String, timeToSet: String) -> Int {
+    let a = setTime.split(separator: ":")
+    let aH = Int(a[0])!, aM = Int(a[1])!
+    let b = timeToSet.split(separator: ":")
+    let bH = Int(b[0])!, bM = Int(b[1])!
+    var h = 0, m = 0
+    if bH > aH {
+        let tmp = 23 - bH + aH + 1
+        h = min(bH - aH, tmp)
+    } else if bH < aH {
+        let tmp = 23 - aH + bH + 1
+        h = min(aH - bH, tmp)
     }
-    return result
+    if bM > aM {
+        let tmp = 59 - bM + aM + 1
+        m = min(bM - aM, tmp)
+    } else if bM < aM {
+        let tmp = 59 - aM + bM + 1
+        m = min(aM - bM, tmp)
+    }
+    return h + m
 }
 
-print(maxHeight(wallPositions: [1, 4],
-                wallHeights: [1, 2]))
+print(alarmClock(setTime: "07:30", timeToSet: "08:00"))

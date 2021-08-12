@@ -1,0 +1,19 @@
+excluded:
+  - Pods
+  - Cartography
+  - build
+disabled_rules:
+  - cyclomatic_complexity
+  - trailing_whitespace
+  - line_length
+  - legacy_constructor
+variable_name:
+    min_length:
+        warning: 1
+function_body_length: 100
+custom_rules:
+    empty_line_before_closing_brace: 
+    name: "Empty Line before closing brace"
+    regex: '(^[ a-zA-Z ]*(?:protocol|extension|class|struct) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)'
+    message: "There should be an empty line after a declaration"
+    severity: error

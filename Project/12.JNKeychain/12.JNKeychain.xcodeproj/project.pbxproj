@@ -185,20 +185,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-12.JNKeychain/Pods-12.JNKeychain-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JNKeychain/JNKeychain.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-12.JNKeychain/Pods-12.JNKeychain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JNKeychain.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-12.JNKeychain/Pods-12.JNKeychain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-12.JNKeychain/Pods-12.JNKeychain-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-12.JNKeychain/Pods-12.JNKeychain-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

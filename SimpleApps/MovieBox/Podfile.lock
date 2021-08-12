@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Mocker (2.5.2)
+  - PullToRefreshKit (0.8.8)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4.3)
+  - Mocker
+  - PullToRefreshKit
+  - SDWebImage
+  - SVProgressHUD (~> 2.2.5)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Mocker
+    - PullToRefreshKit
+    - SDWebImage
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Mocker: 304831b890144a47bd2858714041f7d4a304016d
+  PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 4540349936861e928bd331c420c8b9d1a8fdcfd5
+
+COCOAPODS: 1.10.1
