@@ -11,7 +11,7 @@ Xcode version: **12.5.1**
 Language: **Swift 5**
 
 ## 3. App's demonstrate
-![MovieBox demonstrate](https://i.imgur.com/aVLmWjJ.gifv)
+![MovieBox demonstrate](./SimpleApps/MovieBox/demonstrate.gif)
 
 ## 4. What I have done in this app
 * Wrote 65 unit tests, covered 83%. It includes testing API calls, view models, view controllers and extensions.
