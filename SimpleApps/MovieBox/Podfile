@@ -1,15 +1,15 @@
 # platform :ios, '14.0'
 
-target 'CS_iOS_Assignment' do
+target 'MovieBox' do
   use_frameworks!
   pod 'Alamofire', '~> 5.4.3'
-  pod 'SDWebImage' '~> 5.11.1'
+  pod 'SDWebImage', '~> 5.11.1'
   pod 'PullToRefreshKit', '~> 0.8.8'
   pod 'SVProgressHUD', '~> 2.2.5'
 end
 
-target 'CS_iOS_AssignmentTests' do
+target 'MovieBoxTests' do
   use_frameworks!
   pod 'Alamofire', '~> 5.4.3'
-  pod 'Mocker'
+  pod 'Mocker', '~> 2.5.2'
 end
