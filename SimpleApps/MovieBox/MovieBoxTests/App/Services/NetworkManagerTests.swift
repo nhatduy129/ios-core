@@ -120,6 +120,33 @@ final class NetworkManagerTests: XCTestCase {
         XCTAssertEqual(result, posterResponse)
     }
     
+    func testNetworkManager_getPosters_noInternetReturnError() {
+        // given
+        let promise = expectation(description: "Completion handler invoked")
+        let mock = Mock(
+            url: URL(string: "\(Constants.baseURL)/movie/now_playing?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=undefined")!,
+            dataType: .json,
+            statusCode: 0,
+            data: [.get: Data()],
+            requestError: URLError(.notConnectedToInternet)
+        )
+        mock.register()
+        // when
+        var result: AFError?
+        sut.getPosters { response in
+            switch response {
+            case .success(_):
+                break
+            case .failure(let error):
+                result = error
+            }
+            promise.fulfill()
+        }
+        wait(for: [promise], timeout: 1)
+        // then
+        XCTAssertEqual((result?.underlyingError as? URLError)?.code, URLError.notConnectedToInternet)
+    }
+    
     func testNetworkManager_getPosters_wrongJSONFormatReturnError() {
         // given
         let promise = expectation(description: "Completion handler invoked")
