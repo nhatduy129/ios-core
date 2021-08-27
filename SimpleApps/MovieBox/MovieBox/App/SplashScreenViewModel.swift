@@ -9,7 +9,12 @@
 import Foundation
 import Alamofire
 
-final class SplashScreenViewModel {
+protocol SplashScreenViewModelType {
+    func fetchMoviesAndPosters(completion: @escaping ((Swift.Result<(movies: [Movie], posters: [Movie]),
+                                                                    AFError>) -> Void))
+}
+
+final class SplashScreenViewModel: SplashScreenViewModelType {
     private let networkManager: NetworkManager
     
     init(networkManager: NetworkManager = .shared) {

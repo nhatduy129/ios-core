@@ -9,7 +9,16 @@
 import Foundation
 import Alamofire
 
-final class MoviesListViewModel {
+protocol MoviesListViewModelType {
+    func getNumberOfMovies() -> Int
+    func getMovie(byIndex index: Int) -> Movie
+    func getNumberOfPoster() -> Int
+    func getPoster(byIndex index: Int) -> Movie
+    func loadMoreMovies(completion: @escaping (Swift.Result<Void, AFError>) -> Void)
+    func getMovieDetail(movieId id: Int, completion: @escaping (Swift.Result<MovieDetail, AFError>) -> Void)
+}
+
+final class MoviesListViewModel: MoviesListViewModelType {
     private var movies: [Movie]
     private let poster: [Movie]
     private let networkManager: NetworkManager

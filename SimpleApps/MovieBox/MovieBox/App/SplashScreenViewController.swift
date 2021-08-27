@@ -34,9 +34,9 @@ final class SplashScreenViewController: BaseViewController {
         }
         return nil
     }
-    private let viewModel: SplashScreenViewModel
+    private let viewModel: SplashScreenViewModelType
     
-    init(viewModel: SplashScreenViewModel) {
+    init(viewModel: SplashScreenViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

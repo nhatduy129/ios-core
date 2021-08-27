@@ -8,6 +8,15 @@
 
 import Foundation
 
+protocol MovieDetailViewModelType {
+    func getTitle() -> String?
+    func getReleaseDateAndRuntime() -> String?
+    func getOverview() -> String?
+    func getPosterURL() -> URL?
+    func getNumberOfGenres() -> Int
+    func getGenre(byIndex index: Int) -> Genre?
+}
+
 final class MovieDetailViewModel {
     private let movieDetail: MovieDetail
     

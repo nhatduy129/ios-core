@@ -29,9 +29,9 @@ final class MoviesListViewController: BaseViewController, UITableViewDelegate,
         return tableView
     }()
     
-    private let viewModel: MoviesListViewModel
+    private let viewModel: MoviesListViewModelType
     
-    init(viewModel: MoviesListViewModel) {
+    init(viewModel: MoviesListViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

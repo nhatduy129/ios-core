@@ -94,10 +94,10 @@ final class MovieDetailViewController: BaseViewController, UICollectionViewDeleg
         return collectionView
     }()
     
-    private let viewModel: MovieDetailViewModel
+    private let viewModel: MovieDetailViewModelType
     private var collectionViewHeightAnchor: NSLayoutConstraint?
     
-    init(viewModel: MovieDetailViewModel) {
+    init(viewModel: MovieDetailViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
