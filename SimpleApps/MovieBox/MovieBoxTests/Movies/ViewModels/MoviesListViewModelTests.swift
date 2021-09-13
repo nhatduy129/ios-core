@@ -92,7 +92,7 @@ final class MoviesListViewModelTests: XCTestCase {
         mock.register()
         let promise = expectation(description: "Completion handler invoked")
         // when
-        var error: AFError?
+        var error: APIError?
         sut.loadMoreMovies { result in
             switch result {
             case .failure(let err):

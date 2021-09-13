@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 final class SplashScreenViewController: BaseViewController {
     private lazy var logoImageView: UIImageView = {
@@ -82,7 +81,7 @@ final class SplashScreenViewController: BaseViewController {
     private func fetchData() {
         dispatchGroup.enter()
         var viewController: MoviesListViewController?
-        var error: AFError?
+        var error: APIError?
         viewModel.fetchMoviesAndPosters { [weak self] result in
             switch result {
             case .success(let data):

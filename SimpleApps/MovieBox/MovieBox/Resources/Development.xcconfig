@@ -1,0 +1,18 @@
+//
+//  Development.xcconfig
+//  MovieBox
+//
+//  Created by Duy Nguyen on 27/8/21.
+//  Copyright © 2021 Backbase. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-MovieBox/Pods-MovieBox.development.xcconfig"
+
+DISPLAY_NAME = MovieBox Dev
+BUNDLE_ID_SUFFIX = .dev
+
+API_BASE_URL = https:/$()/api.themoviedb.org/3
+BASE_IMAGE_URL = https:/$()/image.tmdb.org/t/p
+API_KEY = 55957fcf3ba81b137f8fc01ac5a31fb5

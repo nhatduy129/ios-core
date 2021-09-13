@@ -51,17 +51,14 @@ final class NetworkManagerTests: XCTestCase {
     }
     
     private func givenErrorData() -> Data {
-        let error = """
-            "status_message": "This is error",
-            "status_code": -1
-            """
+        let error = ResponseError(statusMessage: "This is error", statusCode: 987)
         let data = try? JSONEncoder().encode(error)
         return data ?? Data()
     }
     
     private func givenDummyData() -> Data {
         let dummy = """
-            "abc": "xyz"
+            {"abc": "xyz"}
             """
         let data = try? JSONEncoder().encode(dummy)
         return data ?? Data()
@@ -120,33 +117,6 @@ final class NetworkManagerTests: XCTestCase {
         XCTAssertEqual(result, posterResponse)
     }
     
-    func testNetworkManager_getPosters_noInternetReturnError() {
-        // given
-        let promise = expectation(description: "Completion handler invoked")
-        let mock = Mock(
-            url: URL(string: "\(Constants.baseURL)/movie/now_playing?api_key=55957fcf3ba81b137f8fc01ac5a31fb5&language=en-US&page=undefined")!,
-            dataType: .json,
-            statusCode: 0,
-            data: [.get: Data()],
-            requestError: URLError(.notConnectedToInternet)
-        )
-        mock.register()
-        // when
-        var result: AFError?
-        sut.getPosters { response in
-            switch response {
-            case .success(_):
-                break
-            case .failure(let error):
-                result = error
-            }
-            promise.fulfill()
-        }
-        wait(for: [promise], timeout: 1)
-        // then
-        XCTAssertEqual((result?.underlyingError as? URLError)?.code, URLError.notConnectedToInternet)
-    }
-    
     func testNetworkManager_getPosters_wrongJSONFormatReturnError() {
         // given
         let promise = expectation(description: "Completion handler invoked")
@@ -155,7 +125,7 @@ final class NetworkManagerTests: XCTestCase {
                         data: [.get: givenDummyData()])
         mock.register()
         // when
-        var result: AFError?
+        var result: APIError?
         sut.getPosters { response in
             switch response {
             case .success(_):
@@ -167,7 +137,7 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 1)
         // then
-        XCTAssertTrue(result?.isResponseSerializationError ?? false)
+        XCTAssertEqual(result, .serialization)
     }
     
     func testNetworkManager_getPosters_responseErrorReturnError() {
@@ -178,7 +148,7 @@ final class NetworkManagerTests: XCTestCase {
                         data: [.get: givenErrorData()])
         mock.register()
         // when
-        var result: AFError?
+        var result: APIError?
         sut.getPosters { response in
             switch response {
             case .success(_):
@@ -190,7 +160,7 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 1)
         // then
-        XCTAssertEqual(result?.responseCode, 401)
+        XCTAssertEqual(result, .knownError(code: 987))
     }
     
     // MARK: - getMovies
@@ -254,7 +224,7 @@ final class NetworkManagerTests: XCTestCase {
                         data: [.get: givenDummyData()])
         mock.register()
         // when
-        var result: AFError?
+        var result: APIError?
         sut.getMovies(page: 1) { response in
             switch response {
             case .success(_):
@@ -266,7 +236,7 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 1)
         // then
-        XCTAssertTrue(result?.isResponseSerializationError ?? false)
+        XCTAssertEqual(result, .serialization)
     }
     
     func testNetworkManager_getMovies_responseErrorReturnError() {
@@ -277,7 +247,7 @@ final class NetworkManagerTests: XCTestCase {
                         data: [.get: givenErrorData()])
         mock.register()
         // when
-        var result: AFError?
+        var result: APIError?
         sut.getMovies(page: 1) { response in
             switch response {
             case .success(_):
@@ -289,7 +259,7 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 1)
         // then
-        XCTAssertEqual(result?.responseCode, 401)
+        XCTAssertEqual(result, .knownError(code: 987))
     }
     
     // MARK: - getMovieDetail
@@ -356,7 +326,7 @@ final class NetworkManagerTests: XCTestCase {
                         data: [.get: givenDummyData()])
         mock.register()
         // when
-        var result: AFError?
+        var result: APIError?
         sut.getMovieDetail(id: 1) { response in
             switch response {
             case .success(_):
@@ -368,7 +338,7 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 1)
         // then
-        XCTAssertTrue(result?.isResponseSerializationError ?? false)
+        XCTAssertEqual(result, .serialization)
     }
     
     func testNetworkManager_getMovieDetail_responseErrorReturnError() {
@@ -379,7 +349,7 @@ final class NetworkManagerTests: XCTestCase {
                         data: [.get: givenErrorData()])
         mock.register()
         // when
-        var result: AFError?
+        var result: APIError?
         sut.getMovieDetail(id: 1) { response in
             switch response {
             case .success(_):
@@ -391,6 +361,6 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 1)
         // then
-        XCTAssertEqual(result?.responseCode, 401)
+        XCTAssertEqual(result, .knownError(code: 987))
     }
 }

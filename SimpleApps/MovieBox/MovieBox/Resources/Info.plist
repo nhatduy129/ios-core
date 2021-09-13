@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>$(DISPLAY_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,11 +23,11 @@
 	<key>Constants</key>
 	<dict>
 		<key>APIKey</key>
-		<string>55957fcf3ba81b137f8fc01ac5a31fb5</string>
+		<string>$(API_KEY)</string>
 		<key>BaseImageURL</key>
-		<string>https://image.tmdb.org/t/p</string>
+		<string>$(BASE_IMAGE_URL)</string>
 		<key>BaseURL</key>
-		<string>https://api.themoviedb.org/3</string>
+		<string>$(API_BASE_URL)</string>
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

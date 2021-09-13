@@ -17,7 +17,7 @@ protocol MovieDetailViewModelType {
     func getGenre(byIndex index: Int) -> Genre?
 }
 
-final class MovieDetailViewModel {
+final class MovieDetailViewModel: MovieDetailViewModelType {
     private let movieDetail: MovieDetail
     
     init(movieDetail: MovieDetail) {

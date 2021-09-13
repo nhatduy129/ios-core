@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/duynguyen/project/ios-core/SimpleApps/MovieBox/MovieBox.xcodeproj">
+      location = "group:MovieBox.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:MovieBox.xcodeproj">
    </FileRef>
 </Workspace>

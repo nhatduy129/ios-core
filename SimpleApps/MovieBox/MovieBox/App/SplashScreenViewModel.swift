@@ -7,25 +7,24 @@
 //
 
 import Foundation
-import Alamofire
 
 protocol SplashScreenViewModelType {
     func fetchMoviesAndPosters(completion: @escaping ((Swift.Result<(movies: [Movie], posters: [Movie]),
-                                                                    AFError>) -> Void))
+                                                                    APIError>) -> Void))
 }
 
 final class SplashScreenViewModel: SplashScreenViewModelType {
-    private let networkManager: NetworkManager
+    private let networkManager: NetworkManagerType
     
-    init(networkManager: NetworkManager = .shared) {
+    init(networkManager: NetworkManagerType = NetworkManager.shared) {
         self.networkManager = networkManager
     }
     
     func fetchMoviesAndPosters(completion: @escaping ((Swift.Result<(movies: [Movie], posters: [Movie]),
-                                                                    AFError>) -> Void)) {
+                                                                    APIError>) -> Void)) {
         var movies = [Movie]()
         var posters = [Movie]()
-        var error: AFError?
+        var error: APIError?
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
         dispatchGroup.enter()
