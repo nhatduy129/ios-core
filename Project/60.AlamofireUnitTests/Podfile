@@ -1,0 +1,12 @@
+# platform :ios, '14.0'
+
+target '60.AlamofireUnitTests' do
+  use_frameworks!
+  pod 'Alamofire', '~> 5.4.3'
+end
+
+target '60.AlamofireUnitTestsTests' do
+  use_frameworks!
+  pod 'Alamofire', '~> 5.4.3'
+  pod 'Mocker'
+end
