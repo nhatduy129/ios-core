@@ -3,5 +3,5 @@
 
 target 'YoutubePlayer' do
   use_frameworks!
-  pod 'XCDYouTubeKit-kbexdev'
+  pod 'XCDYouTubeKit-kbexdev', :git => 'https://github.com/kbex-dev/XCDYouTubeKit.git'
 end

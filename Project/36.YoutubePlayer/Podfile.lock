@@ -2,15 +2,20 @@ PODS:
   - XCDYouTubeKit-kbexdev (2.16.0)
 
 DEPENDENCIES:
-  - XCDYouTubeKit-kbexdev
+  - XCDYouTubeKit-kbexdev (from `https://github.com/kbex-dev/XCDYouTubeKit.git`)
 
-SPEC REPOS:
-  trunk:
-    - XCDYouTubeKit-kbexdev
+EXTERNAL SOURCES:
+  XCDYouTubeKit-kbexdev:
+    :git: https://github.com/kbex-dev/XCDYouTubeKit.git
+
+CHECKOUT OPTIONS:
+  XCDYouTubeKit-kbexdev:
+    :commit: f2b1b685c375edca711cc2b229f6bf2bb4588611
+    :git: https://github.com/kbex-dev/XCDYouTubeKit.git
 
 SPEC CHECKSUMS:
   XCDYouTubeKit-kbexdev: d6bdf492b85a547fe8605568359ec2e91980a465
 
-PODFILE CHECKSUM: 86f17c23e3be5ed22013b4b2b4eef72cc9f4fd17
+PODFILE CHECKSUM: 69e05da772b9231d468daf383d767335e27744d8
 
 COCOAPODS: 1.11.2
