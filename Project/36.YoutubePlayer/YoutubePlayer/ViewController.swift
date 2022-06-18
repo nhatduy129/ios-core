@@ -36,8 +36,22 @@ class ViewController: UIViewController {
             let streamURL = video.streamURL
             self.playerViewController.player = AVPlayer(url: streamURL!)
             self.playerViewController.player?.play()
-            
+            self.setupBackgroundAudio()
         })
+    }
+    
+    private func setupBackgroundAudio(){
+        do {
+            try AVAudioSession.sharedInstance()
+                .setCategory(AVAudioSession.Category.playback)
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 
     @IBAction func moveToButtonTapped(_ sender: Any) {
