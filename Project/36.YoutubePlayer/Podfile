@@ -3,5 +3,5 @@
 
 target 'YoutubePlayer' do
   use_frameworks!
-  pod 'XCDYouTubeKit'
+  pod 'XCDYouTubeKit-kbexdev'
 end

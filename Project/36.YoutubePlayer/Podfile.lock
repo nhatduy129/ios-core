@@ -1,16 +1,16 @@
 PODS:
-  - XCDYouTubeKit (2.9.0)
+  - XCDYouTubeKit-kbexdev (2.16.0)
 
 DEPENDENCIES:
-  - XCDYouTubeKit
+  - XCDYouTubeKit-kbexdev
 
 SPEC REPOS:
   trunk:
-    - XCDYouTubeKit
+    - XCDYouTubeKit-kbexdev
 
 SPEC CHECKSUMS:
-  XCDYouTubeKit: 65b8c362ad9e8b69a7f6bba4e4fa3b26dc0c29f3
+  XCDYouTubeKit-kbexdev: d6bdf492b85a547fe8605568359ec2e91980a465
 
-PODFILE CHECKSUM: 67f8e5273c4c17b6a1105b54ab5ee1afb82b9291
+PODFILE CHECKSUM: 86f17c23e3be5ed22013b4b2b4eef72cc9f4fd17
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.2
