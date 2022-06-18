@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import XCDYouTubeKit
+import XCDYouTubeKit_kbexdev
 import AVKit
 
 class ViewController: UIViewController {
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
                 return
             }
             let streamURL = video.streamURL
-            self.playerViewController.player = AVPlayer(url: streamURL)
+            self.playerViewController.player = AVPlayer(url: streamURL!)
             self.playerViewController.player?.play()
             
         })
