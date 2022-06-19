@@ -99,8 +99,8 @@ class ViewController: UIViewController {
         nowPlayingInfo[MPMediaItemPropertyArtist] = video.author
         nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
     }
-
-    func setupRemoteTransportControls() {
+    
+    private func setupRemoteTransportControls() {
         let commandCenter = MPRemoteCommandCenter.shared()
 
         commandCenter.playCommand.addTarget { [unowned self] event in
@@ -125,16 +125,15 @@ class ViewController: UIViewController {
         }
         
         commandCenter.changePlaybackPositionCommand.addTarget { [weak self] event in
-
             if let event = event as? MPChangePlaybackPositionCommandEvent {
                 self?.playerViewController.player?.seek(to: CMTime(seconds: event.positionTime,
-                                                                  preferredTimescale: CMTimeScale(1000)))
-             }
+                                                                   preferredTimescale: CMTimeScale(1000)))
+            }
             return .success
         }
     }
     
-    func moveBackward(seconds: Double) {
+    private func moveBackward(seconds: Double) {
         guard let player = playerViewController.player else {
             return
         }
@@ -144,7 +143,7 @@ class ViewController: UIViewController {
         player.seek(to: newTime)
     }
     
-    func moveForward(seconds: Double) {
+    private func moveForward(seconds: Double) {
         guard let player = playerViewController.player else {
             return
         }
