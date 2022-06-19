@@ -30,10 +30,9 @@ class ViewController: UIViewController {
     private func setupController() {
         setupRemoteTransportControls()
         playerViewController.updatesNowPlayingInfoCenter = false
-        
         let id = "jPgv65WW9XI"
         XCDYouTubeClient.default().getVideoWithIdentifier(id, completionHandler: {[weak self] video, error in
-            guard let `self` = self else { return }
+            guard let self = self else { return }
             guard let video = video else {
                 print(error?.localizedDescription ?? "")
                 return
@@ -71,30 +70,25 @@ class ViewController: UIViewController {
         guard let player = playerViewController.player else {
             return
         }
-        
         var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
-        
         if !imageUpdated, let thumbnailURL = video.thumbnailURLs?.first {
             URLSession.shared.dataTask(with: thumbnailURL) { (data, _, error) in
                 guard error == nil else { return }
                 guard data != nil else { return }
                 guard let image = UIImage(data: data!) else { return }
-
-                let artwork = MPMediaItemArtwork(boundsSize: image.size) { size in
+                let artwork = MPMediaItemArtwork(boundsSize: image.size) { _ in
                     return image
                 }
                 nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork
                 self.imageUpdated = true
             }.resume()
         }
-        
         nowPlayingInfo[MPNowPlayingInfoPropertyMediaType] = NSNumber(value: MPNowPlayingInfoMediaType.video.rawValue)
         nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = CMTimeGetSeconds(player.currentTime())
         if let currentItem = player.currentItem {
             nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = CMTimeGetSeconds(currentItem.asset.duration)
         }
         nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.rate
-    
         nowPlayingInfo[MPMediaItemPropertyTitle] = video.title
         nowPlayingInfo[MPMediaItemPropertyArtist] = video.author
         nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
@@ -102,17 +96,14 @@ class ViewController: UIViewController {
 
     func setupRemoteTransportControls() {
         let commandCenter = MPRemoteCommandCenter.shared()
-
         commandCenter.playCommand.addTarget { [unowned self] event in
             self.playerViewController.player?.play()
             return .success
         }
-
         commandCenter.pauseCommand.addTarget { [unowned self] event in
             self.playerViewController.player?.pause()
             return .success
         }
-        
         commandCenter.skipForwardCommand.preferredIntervals = [10]
         commandCenter.skipForwardCommand.addTarget { [unowned self] event in
             self.moveForward(seconds: 10)
@@ -123,9 +114,7 @@ class ViewController: UIViewController {
             self.moveBackward(seconds: 10)
             return .success
         }
-        
         commandCenter.changePlaybackPositionCommand.addTarget { [weak self] event in
-
             if let event = event as? MPChangePlaybackPositionCommandEvent {
                 self?.playerViewController.player?.seek(to: CMTime(seconds: event.positionTime,
                                                                   preferredTimescale: CMTimeScale(1000)))
@@ -135,20 +124,14 @@ class ViewController: UIViewController {
     }
     
     func moveBackward(seconds: Double) {
-        guard let player = playerViewController.player else {
-            return
-        }
-        
+        guard let player = playerViewController.player else { return }
         let newTime = CMTimeMakeWithSeconds(CMTimeGetSeconds(player.currentTime()) - seconds,
                                             preferredTimescale: player.currentTime().timescale)
         player.seek(to: newTime)
     }
     
     func moveForward(seconds: Double) {
-        guard let player = playerViewController.player else {
-            return
-        }
-        
+        guard let player = playerViewController.player else { return }
         let newTime = CMTimeMakeWithSeconds(CMTimeGetSeconds(player.currentTime()) + seconds,
                                             preferredTimescale: player.currentTime().timescale)
         player.seek(to: newTime)
