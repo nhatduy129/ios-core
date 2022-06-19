@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     weak var playerViewController: AVPlayerViewController!
     fileprivate let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+    var imageUpdated: Bool = false // You need something like this to not load image every second
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
         
         var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
         
-        if let thumbnailURL = video.thumbnailURLs?.first {
+        if !imageUpdated, let thumbnailURL = video.thumbnailURLs?.first {
             URLSession.shared.dataTask(with: thumbnailURL) { (data, _, error) in
                 guard error == nil else { return }
                 guard data != nil else { return }
@@ -83,7 +84,7 @@ class ViewController: UIViewController {
                     return image
                 }
                 nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork
-                self.nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
+                self.imageUpdated = true
             }.resume()
         }
         
