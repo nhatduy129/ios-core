@@ -15,7 +15,6 @@ protocol MoviesListViewModelType {
     func getNumberOfPoster() -> Int
     func getPoster(byIndex index: Int) -> Movie
     func loadMoreMovies(completion: @escaping (Swift.Result<Void, APIError>) -> Void)
-    func getMovieDetail(movieId id: Int, completion: @escaping (Swift.Result<MovieDetail, APIError>) -> Void)
 }
 
 final class MoviesListViewModel: MoviesListViewModelType {
@@ -59,9 +58,5 @@ final class MoviesListViewModel: MoviesListViewModelType {
                 completion(.failure(error))
             }
         }
-    }
-    
-    func getMovieDetail(movieId id: Int, completion: @escaping (Swift.Result<MovieDetail, APIError>) -> Void) {
-        networkManager.getMovieDetail(id: id, completion: completion)
     }
 }

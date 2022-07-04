@@ -93,7 +93,8 @@ final class MovieDetailViewController: BaseViewController, UICollectionViewDeleg
         collectionView.registerClass(cellType: GenreCell.self)
         return collectionView
     }()
-    
+
+    var transitioningObject: MovieDetailTransitioning.ToObject?
     private let viewModel: MovieDetailViewModelType
     private var collectionViewHeightAnchor: NSLayoutConstraint?
     
@@ -123,6 +124,7 @@ final class MovieDetailViewController: BaseViewController, UICollectionViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpController()
+        configureTransitioning()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -137,7 +139,7 @@ final class MovieDetailViewController: BaseViewController, UICollectionViewDeleg
         NSLayoutConstraint.activate([
             closeButton.widthAnchor.constraint(equalToConstant: 44),
             closeButton.heightAnchor.constraint(equalToConstant: 44),
-            closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12.8),
             closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.topAnchor.constraint(equalTo: closeButton.bottomAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -148,7 +150,7 @@ final class MovieDetailViewController: BaseViewController, UICollectionViewDeleg
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            posterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 13),
+            posterImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
             posterImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             posterImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 27/65),
             posterImageView.widthAnchor.constraint(equalTo: posterImageView.heightAnchor, multiplier: 135/201),
@@ -176,12 +178,26 @@ final class MovieDetailViewController: BaseViewController, UICollectionViewDeleg
     }
     
     private func setUpController() {
-        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
-        titleLabel.text = viewModel.getTitle()
-        releaseDateAndRuntimeLabel.text = viewModel.getReleaseDateAndRuntime()
-        overviewLabel.text = viewModel.getOverview()
-        posterImageView.sd_setImage(with: viewModel.getPosterURL())
-        //collectionView.reloadData()
+        view.backgroundColor = UIColor(hex: 0x212121)
+        viewModel.getMovieDetail { [weak self] _ in
+            guard let self = self else { return }
+            self.titleLabel.text = self.viewModel.getTitle()
+            self.releaseDateAndRuntimeLabel.text = self.viewModel.getReleaseDateAndRuntime()
+            self.overviewLabel.text = self.viewModel.getOverview()
+            self.posterImageView.sd_setImage(with: self.viewModel.getPosterURL())
+        }
+    }
+
+    private func configureTransitioning() {
+        let screenWidth = UIScreen.main.bounds.width
+        let width = UIScreen.main.bounds.width * 27 / 65
+        let height = width * 201 / 135
+        let x = (screenWidth - width) / 2
+        let frame = CGRect(x: x, y: 130,
+                           width: width, height: height)
+        transitioningObject = MovieDetailTransitioning.ToObject(imageView: posterImageView,
+                                                                titleLabel: titleLabel,
+                                                                imageViewFinalFrame: frame)
     }
     
     @objc private func closeButtonTapped() {

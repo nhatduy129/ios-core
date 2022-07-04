@@ -15,20 +15,28 @@ protocol MovieDetailViewModelType {
     func getPosterURL() -> URL?
     func getNumberOfGenres() -> Int
     func getGenre(byIndex index: Int) -> Genre?
+    func getMovieDetail(completion: @escaping (Swift.Result<MovieDetail, APIError>) -> Void)
 }
 
 final class MovieDetailViewModel: MovieDetailViewModelType {
-    private let movieDetail: MovieDetail
-    
-    init(movieDetail: MovieDetail) {
-        self.movieDetail = movieDetail
+    private let movieId: Int
+    private var movieDetail: MovieDetail?
+    private let networkManager: NetworkManagerType
+
+    init(movieId: Int,
+         networkManager: NetworkManagerType = NetworkManager.shared) {
+        self.movieId = movieId
+        self.networkManager = networkManager
     }
     
     func getTitle() -> String? {
-        return movieDetail.title
+        return movieDetail?.title
     }
     
     func getReleaseDateAndRuntime() -> String? {
+        guard let movieDetail = movieDetail else {
+            return nil
+        }
         let releaseDate = movieDetail.releaseDate?.toString(format: "MMMM d, yyyy") ?? "Unknown"
         var runtimeString = "Unknown"
         if let runtime = movieDetail.runtime {
@@ -42,18 +50,30 @@ final class MovieDetailViewModel: MovieDetailViewModelType {
     }
     
     func getOverview() -> String? {
-        return movieDetail.overview
+        return movieDetail?.overview
     }
     
     func getPosterURL() -> URL? {
-        return movieDetail.getPosterURL()
+        return movieDetail?.getPosterURL()
     }
     
     func getNumberOfGenres() -> Int {
-        return movieDetail.genres?.count ?? 0
+        return movieDetail?.genres?.count ?? 0
     }
     
     func getGenre(byIndex index: Int) -> Genre? {
-        return movieDetail.genres?[index]
+        return movieDetail?.genres?[index]
+    }
+
+    func getMovieDetail(completion: @escaping (Swift.Result<MovieDetail, APIError>) -> Void) {
+        networkManager.getMovieDetail(id: movieId) { [weak self] result in
+            switch result {
+            case .success(let movieDetail):
+                self?.movieDetail = movieDetail
+                completion(.success(movieDetail))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

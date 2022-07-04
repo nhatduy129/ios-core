@@ -24,11 +24,13 @@ final class MoviesListViewController: BaseViewController, UITableViewDelegate,
         tableView.registerClassWithClassName(cellType: PosterCollectionCell.self)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor(hex: 0x212121)
+        tableView.separatorStyle = .singleLine
+        tableView.backgroundColor = .white
         return tableView
     }()
     
+    private let movieDetailTransitioning = MovieDetailTransitioning()
+    var transitioningObject: MovieDetailTransitioning.FromObject?
     private let viewModel: MoviesListViewModelType
     
     init(viewModel: MoviesListViewModelType) {
@@ -86,23 +88,6 @@ final class MoviesListViewController: BaseViewController, UITableViewDelegate,
         imageView.widthAnchor.constraint(equalToConstant: 155).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 19).isActive = true
         navigationItem.titleView = imageView
-    }
-    
-    private func goToMovieDetail(movieId id: Int) {
-        SVProgressHUD.show()
-        viewModel.getMovieDetail(movieId: id) { [weak self] result in
-            SVProgressHUD.dismiss()
-            guard let self = self else { return }
-            switch result {
-            case .success(let movieDetail):
-                let viewModel = MovieDetailViewModel(movieDetail: movieDetail)
-                let vc = MovieDetailViewController(viewModel: viewModel)
-                vc.modalPresentationStyle = .overFullScreen
-                self.present(vc, animated: true)
-            case .failure(let error):
-                self.showError(error, tryAgainHandler: nil)
-            }
-        }
     }
     
     // MARK: - UITableView
@@ -165,10 +150,27 @@ final class MoviesListViewController: BaseViewController, UITableViewDelegate,
             return 0
         }
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = viewModel.getMovie(byIndex: indexPath.row)
-        goToMovieDetail(movieId: movie.id)
+        let viewModel = MovieDetailViewModel(movieId: movie.id)
+        let vc = MovieDetailViewController(viewModel: viewModel)
+        vc.modalPresentationStyle = .overFullScreen
+        guard let cell = tableView.cellForRow(at: indexPath) as? MovieCell else { return }
+        let imageView = UIImageView()
+        imageView.image = cell.posterImageView.image
+        imageView.frame = cell.posterImageView.frame
+        let titleLabel = UILabel(frame: cell.titleLabel.frame)
+        titleLabel.numberOfLines = cell.titleLabel.numberOfLines
+        titleLabel.text = cell.titleLabel.text
+        titleLabel.font = cell.titleLabel.font
+        titleLabel.textColor = cell.titleLabel.textColor
+        transitioningObject = MovieDetailTransitioning.FromObject(imageView: imageView,
+                                                                  titleLabel: titleLabel,
+                                                                  cell: cell)
+        vc.transitioningDelegate = movieDetailTransitioning
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true)
     }
     
     // MARK: - UICollectionView
@@ -189,6 +191,9 @@ final class MoviesListViewController: BaseViewController, UITableViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movie = viewModel.getPoster(byIndex: indexPath.row)
-        goToMovieDetail(movieId: movie.id)
+        let viewModel = MovieDetailViewModel(movieId: movie.id)
+        let vc = MovieDetailViewController(viewModel: viewModel)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true)
     }
 }

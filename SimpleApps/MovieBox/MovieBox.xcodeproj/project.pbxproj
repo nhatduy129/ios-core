@@ -56,6 +56,7 @@
 		92AAC02223B126AB0069BD33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92AAC02023B126AB0069BD33 /* LaunchScreen.storyboard */; };
 		A3B04935E74083DB0FDF853C /* Pods_MovieBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC8CD5875EF1E021F7F895E /* Pods_MovieBox.framework */; };
 		C3F49F85BE164295819B187F /* Pods_MovieBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106B370B05979F85A62970B6 /* Pods_MovieBoxTests.framework */; };
+		FAFA670D286DFB24005F0C05 /* MovieDetailTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA670C286DFB24005F0C05 /* MovieDetailTransitioning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		BB4C816DE527B332C94C29B5 /* Pods-MovieBoxTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBoxTests.development.xcconfig"; path = "Target Support Files/Pods-MovieBoxTests/Pods-MovieBoxTests.development.xcconfig"; sourceTree = "<group>"; };
 		BDC8CD5875EF1E021F7F895E /* Pods_MovieBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D7E00E4DE545A850BA1380 /* Pods-MovieBoxTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieBoxTests.production.xcconfig"; path = "Target Support Files/Pods-MovieBoxTests/Pods-MovieBoxTests.production.xcconfig"; sourceTree = "<group>"; };
+		FAFA670C286DFB24005F0C05 /* MovieDetailTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTransitioning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				92AAC01923B126A80069BD33 /* MoviesListViewController.swift */,
 				0466CF2726B518E800A71F73 /* MovieDetailViewController.swift */,
+				FAFA670C286DFB24005F0C05 /* MovieDetailTransitioning.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				0466CF2826B518E800A71F73 /* MovieDetailViewController.swift in Sources */,
 				0466CF4326B5A1B300A71F73 /* MBNavigationController.swift in Sources */,
 				0461D1FB26B3E22F0039183E /* UITableView+.swift in Sources */,
+				FAFA670D286DFB24005F0C05 /* MovieDetailTransitioning.swift in Sources */,
 				0466CF2A26B5281400A71F73 /* MovieDetailViewModel.swift in Sources */,
 				04915C5026B3FD98006B4355 /* UIColor+.swift in Sources */,
 				92AAC01623B126A80069BD33 /* AppDelegate.swift in Sources */,

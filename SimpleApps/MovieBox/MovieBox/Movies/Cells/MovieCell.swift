@@ -10,6 +10,15 @@ import UIKit
 import SDWebImage
 
 final class MovieCell: UITableViewCell {
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(hex: 0x212121)
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+        return view
+    }()
+
     lazy var posterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,33 +84,37 @@ final class MovieCell: UITableViewCell {
     
     private func initSubviews() {
         selectionStyle = .none
-        contentView.backgroundColor = UIColor(hex: 0x212121)
-        contentView.addSubview(posterImageView)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(releaseDateLabel)
-        contentView.addSubview(originalLanguageLabel)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(ratingView)
+        contentView.addSubview(containerView)
+        containerView.addSubview(posterImageView)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(releaseDateLabel)
+        containerView.addSubview(originalLanguageLabel)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(ratingView)
         layoutConstraint()
     }
     
     private func layoutConstraint() {
         NSLayoutConstraint.activate([
-            posterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 25),
-            posterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            posterImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 25),
+            posterImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8),
             posterImageView.widthAnchor.constraint(equalToConstant: 49),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
             titleLabel.leadingAnchor.constraint(equalTo: posterImageView.trailingAnchor, constant: 18),
             titleLabel.trailingAnchor.constraint(equalTo: ratingView.leadingAnchor),
             releaseDateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 7),
             releaseDateLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             originalLanguageLabel.topAnchor.constraint(equalTo: releaseDateLabel.bottomAnchor, constant: 2),
             originalLanguageLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            originalLanguageLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8),
+            originalLanguageLabel.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: -8),
             ratingView.heightAnchor.constraint(equalToConstant: 38),
             ratingView.widthAnchor.constraint(equalToConstant: 38),
-            ratingView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -25),
-            ratingView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            ratingView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -25),
+            ratingView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
         ])
         let posterImageViewHeightAnchor = posterImageView.heightAnchor.constraint(equalToConstant: 73)
         posterImageViewHeightAnchor.priority = UILayoutPriority(999)
