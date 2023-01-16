@@ -8,39 +8,20 @@
 
 import Foundation
 
-protocol ListViewModelType {
-    func transform()
-}
-
-extension ListViewModelType {
-    func transform() {
-        
+class Person {
+    func diAn() {
+        print("di an")
     }
 }
 
-class ListViewModel: ListViewModelType {
-    private let someThing: NSObject
-    
-    init(someThing: NSObject) {
-        self.someThing = someThing
-    }
-    
-    func transform() {
-        
+extension Person {
+    @objc func uongNuoc() {
+        print("di an")
     }
 }
 
-class ListViewController: NSObject {
-    let viewModel: ListViewModelType
-    
-    init(viewModel: ListViewModelType) {
-        self.viewModel = viewModel
-    }
-    
-    func abc() {
-        viewModel.transform()
+class Animal: Person {
+    override func uongNuoc() {
+        print("abc")
     }
 }
-
-let vm = ListViewModel(someThing: NSObject())
-let vc = ListViewController(viewModel: vm)
