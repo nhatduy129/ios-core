@@ -13,8 +13,6 @@
 		FA3853FA29BC4CDF00E310FE /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3853F929BC4CDF00E310FE /* WeatherView.swift */; };
 		FA3853FC29BC4CE100E310FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3853FB29BC4CE100E310FE /* Assets.xcassets */; };
 		FA38540929BC4CE100E310FE /* JohnWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38540829BC4CE100E310FE /* JohnWeatherAppTests.swift */; };
-		FA38541329BC4CE100E310FE /* JohnWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38541229BC4CE100E310FE /* JohnWeatherAppUITests.swift */; };
-		FA38541529BC4CE100E310FE /* JohnWeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38541429BC4CE100E310FE /* JohnWeatherAppUITestsLaunchTests.swift */; };
 		FA8360CB29BD7DB600B55732 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360CA29BD7DB600B55732 /* Color+.swift */; };
 		FA8360CD29BD9F4900B55732 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360CC29BD9F4900B55732 /* WeatherViewModel.swift */; };
 		FA8360D629BDA20800B55732 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8360D529BDA20800B55732 /* Preview Assets.xcassets */; };
@@ -23,13 +21,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		FA38540529BC4CE100E310FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA3853EC29BC4CDF00E310FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA3853F329BC4CDF00E310FE;
-			remoteInfo = JohnWeatherApp;
-		};
-		FA38540F29BC4CE100E310FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA3853EC29BC4CDF00E310FE /* Project object */;
 			proxyType = 1;
@@ -49,9 +40,6 @@
 		FA3853FB29BC4CE100E310FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA38540429BC4CE100E310FE /* JohnWeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JohnWeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA38540829BC4CE100E310FE /* JohnWeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnWeatherAppTests.swift; sourceTree = "<group>"; };
-		FA38540E29BC4CE100E310FE /* JohnWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JohnWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA38541229BC4CE100E310FE /* JohnWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnWeatherAppUITests.swift; sourceTree = "<group>"; };
-		FA38541429BC4CE100E310FE /* JohnWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA8360CA29BD7DB600B55732 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		FA8360CC29BD9F4900B55732 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		FA8360D529BDA20800B55732 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -73,13 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA38540B29BC4CE100E310FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,7 +69,6 @@
 			children = (
 				FA3853F629BC4CDF00E310FE /* JohnWeatherApp */,
 				FA38540729BC4CE100E310FE /* JohnWeatherAppTests */,
-				FA38541129BC4CE100E310FE /* JohnWeatherAppUITests */,
 				FA3853F529BC4CDF00E310FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,7 +78,6 @@
 			children = (
 				FA3853F429BC4CDF00E310FE /* JohnWeatherApp.app */,
 				FA38540429BC4CE100E310FE /* JohnWeatherAppTests.xctest */,
-				FA38540E29BC4CE100E310FE /* JohnWeatherAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,15 +99,6 @@
 				FA38540829BC4CE100E310FE /* JohnWeatherAppTests.swift */,
 			);
 			path = JohnWeatherAppTests;
-			sourceTree = "<group>";
-		};
-		FA38541129BC4CE100E310FE /* JohnWeatherAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FA38541229BC4CE100E310FE /* JohnWeatherAppUITests.swift */,
-				FA38541429BC4CE100E310FE /* JohnWeatherAppUITestsLaunchTests.swift */,
-			);
-			path = JohnWeatherAppUITests;
 			sourceTree = "<group>";
 		};
 		FA8360CE29BDA08D00B55732 /* App */ = {
@@ -224,24 +194,6 @@
 			productReference = FA38540429BC4CE100E310FE /* JohnWeatherAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA38540D29BC4CE100E310FE /* JohnWeatherAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA38541E29BC4CE100E310FE /* Build configuration list for PBXNativeTarget "JohnWeatherAppUITests" */;
-			buildPhases = (
-				FA38540A29BC4CE100E310FE /* Sources */,
-				FA38540B29BC4CE100E310FE /* Frameworks */,
-				FA38540C29BC4CE100E310FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FA38541029BC4CE100E310FE /* PBXTargetDependency */,
-			);
-			name = JohnWeatherAppUITests;
-			productName = JohnWeatherAppUITests;
-			productReference = FA38540E29BC4CE100E310FE /* JohnWeatherAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,10 +208,6 @@
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					FA38540329BC4CE100E310FE = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = FA3853F329BC4CDF00E310FE;
-					};
-					FA38540D29BC4CE100E310FE = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = FA3853F329BC4CDF00E310FE;
 					};
@@ -280,7 +228,6 @@
 			targets = (
 				FA3853F329BC4CDF00E310FE /* JohnWeatherApp */,
 				FA38540329BC4CE100E310FE /* JohnWeatherAppTests */,
-				FA38540D29BC4CE100E310FE /* JohnWeatherAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,13 +243,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA38540229BC4CE100E310FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA38540C29BC4CE100E310FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,15 +274,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA38540A29BC4CE100E310FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA38541529BC4CE100E310FE /* JohnWeatherAppUITestsLaunchTests.swift in Sources */,
-				FA38541329BC4CE100E310FE /* JohnWeatherAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -350,11 +281,6 @@
 			isa = PBXTargetDependency;
 			target = FA3853F329BC4CDF00E310FE /* JohnWeatherApp */;
 			targetProxy = FA38540529BC4CE100E310FE /* PBXContainerItemProxy */;
-		};
-		FA38541029BC4CE100E310FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA3853F329BC4CDF00E310FE /* JohnWeatherApp */;
-			targetProxy = FA38540F29BC4CE100E310FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -577,40 +503,6 @@
 			};
 			name = Release;
 		};
-		FA38541F29BC4CE100E310FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.john.weatherapp.JohnWeatherAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JohnWeatherApp;
-			};
-			name = Debug;
-		};
-		FA38542029BC4CE100E310FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.john.weatherapp.JohnWeatherAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JohnWeatherApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -637,15 +529,6 @@
 			buildConfigurations = (
 				FA38541C29BC4CE100E310FE /* Debug */,
 				FA38541D29BC4CE100E310FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA38541E29BC4CE100E310FE /* Build configuration list for PBXNativeTarget "JohnWeatherAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA38541F29BC4CE100E310FE /* Debug */,
-				FA38542029BC4CE100E310FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
