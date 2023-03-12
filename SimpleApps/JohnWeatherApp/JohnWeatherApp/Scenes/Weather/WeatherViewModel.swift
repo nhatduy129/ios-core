@@ -24,12 +24,12 @@ final class WeatherViewModel: ObservableObject {
         locationManager.$currentLocation
             .compactMap { $0 }
             .sink { [weak self] location in
-            guard let self = self else { return }
-            Task {
-                await self.fetchWeather(for: location)
+                guard let self = self else { return }
+                Task {
+                    await self.fetchWeather(for: location)
+                }
             }
-        }
-        .store(in: &cancellables)
+            .store(in: &cancellables)
     }
 
     func fetchWeather(for location: CLLocation) async {

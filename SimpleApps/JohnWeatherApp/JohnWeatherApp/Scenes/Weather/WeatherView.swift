@@ -62,7 +62,7 @@ struct TenDayForcastView: View {
 struct WeatherView: View {
     @ObservedObject var viewModel = WeatherViewModel()
     @State var selectedIndex: Int?
-
+    
     var body: some View {
         ZStack {
             GeometryReader { geometry in
