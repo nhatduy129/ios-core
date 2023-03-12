@@ -24,7 +24,6 @@ final class WeatherViewModel: ObservableObject {
         locationManager.$currentLocation
             .compactMap { $0 }
             .sink { [weak self] location in
-            print("xyz sink", location)
             guard let self = self else { return }
             Task {
                 await self.fetchWeather(for: location)
@@ -36,7 +35,7 @@ final class WeatherViewModel: ObservableObject {
     func fetchWeather(for location: CLLocation) async {
         do {
             let weather =  try await weatherService.weather(for: location)
-            let cityName = try await geocoder.reverseGeocodeLocation(location).first?.locality
+            let cityName = try await geocoder.reverseGeocodeLocation(location).first?.locality ?? "Unknown City"
             DispatchQueue.main.async {
                 self.weather = weather
                 self.cityName = cityName

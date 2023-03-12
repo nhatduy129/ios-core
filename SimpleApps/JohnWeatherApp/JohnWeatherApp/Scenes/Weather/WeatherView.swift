@@ -10,6 +10,8 @@ import WeatherKit
 
 struct TenDayForcastView: View {
     let dayWeatherList: [DayWeather]
+    @Binding var selectedSummary: String
+    @Binding var showSheet: Bool
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -41,6 +43,11 @@ struct TenDayForcastView: View {
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(.zero))
+                .onTapGesture {
+                    // selectedSummary = dailyWeather  // TODO: I want to get summary from dailyWeather object here
+                    selectedSummary = "I stuck here"
+                    showSheet = true
+                }
             }
             .listStyle(PlainListStyle())
             .frame(height: CGFloat(dayWeatherList.count) * 44)
@@ -55,7 +62,9 @@ struct TenDayForcastView: View {
 }
 
 struct WeatherView: View {
-    @ObservedObject var viewModel = WeatherViewModel() // TODO: refactor
+    @ObservedObject var viewModel = WeatherViewModel()
+    @State var selectedSummary: String = ""
+    @State var showSheet: Bool = false
 
     var body: some View {
         ZStack {
@@ -67,6 +76,7 @@ struct WeatherView: View {
             }.edgesIgnoringSafeArea(.all)
             VStack {
                 if let weather = viewModel.weather, let cityName = viewModel.cityName {
+
                     VStack {
                         Text(cityName)
                             .font(.largeTitle)
@@ -74,7 +84,9 @@ struct WeatherView: View {
                         Text("\(weather.currentWeather.temperature.formatted())")
                             .foregroundColor(.white)
                     }
-                    TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
+                    TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast,
+                                      selectedSummary: $selectedSummary,
+                                      showSheet: $showSheet)
                     Spacer()
                 } else {
                     ProgressView("Loading...")
@@ -84,11 +96,15 @@ struct WeatherView: View {
             }
             .padding()
         }
-    }
-}
-
-struct WeatherView_Previews: PreviewProvider {
-    static var previews: some View {
-        WeatherView()
+        .sheet(isPresented: $showSheet) {
+            VStack(alignment: .leading) {
+                Text("Daily Summary")
+                    .font(.title2)
+                    .padding(.bottom, 10)
+                Text(selectedSummary)
+                    .presentationDetents([.fraction(0.4)])
+                Spacer()
+            }.padding()
+        }
     }
 }
