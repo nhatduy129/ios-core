@@ -7,8 +7,6 @@
 
 import SwiftUI
 import WeatherKit
-import CoreLocation
-import Charts
 
 struct TenDayForcastView: View {
     let dayWeatherList: [DayWeather]
@@ -57,20 +55,7 @@ struct TenDayForcastView: View {
 }
 
 struct WeatherView: View {
-    let weatherService = WeatherService.shared
-    @StateObject private var locationManager = LocationManager()
-    @State private var weather: Weather?
-    @State private var cityName: String = "_"
-
-    var hourlyWeatherData: [HourWeather] {
-        if let weather {
-            return Array(weather.hourlyForecast.filter { hourlyWeather in
-                return hourlyWeather.date.timeIntervalSince(Date()) >= 0
-            }.prefix(24))
-        } else {
-            return []
-        }
-    }
+    @ObservedObject var viewModel = WeatherViewModel() // TODO: refactor
 
     var body: some View {
         ZStack {
@@ -81,7 +66,7 @@ struct WeatherView: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
             }.edgesIgnoringSafeArea(.all)
             VStack {
-                if let weather {
+                if let weather = viewModel.weather, let cityName = viewModel.cityName {
                     VStack {
                         Text(cityName)
                             .font(.largeTitle)
@@ -91,27 +76,13 @@ struct WeatherView: View {
                     }
                     TenDayForcastView(dayWeatherList: weather.dailyForecast.forecast)
                     Spacer()
+                } else {
+                    ProgressView("Loading...")
+                        .foregroundColor(.white)
+                        .tint(.white)
                 }
             }
             .padding()
-            .task(id: locationManager.currentLocation) {
-                do {
-                    if let location = locationManager.currentLocation {
-                        self.weather =  try await weatherService.weather(for: location)
-                        let geocoder = CLGeocoder()
-                        geocoder.reverseGeocodeLocation(location) { placemarks, error in
-                            if error == nil {
-                                if let firstLocation = placemarks?[0],
-                                   let cityName = firstLocation.locality {
-                                    self.cityName = cityName
-                                }
-                            }
-                        }
-                    }
-                } catch {
-                    print(error)
-                }
-            }
         }
     }
 }

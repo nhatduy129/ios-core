@@ -8,7 +8,6 @@
 import CoreLocation
 
 class LocationManager: NSObject, ObservableObject {
-
     @Published var currentLocation: CLLocation?
     private let locationManager = CLLocationManager()
 
@@ -20,16 +19,10 @@ class LocationManager: NSObject, ObservableObject {
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
     }
-
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
-        guard let location = locations.last, currentLocation == nil else { return }
-
-        DispatchQueue.main.async {
-            self.currentLocation = location
-        }
+        currentLocation = locations.last
     }
 }
