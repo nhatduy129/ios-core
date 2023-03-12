@@ -44,4 +44,13 @@ final class WeatherViewModel: ObservableObject {
             print(error)
         }
     }
+
+    func getSummary(for index: Int) -> String {
+        guard let weather = weather else { return "Unknown" }
+        let dayWeather = weather.dailyForecast.forecast[index]
+        let day = index == 0 ? "Today" : dayWeather.date.toString(format: "EEEE")
+        let lowTemperature = dayWeather.lowTemperature.formatted().dropLast()
+        let highTemperature = dayWeather.highTemperature.formatted().dropLast()
+        return "\(day)'s low will be \(lowTemperature), and the high will be \(highTemperature)."
+    }
 }

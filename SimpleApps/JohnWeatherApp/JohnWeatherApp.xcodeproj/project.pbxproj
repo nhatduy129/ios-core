@@ -18,6 +18,7 @@
 		FA8360CB29BD7DB600B55732 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360CA29BD7DB600B55732 /* Color+.swift */; };
 		FA8360CD29BD9F4900B55732 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360CC29BD9F4900B55732 /* WeatherViewModel.swift */; };
 		FA8360D629BDA20800B55732 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8360D529BDA20800B55732 /* Preview Assets.xcassets */; };
+		FA99B4F729BDEAA30087D6A2 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99B4F629BDEAA30087D6A2 /* Int+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		FA8360CA29BD7DB600B55732 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		FA8360CC29BD9F4900B55732 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		FA8360D529BDA20800B55732 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA99B4F629BDEAA30087D6A2 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				FA29E80F29BC6D22004830ED /* Date+.swift */,
 				FA8360CA29BD7DB600B55732 /* Color+.swift */,
+				FA99B4F629BDEAA30087D6A2 /* Int+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				FA3853F829BC4CDF00E310FE /* JohnWeatherAppApp.swift in Sources */,
 				FA29E80E29BC6BA0004830ED /* LocationManager.swift in Sources */,
 				FA29E81029BC6D22004830ED /* Date+.swift in Sources */,
+				FA99B4F729BDEAA30087D6A2 /* Int+.swift in Sources */,
 				FA8360CB29BD7DB600B55732 /* Color+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +490,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JohnWeatherApp needs your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -520,7 +523,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JohnWeatherApp needs your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
