@@ -19,34 +19,35 @@ struct TenDayForcastView: View {
                 .opacity(0.5)
             List(Array(dayWeatherList.enumerated()), id: \.1.date) { (index, dailyWeather) in
                 VStack(alignment: .center, spacing: 0) {
-                    Rectangle()
-                        .fill(Color(hex: 0xDCDCDC))
-                        .frame(height: 0.5)
-                    Spacer()
-                    HStack {
-                        let dateLabel: String = index == 0 ? "Today" : dailyWeather.date.toString(format: "EEE")
-                        Text(dateLabel)
-                            .frame(maxWidth: 70, alignment: .leading)
-                            .bold()
-                        Image(systemName: "\(dailyWeather.symbolName).fill")
-                        Text(dailyWeather.lowTemperature.formatted().dropLast())
-                            .frame(maxWidth: .infinity)
-                            .bold()
-                            .foregroundColor(Color(hex: 0xDCDCDC))
-                        Text(dailyWeather.highTemperature.formatted().dropLast())
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .bold()
+                    Button(action: {
+                        selectedIndex = index
+                    }) {
+                        Rectangle()
+                            .fill(Color(hex: 0xDCDCDC))
+                            .frame(height: 0.5)
+                        Spacer()
+                        HStack {
+                            let dateLabel: String = index == 0 ? "Today" : dailyWeather.date.toString(format: "EEE")
+                            Text(dateLabel)
+                                .frame(maxWidth: 70, alignment: .leading)
+                                .bold()
+                            Image(systemName: "\(dailyWeather.symbolName).fill")
+                            Text(dailyWeather.lowTemperature.formatted().dropLast())
+                                .frame(maxWidth: .infinity)
+                                .bold()
+                                .foregroundColor(Color(hex: 0xDCDCDC))
+                            Text(dailyWeather.highTemperature.formatted().dropLast())
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .bold()
+                        }
+                        Spacer()
                     }
-                    Spacer()
                 }
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
                 .listRowInsets(EdgeInsets(.zero))
-                .onTapGesture {
-                    selectedIndex = index
-                }
             }
-            .listStyle(PlainListStyle())
+            .listStyle(.plain)
             .frame(height: CGFloat(dayWeatherList.count) * 44)
         }
         .padding()
