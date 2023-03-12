@@ -24,12 +24,12 @@ final class WeatherViewModel: ObservableObject {
         locationManager.$currentLocation
             .compactMap { $0 }
             .sink { [weak self] location in
-            guard let self = self else { return }
-            Task {
-                await self.fetchWeather(for: location)
+                guard let self = self else { return }
+                Task {
+                    await self.fetchWeather(for: location)
+                }
             }
-        }
-        .store(in: &cancellables)
+            .store(in: &cancellables)
     }
 
     func fetchWeather(for location: CLLocation) async {
@@ -43,5 +43,14 @@ final class WeatherViewModel: ObservableObject {
         } catch {
             print(error)
         }
+    }
+
+    func getSummary(for index: Int) -> String {
+        guard let weather = weather else { return "Unknown" }
+        let dayWeather = weather.dailyForecast.forecast[index]
+        let day = index == 0 ? "Today" : dayWeather.date.toString(format: "EEEE")
+        let lowTemperature = dayWeather.lowTemperature.formatted().dropLast()
+        let highTemperature = dayWeather.highTemperature.formatted().dropLast()
+        return "\(day)'s low will be \(lowTemperature), and the high will be \(highTemperature)."
     }
 }

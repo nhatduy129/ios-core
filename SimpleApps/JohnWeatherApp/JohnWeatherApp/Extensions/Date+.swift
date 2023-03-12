@@ -8,15 +8,9 @@
 import Foundation
 
 extension Date {
-    func formatAsAbbreviatedDay() -> String {
+    func toString(format: String) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEE"
-        return formatter.string(from: self)
-    }
-
-    func formatAsAbbreviatedTime() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "ha"
+        formatter.dateFormat = format
         return formatter.string(from: self)
     }
 }
